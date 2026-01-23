@@ -38,6 +38,19 @@ const I18n = {
             stat_office: "Virtual Office",
             stat_client: "Klien Aktif",
             stat_rating: "Rating Google",
+            trust_oss: "Resmi OSS",
+            trust_kemenkumham: "Kemenkumham RI",
+            trust_legalitas: "Legalitas Terjamin",
+            trust_process_time: "± 3 Hari",
+            trust_process_text: "Proses Izin Terbit",
+            floating_client_title: "Klien Puas!",
+            floating_client_desc: "\"Sangat cepat & dibantu sampai tuntas.\"",
+            floating_izin: "IZIN TERBIT",
+            marquee_oss: "Terdaftar OSS RBA",
+            marquee_kemenkumham: "Berizin Kemenkumham",
+            marquee_aman: "Aman & Sah Secara Hukum",
+            marquee_ahu: "Terintegrasi AHU Online",
+            marquee_regulasi: "Sesuai Regulasi Terkini",
 
             // Comparison
             comp_title: "Cara Lama vs Cara Kami",
@@ -67,7 +80,7 @@ const I18n = {
             investasi: "Investasi",
 
             // Roadmap Section
-            roadmap_title: "Alur Pendirian Legalitas",
+            roadmap_title: "Alur <span class=\"text-primary italic\">Pendirian Legalitas</span>",
             roadmap_subtitle: "Sistem pemantauan progres pendirian legalitas secara real-time.",
 
             // Roadmap Steps
@@ -102,18 +115,33 @@ const I18n = {
             roadmap_8_title: "Serah Terima Dokumen",
             roadmap_8_desc: "Penyerahan seluruh dokumen legal dalam format digital dan fisik (opsional).",
             roadmap_8_detail: "Akses selamanya ke dashboard digital untuk menyimpan dan mengunduh dokumen kapan saja.",
+            roadmap_ai_title: "AI Process Assistant",
+            roadmap_ai_subtitle: "Live Progress Monitoring",
+            roadmap_active: "Active",
+            roadmap_verified: "Verified by Licensed<br>Legal Consultants",
+            roadmap_est: "Est. Completion",
+            roadmap_days: "5-7 Working Days",
 
             // Bento / Why Choose Us
             bento_title_pre: "Kenapa", bento_title_accent: "Founder Milenial", bento_title_post: "Pilih Kami?",
             bento_subtitle: "Kami paham kecepatan dan transparansi adalah segalanya bagi Anda.",
             bento_1_tag: "Proses 24 Jam", bento_1_title: "Cepat & 100% Digital", bento_1_desc: "Urus PT & CV tanpa harus beranjak dari meja kerja. Semua dokumen diproses via sistem terintegrasi.",
             bento_2_title: "Strategic Partner, Bukan Sekadar Jasa", bento_2_desc: "Tim legal kami adalah konsultan aktif yang mengerti dinamika startup & UMKM modern.", bento_2_badge: "Jaminan Perlindungan Hukum",
-            bento_3_title: "Harga Transparan", bento_3_desc: "\"What you see is what you pay.\"", bento_3_fee: "Biaya Tersembunyi",
+            bento_3_title: "Harga Transparan", bento_3_desc: "\"Apa yang Anda lihat adalah apa yang Anda bayar.\"", bento_3_fee: "Biaya Tersembunyi",
             bento_4_title: "Secure Privacy Data", bento_4_desc: "Keamanan data Anda adalah prioritas mutlak (absolute) kami. Kami menggunakan enkripsi tingkat tinggi.",
 
             // Testimonials
             testi_title_pre: "Apa Kata Mereka", testi_title_accent: "Yang Sudah Legal?",
             testi_subtitle: "Lebih dari 5.000 pengusaha telah mempercayakan legalitasnya kepada kami.",
+            testi_1_text: "\"Prosesnya beneran kilat! PT Perorangan saya terbit kurang dari 24 jam. Adminnya fast respon dan sabar banget jelasin step-stepnya. Rekomen banget buat founder muda!\"",
+            testi_1_name: "Andi Maulana",
+            testi_1_position: "CEO TechStart ID",
+            testi_2_text: "\"Harga paling transparan yang pernah saya temuin. Gak ada biaya siluman di tengah jalan. Akses Legal bikin mimpi saya punya brand kopi sendiri jadi kenyataan lewat HAKI.\"",
+            testi_2_name: "Siti Rahma",
+            testi_2_position: "Owner Kopi Kreasi",
+            testi_3_text: "\"Awalnya ragu karena harganya murah, tapi ternyata servis premium! Dashboard monitoringnya keren, dpt update terus sampai dokumen beneran jadi. Akses Legal partner terbaik.\"",
+            testi_3_name: "Budi Wijaya",
+            testi_3_position: "Founder CraftCo",
 
             // FAQ
             faq_title: "Pertanyaan Yang Sering Diajukan",
@@ -143,9 +171,59 @@ const I18n = {
             faq_support_text: "Masih punya pertanyaan lain?",
             faq_support_btn: "Hubungi Tim Support Kami",
 
+            // Why Choose Us Section
+            service_section_title_pre: "Mengapa memilih",
+            service_section_title_accent: "AKSES LEGAL INDONESIA?",
+            service_section_subtitle: "Kami bukan sekadar jasa, kami adalah partner pertumbuhan bisnis Anda.",
+            service_fast_title: "Proses Kilat",
+            service_fast_desc: "Dokumen NIB dan Akta selesai dalam 1-3 hari kerja tanpa ribet.",
+            service_transparent_title: "Harga Transparan",
+            service_transparent_desc: "Tanpa biaya siluman. Paket harga sudah termasuk semua biaya administrasi.",
+            service_expert_title: "Konsultasi Ahli",
+            service_expert_desc: "Tim legal profesional yang siap membimbing langkah bisnis Anda 24/7.",
+            service_digital_title: "100% Digital",
+            service_digital_desc: "Pantau progress pendaftaran Anda kapan saja melalui dashboard digital.",
+
+            // Blog Section
+            blog_title_pre: "Wawasan",
+            blog_title_accent: "& Pendidikan Bisnis",
+            blog_subtitle: "Pelajari regulasi terkini untuk menjaga bisnis Anda tetap patuh dan kompetitif.",
+            blog_view_all: "Lihat Semua Artikel",
+
+            // Blog Articles
+            blog_tag_regulasi: "Regulasi 2024",
+            blog_tag_tips: "Tips Pajak",
+            blog_tag_startup: "Startup Kit",
+            blog_article_1_title: "Perbedaan PT Biasa dan PT Perorangan di 2024",
+            blog_article_1_desc: "Temukan mana yang paling menguntungkan untuk skala bisnis Anda saat ini berdasarkan regulasi terkini...",
+            blog_article_2_title: "Panduan Lengkap Aktivasi EFIN untuk Perusahaan Baru",
+            blog_article_2_desc: "Langkah mudah mengelola kewajiban pajak bisnis Anda tanpa harus ke kantor pajak...",
+            blog_article_3_title: "Cara Melindungi Merek Dagang dari Pelanggaran Kompetitor",
+            blog_article_3_desc: "Pentingnya HAKI sebagai aset tidak berwujud bernilai miliaran di masa depan...",
+
+            // CTA Section
+            cta_title_pre: "Siap Maju Bersama",
+            cta_title_accent: "PT Akses Legal Indonesia?",
+            cta_desc: "Rasakan kemudahan mengelola legalitas dengan layanan berbasis digital terbaik.",
+            cta_whatsapp: "WhatsApp Sekarang",
+            cta_learn: "Pelajari Proses",
+            cta_entrepreneurs: "Pengusaha Terbantu",
+            cta_success: "Tingkat Keberhasilan",
+            cta_no_fees: "Biaya Tersembunyi",
+            cta_secure: "Perlindungan Data",
+
             // Footer
             footer_links_main: "Layanan Utama", footer_links_company: "Perusahaan", footer_links_contact: "Hubungi Kami",
-            footer_copyright: "© 2025 PT Akses Legal Indonesia. Seluruh Hak Cipta Dilindungi."
+            footer_copyright: "© 2025 PT Akses Legal Indonesia. Seluruh Hak Cipta Dilindungi.",
+            footer_link_pt: "Pendirian PT Perorangan",
+            footer_link_cv: "Pendaftaran CV",
+            footer_link_haki: "Hak Kekayaan Intelektual",
+            footer_link_halal: "Sertifikasi Halal & PIRT",
+            footer_link_about: "Tentang Kami",
+            footer_link_blog: "Blog & Edukasi",
+            footer_link_contact: "Hubungi Kami",
+            footer_link_terms: "Syarat & Ketentuan",
+            footer_link_privacy: "Kebijakan Privasi"
         },
         en: {
             nav_layanan: "Services",
@@ -159,6 +237,7 @@ const I18n = {
             hero_subtitle: "Start your business now through Akseslegal services with Individual PT establishment. Fast and hassle-free.",
             hero_cta: "Start Now",
             hero_chat: "Ask Our Legal Team",
+            hero_badge: "#1 Trusted Legal Solution",
             footer_desc: "Leading solution for MSE business legality in Indonesia. Professional, Transparent, and Trusted.",
             currency_idr: "IDR",
             currency_usd: "USD",
@@ -175,6 +254,19 @@ const I18n = {
             stat_office: "Virtual Office",
             stat_client: "Active Clients",
             stat_rating: "Google Rating",
+            trust_oss: "Official OSS",
+            trust_kemenkumham: "Kemenkumham RI",
+            trust_legalitas: "Guaranteed Legality",
+            trust_process_time: "± 3 Days",
+            trust_process_text: "License Processing",
+            floating_client_title: "Satisfied Clients!",
+            floating_client_desc: "\"Very fast & helped until completion.\"",
+            floating_izin: "LICENSES ISSUED",
+            marquee_oss: "Registered OSS RBA",
+            marquee_kemenkumham: "Licensed by Kemenkumham",
+            marquee_aman: "Safe & Legally Valid",
+            marquee_ahu: "Integrated with AHU Online",
+            marquee_regulasi: "Compliant with Latest Regulations",
 
             // Comparison
             comp_title: "The Old Way vs Our Way",
@@ -204,7 +296,7 @@ const I18n = {
             investasi: "Investment",
 
             // Roadmap Section
-            roadmap_title: "Legality Establishment Flow",
+            roadmap_title: "<span class=\"text-primary italic\">Legality Establishment</span> Flow",
             roadmap_subtitle: "Real-time legality establishment progress monitoring system.",
 
             // Roadmap Steps
@@ -239,6 +331,12 @@ const I18n = {
             roadmap_8_title: "Document Handover",
             roadmap_8_desc: "Delivery of all legal documents in digital and physical format (optional).",
             roadmap_8_detail: "Lifetime access to digital dashboard to store and download documents anytime.",
+            roadmap_ai_title: "AI Process Assistant",
+            roadmap_ai_subtitle: "Live Progress Monitoring",
+            roadmap_active: "Active",
+            roadmap_verified: "Verified by Licensed<br>Legal Consultants",
+            roadmap_est: "Est. Completion",
+            roadmap_days: "5-7 Working Days",
 
             // Bento / Why Choose Us
             bento_title_pre: "Why", bento_title_accent: "Millennial Founders", bento_title_post: "Choose Us?",
@@ -251,6 +349,93 @@ const I18n = {
             // Testimonials
             testi_title_pre: "What Those Who Have", testi_title_accent: "Gone Legal Say?",
             testi_subtitle: "More than 5,000 entrepreneurs have entrusted their legality to us.",
+            testi_1_text: "\"The process is really lightning fast! My Individual PT was issued in less than 24 hours. The admin is fast responding and very patient explaining the steps. Highly recommended for young founders!\"",
+            testi_1_name: "Andi Maulana",
+            testi_1_position: "CEO TechStart ID",
+            testi_2_text: "\"The most transparent pricing I've ever encountered. No hidden fees along the way. Akses Legal made my dream of having my own coffee brand come true through HAKI.\"",
+            testi_2_name: "Siti Rahma",
+            testi_2_position: "Owner Kopi Kreasi",
+            testi_3_text: "\"Initially skeptical because the price was cheap, but it turned out to be premium service! The monitoring dashboard is cool, get continuous updates until the documents are really done. Akses Legal is the best partner.\"",
+            testi_3_name: "Budi Wijaya",
+            testi_3_position: "Founder CraftCo",
+            
+            // Blog Section
+            blog_title_pre: "Insight",
+            blog_title_accent: "& Business Education",
+            blog_subtitle: "Learn the latest regulations to keep your business compliant and competitive.",
+            blog_view_all: "View All Articles",
+            
+            // CTA Section
+            cta_title_pre: "Ready to Move Forward with",
+            cta_title_accent: "PT Akses Legal Indonesia?",
+            cta_desc: "Experience the ease of managing legality with the best digital-based services.",
+            cta_whatsapp: "WhatsApp Now",
+            cta_learn: "Learn the Process",
+            cta_entrepreneurs: "Entrepreneurs Helped",
+            cta_success: "Success Rate",
+            cta_no_fees: "Hidden Fees",
+            cta_secure: "Data Protection",
+            
+            // Service Points Section
+            service_section_title_pre: "Why Choose",
+            service_section_title_accent: "AKSES LEGAL INDONESIA?",
+            service_section_subtitle: "We are not just a service, we are your business growth partner.",
+            service_fast_title: "Fast Process",
+            service_fast_desc: "NIB and Deed documents completed in 1-3 working days without hassle.",
+            service_transparent_title: "Transparent Pricing",
+            service_transparent_desc: "No hidden fees. Price packages already include all administrative costs.",
+            service_expert_title: "Expert Consultation",
+            service_expert_desc: "Professional legal team ready to guide your business steps 24/7.",
+            service_digital_title: "100% Digital",
+            service_digital_desc: "Monitor your registration progress anytime through the digital dashboard.",
+            
+            // Mobile Menu
+            mobile_chat: "Chat Consultant",
+            
+            // Blog Articles
+            blog_tag_regulasi: "Regulation 2024",
+            blog_tag_tips: "Tax Tips",
+            blog_tag_startup: "Startup Kit",
+            blog_article_1_title: "Difference Between Regular PT and Individual PT in 2024",
+            blog_article_1_desc: "Find out which is most beneficial for your current business scale based on the latest regulations...",
+            blog_article_2_title: "Complete Guide to EFIN Activation for New Companies",
+            blog_article_2_desc: "Easy steps to manage your business tax obligations without having to go to the tax office...",
+            blog_article_3_title: "How to Protect Your Trademark from Competitor Infringement",
+            blog_article_3_desc: "The importance of IPR as an intangible asset worth billions in the future...",
+            
+            // Roadmap
+            roadmap_step: "Step",
+            
+            // About Page
+            about_title_pre: "Building",
+            about_title_accent: "Indonesia's Legal Future",
+            about_title_post: "",
+            about_subtitle: "PT Akses Legal Indonesia is a strategic partner for thousands of entrepreneurs in securing their business legal foundation through technology.",
+            about_vision_title: "Our Vision & Mission",
+            about_vision_company: "Company Vision",
+            about_vision_desc: "To become the leading force in legal service digitalization in Indonesia, empowering MSMEs to grow without bureaucratic barriers.",
+            about_mission_company: "Company Mission",
+            about_mission_1: "Provide transparent and affordable access to legality.",
+            about_mission_2: "Integrate technology into legal administrative processes.",
+            about_mission_3: "Provide solution-oriented expert consultation for business growth.",
+            about_stats_years: "Years of Dedication",
+            about_stats_clients: "Active Clients",
+            about_team_title: "Our Expert Team",
+            about_team_subtitle: "Working with high dedication to ensure every business document is legally secure.",
+            about_team_role_consultant: "Legal Consultant",
+            about_team_role_compliance: "Compliance Officer",
+            about_team_role_analyst: "Business Analyst",
+            about_team_role_tax: "Tax Consultant",
+            about_team_founder: "Founder / CEO",
+            about_team_cofounder: "Co-Founder",
+            about_team_expert: "Legal Tech Expert",
+            about_team_partner: "Managing Partner",
+            about_cta_title_pre: "Be Part of",
+            about_cta_title_number: "5,000+",
+            about_cta_title_post: "Legally Successful Businesses",
+            about_cta_desc: "Consult your best business structure today with our expert team for free.",
+            about_cta_contact: "Contact Us Now",
+            about_cta_services: "View Services",
 
             // FAQ
             faq_title: "Frequently Asked Questions",
@@ -282,7 +467,16 @@ const I18n = {
 
             // Footer
             footer_links_main: "Main Services", footer_links_company: "Company", footer_links_contact: "Contact Us",
-            footer_copyright: "© 2025 PT Akses Legal Indonesia. All Rights Reserved."
+            footer_copyright: "© 2025 PT Akses Legal Indonesia. All Rights Reserved.",
+            footer_link_pt: "Individual PT Establishment",
+            footer_link_cv: "CV Registration",
+            footer_link_haki: "Intellectual Property Rights",
+            footer_link_halal: "Halal & PIRT Certification",
+            footer_link_about: "About Us",
+            footer_link_blog: "Blog & Education",
+            footer_link_contact: "Contact Us",
+            footer_link_terms: "Terms & Conditions",
+            footer_link_privacy: "Privacy Policy"
         }
     },
 

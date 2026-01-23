@@ -45,6 +45,7 @@
             transform: translateY(0);
         }
     </style>
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </head>
 
@@ -62,27 +63,27 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html" data-i18n="nav_layanan">
                     Layanan
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html" data-i18n="nav_harga">
                     Harga
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
-                <a class="text-sm font-bold text-primary transition-all relative group py-2" href="about.html">
+                <a class="text-sm font-bold text-primary transition-all relative group py-2" href="about.html" data-i18n="nav_tentang">
                     Tentang Kami
                     <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-all"></span>
                 </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html" data-i18n="nav_blog">
                     Blog
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
                 <a class="text-sm font-black text-accent bg-accent/10 px-4 py-2 rounded-xl border border-accent/20 hover:bg-accent/20 transition-all"
-                    href="dashboard.html">
+                    href="dashboard.html" data-i18n="nav_dashboard">
                     Dashboard
                 </a>
             </nav>
@@ -91,7 +92,8 @@
             <div class="flex items-center gap-4">
                 <a href="https://wa.me/6285251519925?text=Halo%20Akses%20Legal,%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20perusahaan..."
                     target="_blank"
-                    class="hidden sm:flex items-center justify-center rounded-xl h-11 px-6 bg-primary text-white text-sm font-black transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 active:scale-95">
+                    class="hidden sm:flex items-center justify-center rounded-xl h-11 px-6 bg-primary text-white text-sm font-black transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 active:scale-95"
+                    data-i18n="btn_konsultasi">
                     Konsultasi Gratis
                 </a>
 
@@ -118,20 +120,20 @@
                 </button>
             </div>
             <nav class="flex flex-col gap-8 text-2xl font-black text-gray-900 dark:text-white mb-auto">
-                <a href="layanan.html" class="flex items-center justify-between group">Layanan <span
+                <a href="layanan.html" class="flex items-center justify-between group" data-i18n="nav_layanan">Layanan <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="harga.html" class="flex items-center justify-between group">Harga <span
+                <a href="harga.html" class="flex items-center justify-between group" data-i18n="nav_harga">Harga <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="about.html" class="flex items-center justify-between group">Tentang Kami <span
+                <a href="about.html" class="flex items-center justify-between group" data-i18n="nav_tentang">Tentang Kami <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="blog.html" class="flex items-center justify-between group">Blog <span
+                <a href="blog.html" class="flex items-center justify-between group" data-i18n="nav_blog">Blog <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="dashboard.html" class="flex items-center justify-between group text-accent">Dashboard <span
+                <a href="dashboard.html" class="flex items-center justify-between group text-accent" data-i18n="nav_dashboard">Dashboard <span
                         class="material-symbols-outlined text-accent group-hover:translate-x-2 transition-transform">dashboard</span></a>
             </nav>
             <a href="https://wa.me/6285251519925" target="_blank"
                 class="w-full h-16 bg-primary text-white flex items-center justify-center rounded-2xl font-black gap-2 shadow-xl shadow-primary/20 mt-12">
-                <span class="material-symbols-outlined">chat</span> Chat Konsultan
+                <span class="material-symbols-outlined">chat</span> <span data-i18n="mobile_chat">Chat Konsultan</span>
             </a>
         </div>
     </header>
@@ -141,10 +143,10 @@
         <section class="py-24 bg-gradient-to-br from-primary to-[#1a2c3d] text-white overflow-hidden relative px-6">
             <div class="max-w-[1200px] mx-auto relative z-10">
                 <div class="max-w-3xl space-y-4 md:space-y-6 reveal-up">
-                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight leading-tight">Membangun
-                        <br /><span class="text-secondary">Masa Depan Legalitas</span> Indonesia
+                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight leading-tight"><span data-i18n="about_title_pre">Membangun</span>
+                        <br /><span class="text-secondary" data-i18n="about_title_accent">Masa Depan Legalitas</span> <span data-i18n="about_title_post">Indonesia</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-white/80 font-medium leading-relaxed">PT Akses Legal Indonesia
+                    <p class="text-lg md:text-xl text-white/80 font-medium leading-relaxed" data-i18n="about_subtitle">PT Akses Legal Indonesia
                         adalah partner
                         strategis bagi ribuan pengusaha dalam mengamankan pondasi legal bisnis mereka melalui teknologi.
                     </p>
@@ -160,7 +162,7 @@
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="reveal-up space-y-6 md:space-y-8">
                     <div class="space-y-3 md:space-y-4">
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight">Visi &
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight" data-i18n="about_vision_title">Visi &
                             Misi Kami
                         </h2>
                         <div class="w-16 md:w-20 h-1 md:h-1.5 bg-secondary rounded-full"></div>
@@ -173,8 +175,8 @@
                                 <span class="material-symbols-outlined text-3xl">rocket_launch</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-xl font-black text-gray-900 dark:text-white">Visi Perusahaan</h3>
-                                <p class="text-gray-500 font-medium leading-relaxed">Menjadi garda terdepan dalam
+                                <h3 class="text-xl font-black text-gray-900 dark:text-white" data-i18n="about_vision_company">Visi Perusahaan</h3>
+                                <p class="text-gray-500 font-medium leading-relaxed" data-i18n="about_vision_desc">Menjadi garda terdepan dalam
                                     digitalisasi layanan hukum di Indonesia, memberdayakan UMKM untuk tumbuh tanpa
                                     hambatan birokrasi.</p>
                             </div>
@@ -186,22 +188,22 @@
                                 <span class="material-symbols-outlined text-3xl">target</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-xl font-black text-gray-900 dark:text-white">Misi Perusahaan</h3>
+                                <h3 class="text-xl font-black text-gray-900 dark:text-white" data-i18n="about_mission_company">Misi Perusahaan</h3>
                                 <ul class="space-y-3 text-gray-500 font-medium">
                                     <li class="flex items-start gap-2">
                                         <span
                                             class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        Menyediakan akses legalitas yang transparan dan terjangkau.
+                                        <span data-i18n="about_mission_1">Menyediakan akses legalitas yang transparan dan terjangkau.</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span
                                             class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        Mengintegrasikan teknologi ke dalam proses administratif hukum.
+                                        <span data-i18n="about_mission_2">Mengintegrasikan teknologi ke dalam proses administratif hukum.</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span
                                             class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        Memberikan konsultasi ahli yang solutif bagi pertumbuhan bisnis.
+                                        <span data-i18n="about_mission_3">Memberikan konsultasi ahli yang solutif bagi pertumbuhan bisnis.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -215,13 +217,13 @@
                             class="rounded-[2.5rem] shadow-xl w-full aspect-[4/5] object-cover" alt="Office Life">
                         <div class="bg-primary p-8 rounded-[2.5rem] text-white">
                             <p class="text-4xl font-black mb-1">5+</p>
-                            <p class="text-xs font-black uppercase tracking-widest opacity-80">Tahun Dedikasi</p>
+                            <p class="text-xs font-black uppercase tracking-widest opacity-80" data-i18n="about_stats_years">Tahun Dedikasi</p>
                         </div>
                     </div>
                     <div class="space-y-6">
                         <div class="bg-secondary p-8 rounded-[2.5rem] text-primary">
                             <p class="text-4xl font-black mb-1">2K+</p>
-                            <p class="text-xs font-black uppercase tracking-widest opacity-80">Klien Aktif</p>
+                            <p class="text-xs font-black uppercase tracking-widest opacity-80" data-i18n="about_stats_clients">Klien Aktif</p>
                         </div>
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
                             class="rounded-[2.5rem] shadow-xl w-full aspect-[4/5] object-cover" alt="Teamwork">
@@ -234,8 +236,8 @@
         <section class="py-24 bg-white dark:bg-gray-900/50">
             <div class="max-w-[1200px] mx-auto px-6">
                 <div class="text-center mb-16 reveal-up">
-                    <h2 class="text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-4">Tim Ahli Kami</h2>
-                    <p class="text-lg text-gray-500 max-w-2xl mx-auto font-medium">Bekerja dengan dedikasi tinggi untuk
+                    <h2 class="text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-4" data-i18n="about_team_title">Tim Ahli Kami</h2>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto font-medium" data-i18n="about_team_subtitle">Bekerja dengan dedikasi tinggi untuk
                         memastikan setiap dokumen bisnis Anda aman secara hukum.</p>
                 </div>
 
@@ -247,12 +249,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest">Legal
+                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_consultant">Legal
                                     Consultant</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Bapak [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Founder / CEO</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_founder">Founder / CEO</p>
                     </div>
 
                     <!-- Team Member 2 -->
@@ -262,12 +264,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest">Compliance
+                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_compliance">Compliance
                                     Officer</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Ibu [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Co-Founder</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_cofounder">Co-Founder</p>
                     </div>
 
                     <!-- Team Member 3 -->
@@ -277,12 +279,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest">Business
+                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_analyst">Business
                                     Analyst</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Nama [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Legal Tech Expert</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_expert">Legal Tech Expert</p>
                     </div>
 
                     <!-- Team Member 4 -->
@@ -292,12 +294,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest">Tax
+                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_tax">Tax
                                     Consultant</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Nama [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Managing Partner</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_partner">Managing Partner</p>
                     </div>
                 </div>
             </div>
@@ -307,19 +309,21 @@
         <section class="py-12 md:py-24 max-w-[1200px] mx-auto px-6 mb-10 md:mb-20">
             <div
                 class="bg-primary rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-20 text-center space-y-6 md:space-y-8 reveal-up">
-                <h2 class="text-2xl md:text-5xl font-black text-white leading-tight">Jadilah Bagian dari <br
-                        class="hidden md:block" />5,000+
-                    Bisnis yang Sukses Secara Legal</h2>
-                <p class="text-base md:text-xl text-white/80 max-w-2xl mx-auto">Konsultasikan struktur bisnis terbaik
+                <h2 class="text-2xl md:text-5xl font-black text-white leading-tight"><span data-i18n="about_cta_title_pre">Jadilah Bagian dari</span> <br
+                        class="hidden md:block" /><span data-i18n="about_cta_title_number">5,000+</span>
+                    <span data-i18n="about_cta_title_post">Bisnis yang Sukses Secara Legal</span></h2>
+                <p class="text-base md:text-xl text-white/80 max-w-2xl mx-auto" data-i18n="about_cta_desc">Konsultasikan struktur bisnis terbaik
                     Anda hari ini
                     dengan tim ahli kami secara gratis.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
                     <button
-                        class="h-14 md:h-16 px-8 md:px-10 bg-secondary text-primary font-black text-base md:text-lg rounded-xl md:rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all">
+                        class="h-14 md:h-16 px-8 md:px-10 bg-secondary text-primary font-black text-base md:text-lg rounded-xl md:rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all"
+                        data-i18n="about_cta_contact">
                         Hubungi Kami Sekarang
                     </button>
                     <button
-                        class="h-14 md:h-16 px-8 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-base md:text-lg rounded-xl md:rounded-2xl hover:bg-white/20 transition-all">
+                        class="h-14 md:h-16 px-8 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-base md:text-lg rounded-xl md:rounded-2xl hover:bg-white/20 transition-all"
+                        data-i18n="about_cta_services">
                         Lihat Layanan
                     </button>
                 </div>
@@ -334,40 +338,40 @@
                 <div class="flex flex-col gap-4">
                     <img src="assets/images/logo-color.png" alt="ALI Logo Footer"
                         class="h-14 w-auto object-contain self-start">
-                    <p class="text-base text-gray-500 font-medium leading-relaxed">
+                    <p class="text-base text-gray-500 font-medium leading-relaxed" data-i18n="footer_desc">
                         Solusi terdepan untuk legalitas bisnis UMK di Indonesia. Profesional, Transparan, dan
                         Terpercaya.
                     </p>
                 </div>
             </div>
             <div>
-                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]">Layanan
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" data-i18n="footer_links_main">Layanan
                     Utama</h4>
                 <ul class="space-y-5 text-sm font-bold text-gray-500">
-                    <li><a class="hover:text-primary transition-colors" href="layanan-pt.html">Pendirian PT
+                    <li><a class="hover:text-primary transition-colors" href="layanan-pt.html" data-i18n="footer_link_pt">Pendirian PT
                             Perorangan</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="layanan-cv.html">Pendaftaran CV</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="layanan-haki.html">Hak Kekayaan
+                    <li><a class="hover:text-primary transition-colors" href="layanan-cv.html" data-i18n="footer_link_cv">Pendaftaran CV</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="layanan-haki.html" data-i18n="footer_link_haki">Hak Kekayaan
                             Intelektual</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="layanan-halal.html">Sertifikasi Halal &
+                    <li><a class="hover:text-primary transition-colors" href="layanan-halal.html" data-i18n="footer_link_halal">Sertifikasi Halal &
                             PIRT</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]">Perusahaan
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" data-i18n="footer_links_company">Perusahaan
                 </h4>
                 <ul class="space-y-5 text-sm font-bold text-gray-500">
-                    <li><a class="hover:text-primary transition-colors" href="about.html">Tentang Kami</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="blog.html">Blog & Edukasi</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="kontak.html">Hubungi Kami</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="syarat-ketentuan.html">Syarat &
+                    <li><a class="hover:text-primary transition-colors" href="about.html" data-i18n="footer_link_about">Tentang Kami</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="blog.html" data-i18n="footer_link_blog">Blog & Edukasi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="kontak.html" data-i18n="footer_link_contact">Hubungi Kami</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="syarat-ketentuan.html" data-i18n="footer_link_terms">Syarat &
                             Ketentuan</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="kebijakan-privasi.html">Kebijakan
+                    <li><a class="hover:text-primary transition-colors" href="kebijakan-privasi.html" data-i18n="footer_link_privacy">Kebijakan
                             Privasi</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]">Hubungi
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" data-i18n="footer_links_contact">Hubungi
                     Kami</h4>
                 <div class="space-y-6">
                     <div class="flex items-center gap-4 text-sm text-gray-600 font-bold">
@@ -380,7 +384,7 @@
             </div>
         </div>
         <div class="max-w-[1200px] mx-auto mt-20 pt-10 border-t border-gray-100 dark:border-gray-800 text-center">
-            <p class="text-xs font-black text-gray-400 uppercase tracking-[0.2em]">© 2025 PT Akses Legal Indonesia.
+            <p class="text-xs font-black text-gray-400 uppercase tracking-[0.2em]" data-i18n="footer_copyright">© 2025 PT Akses Legal Indonesia.
                 Seluruh Hak Cipta Dilindungi.</p>
         </div>
     </footer>
