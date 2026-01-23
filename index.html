@@ -107,10 +107,28 @@
             0% {
                 transform: translateX(0);
             }
-
             100% {
                 transform: translateX(-50%);
             }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .animate-marquee {
+            display: flex;
+            gap: 2.5rem;
+            animation: marquee 40s linear infinite;
+            will-change: transform;
+            white-space: nowrap;
+            width: fit-content;
+        }
+        
+        .animate-marquee > span {
+            flex-shrink: 0;
         }
 
         /* Roadmap Dashboard Styles */
@@ -375,7 +393,7 @@
     </header>
     <main class="relative">
         <!-- Hero Section -->
-        <section class="relative  pb-16 md:pb-24 mesh-gradient overflow-hidden">
+        <section class="relative pb-16 md:pb-24 mesh-gradient overflow-hidden">
             <!-- Subliminal Background -->
             <div class="absolute inset-0 pointer-events-none -z-10">
                 <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-blob">
@@ -429,29 +447,29 @@
                     <!-- Trust Indicators -->
                     <div class="flex flex-wrap items-center gap-10 pt-4 border-t border-gray-100 dark:border-gray-800">
                         <div class="flex flex-col gap-2">
-                            <div class="flex -space-x-3">
-                                <img src="https://ui-avatars.com/api/?name=A&background=random"
-                                    class="size-10 rounded-full border-2 border-white dark:border-gray-900" />
-                                <img src="https://ui-avatars.com/api/?name=B&background=random"
-                                    class="size-10 rounded-full border-2 border-white dark:border-gray-900" />
-                                <img src="https://ui-avatars.com/api/?name=C&background=random"
-                                    class="size-10 rounded-full border-2 border-white dark:border-gray-900" />
-                                <div
-                                    class="size-10 rounded-full bg-primary flex items-center justify-center text-[10px] font-black text-white border-2 border-white dark:border-gray-900">
-                                    +2K</div>
+                            <div class="flex items-center gap-2">
+                                <div class="size-10 rounded-full bg-primary flex items-center justify-center border-2 border-white dark:border-gray-900 shadow-sm">
+                                    <span class="material-symbols-outlined text-white text-xl">verified</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-[13px] font-black dark:text-white leading-tight">Resmi OSS</span>
+                                    <span class="text-[9px] text-gray-400 font-bold uppercase tracking-tighter">Kemenkumham RI</span>
+                                </div>
                             </div>
                             <p class="text-[11px] font-bold text-gray-500 uppercase tracking-widest"
-                                data-i18n="trust_client">Client yang Puas
+                                data-i18n="">Legalitas Terjamin
                             </p>
                         </div>
+
                         <div class="h-10 w-px bg-gray-200 dark:bg-gray-800 hidden sm:block"></div>
+
                         <div class="flex flex-col gap-1">
                             <div class="flex items-center gap-2">
-                                <span class="material-symbols-outlined text-2xl text-[#f3b444] fill-1">stars</span>
-                                <span class="text-xl font-black dark:text-white">4.9/5.0</span>
+                                <span class="material-symbols-outlined text-2xl text-secondary fill-1">bolt</span>
+                                <span class="text-xl font-black dark:text-white">± 3 Hari</span>
                             </div>
                             <p class="text-[11px] font-bold text-gray-500 uppercase tracking-widest"
-                                data-i18n="trust_review">Google Reviews</p>
+                                data-i18n="">Proses Izin Terbit</p>
                         </div>
                     </div>
                 </div>
@@ -470,58 +488,72 @@
                         </div>
 
                         <!-- Floating Premium Cards -->
-                        <div
-                            class="absolute -left-12 top-1/2 -translate-y-1/2 glass-premium p-5 rounded-[2.5rem] shadow-2xl animate-float z-20 max-w-[200px]">
-                            <div class="flex items-start gap-4">
-                                <div
-                                    class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-3xl">task_alt</span>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-black text-gray-900 dark:text-white leading-tight mb-1">Izin
-                                        Terbit!</h4>
-                                    <p class="text-[10px] font-bold text-gray-500">Legalitas Anda selesai diproses.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="absolute -left-12 top-1/2 -translate-y-1/2 glass-premium p-5 rounded-[2.5rem] shadow-2xl animate-float z-20 max-w-[200px]">
+    <div class="flex items-start gap-4">
+        <div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-3xl">sentiment_very_satisfied</span>
+        </div>
+        <div>
+            <h4 class="text-sm font-black text-gray-900 dark:text-white leading-tight mb-1">
+                Klien Puas!
+            </h4>
+            <p class="text-[10px] font-bold text-gray-500">"Sangat cepat & dibantu sampai tuntas."</p>
+        </div>
+    </div>
+</div>
 
-                        <div
-                            class="absolute -right-8 bottom-12 glass-premium p-6 rounded-[2.5rem] shadow-2xl animate-float-delayed z-20">
-                            <div class="flex items-center gap-4">
-                                <div class="flex flex-col">
-                                    <span class="text-2xl font-black text-primary">99%</span>
-                                    <span
-                                        class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">SUCCESS
-                                        RATE</span>
-                                </div>
-                                <div
-                                    class="size-10 rounded-full bg-emerald-500 text-white flex items-center justify-center">
-                                    <span class="material-symbols-outlined">trending_up</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="absolute -right-8 bottom-12 glass-premium p-6 rounded-[2.5rem] shadow-2xl animate-float-delayed z-20">
+    <div class="flex items-center gap-4">
+        <div class="flex flex-col">
+            <span class="text-2xl font-black text-primary">2.5k+</span>
+            <span class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                IZIN TERBIT
+            </span>
+        </div>
+        <div class="size-10 rounded-full bg-secondary text-white flex items-center justify-center">
+            <span class="material-symbols-outlined">description</span>
+        </div>
+    </div>
+</div>
 
                         <!-- Trusted Marquee in Visual -->
-                        <div
-                            class="absolute -bottom-10 left-0 right-0 py-4 glass-premium rounded-3xl z-30 overflow-hidden border border-white/30">
-                            <div class="flex gap-10 animate-marquee whitespace-nowrap px-6">
-                                <span
-                                    class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">Founder+</span>
-                                <span
-                                    class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">Strategy_Co</span>
-                                <span
-                                    class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">Legal_Eye</span>
-                                <span
-                                    class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">Biz_Flow</span>
-                                <span
-                                    class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">Founder+</span>
-                                <span
-                                    class="text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">Strategy_Co</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <div class="absolute -bottom-10 left-0 right-0 py-4 glass-premium rounded-3xl z-30 overflow-hidden border border-white/30">
+    <div class="marquee-container px-6">
+        <div class="animate-marquee px-6">
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Terdaftar OSS RBA  
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Berizin Kemenkumham
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Aman & Sah Secara Hukum
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Terintegrasi AHU Online
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Sesuai Regulasi Terkini
+        </span>
+        <!-- Duplicate for seamless marquee -->
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Terdaftar OSS RBA  
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Berizin Kemenkumham
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Aman & Sah Secara Hukum
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Terintegrasi AHU Online
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Sesuai Regulasi Terkini
+        </span>
+        </div>
+    </div>
+</div>
         </section>
         <!-- Trust Bar & Stats -->
         <section
