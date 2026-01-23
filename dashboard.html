@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Digital Dashboard - PT Akses Legal Indonesia</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2a6ba7",
+                        "accent": "#F3B444",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#1a2c3d",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-[#f8fafc] dark:bg-[#0f172a] font-display min-h-screen">
+    <!-- Sidebar -->
+    <aside
+        class="fixed left-0 top-0 bottom-0 w-64 bg-white dark:bg-[#1e293b] border-r border-slate-200 dark:border-slate-800 hidden lg:flex flex-col z-50">
+        <div class="p-6">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-xl font-black tracking-tighter transition-all group-hover:scale-105">
+                    <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-24 w-auto">
+                </span>
+            </a>
+        </div>
+
+        <nav class="flex-1 px-4 py-4 space-y-1">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl font-bold">
+                <span class="material-symbols-outlined">dashboard</span>
+                Overview
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl font-bold transition-all">
+                <span class="material-symbols-outlined">description</span>
+                Permohonan Saya
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl font-bold transition-all">
+                <span class="material-symbols-outlined">folder</span>
+                Dokumen Legal
+            </a>
+            <a href="harga.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl font-bold transition-all">
+                <span class="material-symbols-outlined">payments</span>
+                Billing & Harga
+            </a>
+            <div class="pt-8 pb-4 px-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Layanan Baru
+            </div>
+            <a href="layanan.html"
+                class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl font-bold transition-all">
+                <span class="material-symbols-outlined">add_box</span>
+                Tambah Layanan
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex items-center gap-3 px-4 py-3">
+                <div class="size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">JD
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-black dark:text-white">John Doe</span>
+                    <span class="text-[10px] font-bold text-slate-400">Premium Member</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64 min-h-screen">
+        <!-- Top Nav -->
+        <nav
+            class="sticky top-0 h-20 bg-white/80 dark:bg-[#1e293b]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6 lg:px-10 z-40">
+            <button
+                class="lg:hidden size-11 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <div class="flex-1 max-w-xl mx-8 hidden sm:block">
+                <div class="relative">
+                    <span
+                        class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">search</span>
+                    <input type="text" placeholder="Cari dokumen atau layanan..."
+                        class="w-full h-11 pl-12 pr-4 bg-slate-50 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 transition-all">
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="size-11 rounded-xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center text-slate-500 relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span
+                        class="absolute top-2.5 right-2.5 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-800"></span>
+                </button>
+                <div class="h-8 w-px bg-slate-200 dark:border-slate-800"></div>
+                <a href="index.html"
+                    class="text-sm font-black text-slate-500 hover:text-primary transition-colors">Keluar</a>
+            </div>
+        </nav>
+
+        <div class="p-6 lg:p-10">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div class="space-y-2">
+                    <h1 class="text-3xl font-black tracking-tight dark:text-white">Selamat Datang, John! 👋</h1>
+                    <p class="text-slate-500 font-bold">Pantau proses legalitas bisnis Anda secara real-time.</p>
+                </div>
+                <div class="flex gap-3">
+                    <a href="harga.html"
+                        class="h-12 px-6 bg-primary text-white rounded-xl flex items-center justify-center font-bold gap-2 hover:shadow-lg hover:shadow-primary/20 transition-all">
+                        <span class="material-symbols-outlined text-lg">add</span>
+                        Order Layanan Baru
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="bg-white dark:bg-[#1e293b] p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <div class="size-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">description</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Total Permohonan</p>
+                    <h3 class="text-2xl font-black dark:text-white">12</h3>
+                </div>
+                <div class="bg-white dark:bg-[#1e293b] p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <div
+                        class="size-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">pending_actions</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Sedang Diproses</p>
+                    <h3 class="text-2xl font-black dark:text-white">3</h3>
+                </div>
+                <div class="bg-white dark:bg-[#1e293b] p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <div
+                        class="size-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Selesai/Terbit</p>
+                    <h3 class="text-2xl font-black dark:text-white">9</h3>
+                </div>
+                <div class="bg-white dark:bg-[#1e293b] p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                    <div
+                        class="size-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">folder_shared</span>
+                    </div>
+                    <p class="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Total Dokumen</p>
+                    <h3 class="text-2xl font-black dark:text-white">24</h3>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Recent Orders -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-black dark:text-white">Permohonan Terbaru</h2>
+                        <a href="#" class="text-sm font-bold text-primary hover:underline">Lihat Semua</a>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-[#1e293b] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead
+                                class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                                <tr class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                    <th class="px-6 py-4">Layanan</th>
+                                    <th class="px-6 py-4">Status</th>
+                                    <th class="px-6 py-4">Estimasi</th>
+                                    <th class="px-6 py-4">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                                                <span class="material-symbols-outlined">business</span>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-sm font-bold dark:text-white">PT Maju Bersama</span>
+                                                <span class="text-[10px] text-slate-400">Pendirian PT Perorangan</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-3 py-1 bg-amber-500/10 text-amber-500 text-[10px] font-black rounded-full uppercase">Review
+                                            Notaris</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-xs font-bold text-slate-500">24 Jan 2024</td>
+                                    <td class="px-6 py-4">
+                                        <button class="text-primary hover:text-primary/70 transition-colors">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                                                <span class="material-symbols-outlined">verified</span>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-sm font-bold dark:text-white">Warung Kita</span>
+                                                <span class="text-[10px] text-slate-400">Sertifikasi Halal</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-black rounded-full uppercase">Selesai</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-xs font-bold text-slate-500">Terbit</td>
+                                    <td class="px-6 py-4">
+                                        <button class="text-primary hover:text-primary/70 transition-colors">
+                                            <span class="material-symbols-outlined">download</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Legal Documents Sidebar -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-black dark:text-white">Dokumen Siap</h2>
+                    <div class="space-y-4">
+                        <div
+                            class="p-4 bg-white dark:bg-[#1e293b] rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 group cursor-pointer hover:border-primary/30 transition-all">
+                            <div class="size-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center">
+                                <span class="material-symbols-outlined">picture_as_pdf</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-black dark:text-white">NIB_PT_Maju.pdf</h4>
+                                <p class="text-[10px] text-slate-400 uppercase font-black tracking-widest">Digital
+                                    Certificate</p>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">download</span>
+                        </div>
+                        <div
+                            class="p-4 bg-white dark:bg-[#1e293b] rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 group cursor-pointer hover:border-primary/30 transition-all">
+                            <div
+                                class="size-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
+                                <span class="material-symbols-outlined">picture_as_pdf</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-black dark:text-white">SK_Kemenkumham.pdf</h4>
+                                <p class="text-[10px] text-slate-400 uppercase font-black tracking-widest">Legal
+                                    Document</p>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">download</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gradient-to-br from-primary to-blue-600 rounded-[2rem] text-white space-y-4">
+                        <h4 class="text-lg font-black leading-tight">Butuh Konsultasi Legal Langsung?</h4>
+                        <p class="text-xs text-white/80 leading-relaxed font-bold">Tim legal kami siap membantu melalui
+                            video call atau chat intensif.</p>
+                        <a href="https://wa.me/6285251519925" target="_blank"
+                            class="w-full h-11 bg-white text-primary flex items-center justify-center rounded-xl text-xs font-black shadow-lg">Chat
+                            Tim Legal Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

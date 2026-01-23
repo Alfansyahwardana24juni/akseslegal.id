@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tentang Kami - PT Akses Legal Indonesia</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2a6ba7",
+                        "secondary": "#f3b444",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#1a2c3d",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#101519] dark:text-gray-100 overflow-x-hidden">
+    <!-- Top Navigation Bar (Consistent with index.html) -->
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e9edf1] dark:border-gray-800 transition-all duration-300">
+        <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-2 group shrink-0" href="index.html">
+                <span class="text-2xl font-black tracking-tighter transition-all group-hover:scale-105">
+                    <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-24 w-auto">
+                </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html">
+                    Layanan
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html">
+                    Harga
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+                <a class="text-sm font-bold text-primary transition-all relative group py-2" href="about.html">
+                    Tentang Kami
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-all"></span>
+                </a>
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html">
+                    Blog
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+                <a class="text-sm font-black text-accent bg-accent/10 px-4 py-2 rounded-xl border border-accent/20 hover:bg-accent/20 transition-all"
+                    href="dashboard.html">
+                    Dashboard
+                </a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/6285251519925?text=Halo%20Akses%20Legal,%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20perusahaan..."
+                    target="_blank"
+                    class="hidden sm:flex items-center justify-center rounded-xl h-11 px-6 bg-primary text-white text-sm font-black transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 active:scale-95">
+                    Konsultasi Gratis
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle"
+                    class="md:hidden size-11 flex items-center justify-center rounded-xl bg-gray-50 dark:bg-gray-800 text-primary transition-all hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="md:hidden fixed inset-0 z-[999] bg-white dark:bg-gray-900 p-6 flex flex-col h-screen overflow-y-auto transition-transform duration-300 translate-x-full">
+            <div class="flex items-center justify-between mb-12">
+                <a class="flex items-center gap-2 group shrink-0" href="index.html">
+                    <span class="text-2xl font-black tracking-tighter transition-all group-hover:scale-105">
+                        <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-24 w-auto">
+                    </span>
+                </a>
+                <button id="mobile-menu-close"
+                    class="size-11 flex items-center justify-center rounded-xl bg-gray-50 dark:bg-gray-800">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-8 text-2xl font-black text-gray-900 dark:text-white mb-auto">
+                <a href="layanan.html" class="flex items-center justify-between group">Layanan <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
+                <a href="harga.html" class="flex items-center justify-between group">Harga <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
+                <a href="about.html" class="flex items-center justify-between group">Tentang Kami <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
+                <a href="blog.html" class="flex items-center justify-between group">Blog <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
+                <a href="dashboard.html" class="flex items-center justify-between group text-accent">Dashboard <span
+                        class="material-symbols-outlined text-accent group-hover:translate-x-2 transition-transform">dashboard</span></a>
+            </nav>
+            <a href="https://wa.me/6285251519925" target="_blank"
+                class="w-full h-16 bg-primary text-white flex items-center justify-center rounded-2xl font-black gap-2 shadow-xl shadow-primary/20 mt-12">
+                <span class="material-symbols-outlined">chat</span> Chat Konsultan
+            </a>
+        </div>
+    </header>
+
+    <main class="relative">
+        <!-- Page Header -->
+        <section class="py-24 bg-gradient-to-br from-primary to-[#1a2c3d] text-white overflow-hidden relative px-6">
+            <div class="max-w-[1200px] mx-auto relative z-10">
+                <div class="max-w-3xl space-y-4 md:space-y-6 reveal-up">
+                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight leading-tight">Membangun
+                        <br /><span class="text-secondary">Masa Depan Legalitas</span> Indonesia
+                    </h1>
+                    <p class="text-lg md:text-xl text-white/80 font-medium leading-relaxed">PT Akses Legal Indonesia
+                        adalah partner
+                        strategis bagi ribuan pengusaha dalam mengamankan pondasi legal bisnis mereka melalui teknologi.
+                    </p>
+                </div>
+            </div>
+            <div class="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4">
+                <img src="assets/images/logo-white.png" alt="ALI Logo BG" class="w-[400px] md:w-[800px] h-auto">
+            </div>
+        </section>
+
+        <!-- Vision & Mission -->
+        <section class="py-24 max-w-[1200px] mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal-up space-y-6 md:space-y-8">
+                    <div class="space-y-3 md:space-y-4">
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight">Visi &
+                            Misi Kami
+                        </h2>
+                        <div class="w-16 md:w-20 h-1 md:h-1.5 bg-secondary rounded-full"></div>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div class="flex gap-6">
+                            <div
+                                class="size-14 shrink-0 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-black text-gray-900 dark:text-white">Visi Perusahaan</h3>
+                                <p class="text-gray-500 font-medium leading-relaxed">Menjadi garda terdepan dalam
+                                    digitalisasi layanan hukum di Indonesia, memberdayakan UMKM untuk tumbuh tanpa
+                                    hambatan birokrasi.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6">
+                            <div
+                                class="size-14 shrink-0 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center">
+                                <span class="material-symbols-outlined text-3xl">target</span>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-black text-gray-900 dark:text-white">Misi Perusahaan</h3>
+                                <ul class="space-y-3 text-gray-500 font-medium">
+                                    <li class="flex items-start gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                        Menyediakan akses legalitas yang transparan dan terjangkau.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                        Mengintegrasikan teknologi ke dalam proses administratif hukum.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                                        Memberikan konsultasi ahli yang solutif bagi pertumbuhan bisnis.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-up grid grid-cols-2 gap-6" style="transition-delay: 200ms;">
+                    <div class="space-y-6 mt-12">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80"
+                            class="rounded-[2.5rem] shadow-xl w-full aspect-[4/5] object-cover" alt="Office Life">
+                        <div class="bg-primary p-8 rounded-[2.5rem] text-white">
+                            <p class="text-4xl font-black mb-1">5+</p>
+                            <p class="text-xs font-black uppercase tracking-widest opacity-80">Tahun Dedikasi</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-secondary p-8 rounded-[2.5rem] text-primary">
+                            <p class="text-4xl font-black mb-1">2K+</p>
+                            <p class="text-xs font-black uppercase tracking-widest opacity-80">Klien Aktif</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                            class="rounded-[2.5rem] shadow-xl w-full aspect-[4/5] object-cover" alt="Teamwork">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section class="py-24 bg-white dark:bg-gray-900/50">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="text-center mb-16 reveal-up">
+                    <h2 class="text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-4">Tim Ahli Kami</h2>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto font-medium">Bekerja dengan dedikasi tinggi untuk
+                        memastikan setiap dokumen bisnis Anda aman secara hukum.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="reveal-up group" style="transition-delay: 0ms;">
+                        <div class="relative mb-6 rounded-[2rem] overflow-hidden aspect-square shadow-lg">
+                            <img src="https://i.pravatar.cc/400?u=a" alt="Tim 1"
+                                class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <span class="text-white text-xs font-black uppercase tracking-widest">Legal
+                                    Consultant</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Bapak [Placeholder]</h3>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Founder / CEO</p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="reveal-up group" style="transition-delay: 100ms;">
+                        <div class="relative mb-6 rounded-[2rem] overflow-hidden aspect-square shadow-lg">
+                            <img src="https://i.pravatar.cc/400?u=b" alt="Tim 2"
+                                class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <span class="text-white text-xs font-black uppercase tracking-widest">Compliance
+                                    Officer</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Ibu [Placeholder]</h3>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Co-Founder</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="reveal-up group" style="transition-delay: 200ms;">
+                        <div class="relative mb-6 rounded-[2rem] overflow-hidden aspect-square shadow-lg">
+                            <img src="https://i.pravatar.cc/400?u=c" alt="Tim 3"
+                                class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <span class="text-white text-xs font-black uppercase tracking-widest">Business
+                                    Analyst</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Nama [Placeholder]</h3>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Legal Tech Expert</p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="reveal-up group" style="transition-delay: 300ms;">
+                        <div class="relative mb-6 rounded-[2rem] overflow-hidden aspect-square shadow-lg">
+                            <img src="https://i.pravatar.cc/400?u=d" alt="Tim 4"
+                                class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <span class="text-white text-xs font-black uppercase tracking-widest">Tax
+                                    Consultant</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Nama [Placeholder]</h3>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Managing Partner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-12 md:py-24 max-w-[1200px] mx-auto px-6 mb-10 md:mb-20">
+            <div
+                class="bg-primary rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-20 text-center space-y-6 md:space-y-8 reveal-up">
+                <h2 class="text-2xl md:text-5xl font-black text-white leading-tight">Jadilah Bagian dari <br
+                        class="hidden md:block" />5,000+
+                    Bisnis yang Sukses Secara Legal</h2>
+                <p class="text-base md:text-xl text-white/80 max-w-2xl mx-auto">Konsultasikan struktur bisnis terbaik
+                    Anda hari ini
+                    dengan tim ahli kami secara gratis.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
+                    <button
+                        class="h-14 md:h-16 px-8 md:px-10 bg-secondary text-primary font-black text-base md:text-lg rounded-xl md:rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all">
+                        Hubungi Kami Sekarang
+                    </button>
+                    <button
+                        class="h-14 md:h-16 px-8 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-base md:text-lg rounded-xl md:rounded-2xl hover:bg-white/20 transition-all">
+                        Lihat Layanan
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Consistent) -->
+    <footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 py-20 px-6">
+        <div class="max-w-[1200px] mx-auto grid md:grid-cols-4 gap-16">
+            <div class="space-y-8">
+                <div class="flex flex-col gap-4">
+                    <img src="assets/images/logo-color.png" alt="ALI Logo Footer"
+                        class="h-14 w-auto object-contain self-start">
+                    <p class="text-base text-gray-500 font-medium leading-relaxed">
+                        Solusi terdepan untuk legalitas bisnis UMK di Indonesia. Profesional, Transparan, dan
+                        Terpercaya.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]">Layanan
+                    Utama</h4>
+                <ul class="space-y-5 text-sm font-bold text-gray-500">
+                    <li><a class="hover:text-primary transition-colors" href="layanan-pt.html">Pendirian PT
+                            Perorangan</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="layanan-cv.html">Pendaftaran CV</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="layanan-haki.html">Hak Kekayaan
+                            Intelektual</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="layanan-halal.html">Sertifikasi Halal &
+                            PIRT</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]">Perusahaan
+                </h4>
+                <ul class="space-y-5 text-sm font-bold text-gray-500">
+                    <li><a class="hover:text-primary transition-colors" href="about.html">Tentang Kami</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="blog.html">Blog & Edukasi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="kontak.html">Hubungi Kami</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="syarat-ketentuan.html">Syarat &
+                            Ketentuan</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="kebijakan-privasi.html">Kebijakan
+                            Privasi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]">Hubungi
+                    Kami</h4>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 text-sm text-gray-600 font-bold">
+                        <div class="size-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-xl">mail</span>
+                        </div>
+                        info.akseslegal.id
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1200px] mx-auto mt-20 pt-10 border-t border-gray-100 dark:border-gray-800 text-center">
+            <p class="text-xs font-black text-gray-400 uppercase tracking-[0.2em]">© 2025 PT Akses Legal Indonesia.
+                Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
