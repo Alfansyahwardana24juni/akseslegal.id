@@ -229,58 +229,717 @@
             </div>
         </section>
 
-        <!-- 3-Step Process Section -->
-        <section class="px-6 py-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Proses 3 Langkah Mudah</h2>
-                <p class="text-gray-600 dark:text-gray-400">Hanya butuh waktu sebentar untuk melegalkan bisnis impian
-                    Anda.</p>
+        <!-- Alur Pembuatan PT Section - Enhanced Animation -->
+        <section id="alur-pembuatan" class="px-6 py-20 overflow-hidden">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Alur Pembuatan PT</h2>
+                <p class="text-gray-600 dark:text-gray-400">Proses transparan dari awal hingga legalitas Anda terbit.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                <div
-                    class="hidden md:block absolute top-24 left-[15%] right-[15%] h-0.5 bg-dashed border-t-2 border-dashed border-gray-200 dark:border-gray-700 z-0">
+
+            <!-- Mobile Progress Indicator -->
+            <div class="md:hidden flex justify-center mb-8">
+                
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Desktop Progress Line -->
+                <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 md:-translate-x-1/2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div id="progress-fill" class="progress-line w-full rounded-full"></div>
                 </div>
-                <!-- Step 1 -->
-                <div class="step-card group relative z-10 flex flex-col items-center text-center">
-                    <div
-                        class="step-icon size-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex items-center justify-center border-2 border-primary mb-6 transition-all duration-300">
-                        <span class="material-symbols-outlined text-4xl text-primary">edit_note</span>
-                        <div
-                            class="absolute -top-3 -right-3 size-8 bg-accent text-white font-black rounded-full flex items-center justify-center shadow-md">
-                            1</div>
+
+                <!-- Steps Container -->
+                <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-y-12" id="timeline-steps">
+                    
+                    <!-- Step 1 -->
+                    <div class="timeline-step pl-20 md:pl-0 md:text-right md:pr-16 relative md:z-10" data-step="1">
+                        <div class="step-connector absolute left-8 md:left-auto md:right-0 top-1/2 -translate-y-1/2 md:translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">1</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-[3rem]"></div>
+                            <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-primary/5 to-transparent rounded-tr-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 md:justify-end mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-blue-500 transition-all duration-500">support_agent</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">Konsultasi</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Diskusi kebutuhan legalitas Anda</p>
+                                <div class="flex items-center gap-2 md:justify-end">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-500 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">schedule</span>
+                                        15-30 menit
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Isi Formulir</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm">Masukkan data diri dan nama usaha secara online
-                        lewat dashboard kami yang user-friendly.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="step-card group relative z-10 flex flex-col items-center text-center">
-                    <div
-                        class="step-icon size-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex items-center justify-center border-2 border-primary mb-6 transition-all duration-300">
-                        <span class="material-symbols-outlined text-4xl text-primary">history_edu</span>
-                        <div
-                            class="absolute -top-3 -right-3 size-8 bg-accent text-white font-black rounded-full flex items-center justify-center shadow-md">
-                            2</div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="2">
+                        <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">2</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-purple-500/10 to-transparent rounded-br-[3rem]"></div>
+                            <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-purple-500/5 to-transparent rounded-tl-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/30 dark:to-purple-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-purple-500 transition-all duration-500">fact_check</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">Validasi Dokumen</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Pemeriksaan kelengkapan berkas</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-purple-500 bg-purple-50 dark:bg-purple-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">description</span>
+                                        KTP, NPWP
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Proses Dokumen</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm">Tim ahli kami memproses verifikasi dan
-                        pendaftaran ke sistem Kemenkumham secara langsung.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="step-card group relative z-10 flex flex-col items-center text-center">
-                    <div
-                        class="step-icon size-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex items-center justify-center border-2 border-primary mb-6 transition-all duration-300">
-                        <span class="material-symbols-outlined text-4xl text-primary">card_membership</span>
-                        <div
-                            class="absolute -top-3 -right-3 size-8 bg-accent text-white font-black rounded-full flex items-center justify-center shadow-md">
-                            3</div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-step pl-20 md:pl-0 md:text-right md:pr-16 relative md:z-10" data-step="3">
+                        <div class="step-connector absolute left-8 md:left-auto md:right-0 top-1/2 -translate-y-1/2 md:translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">3</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-amber-500/10 to-transparent rounded-bl-[3rem]"></div>
+                            <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-amber-500/5 to-transparent rounded-tr-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 md:justify-end mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-amber-100 to-amber-50 dark:from-amber-900/30 dark:to-amber-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-amber-500 transition-all duration-500">bookmark_added</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">Booking Nama</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Reservasi nama PT di Kemenkumham</p>
+                                <div class="flex items-center gap-2 md:justify-end">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-amber-600 bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">hourglass_top</span>
+                                        1-2 hari
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Legalitas Terbit</h3>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm">Sertifikat PT &amp; NIB diterbitkan dan bisa
-                        langsung Anda download di dashboard.</p>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="4">
+                        <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">4</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-rose-500/10 to-transparent rounded-br-[3rem]"></div>
+                            <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-rose-500/5 to-transparent rounded-tl-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-rose-100 to-rose-50 dark:from-rose-900/30 dark:to-rose-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-rose-500 transition-all duration-500">history_edu</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">Akta Notaris</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Pembuatan akta pendirian resmi</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-rose-500 bg-rose-50 dark:bg-rose-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">gavel</span>
+                                        Notaris Resmi
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="timeline-step pl-20 md:pl-0 md:text-right md:pr-16 relative md:z-10" data-step="5">
+                        <div class="step-connector absolute left-8 md:left-auto md:right-0 top-1/2 -translate-y-1/2 md:translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">5</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-[3rem]"></div>
+                            <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-emerald-500/5 to-transparent rounded-tr-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 md:justify-end mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-50 dark:from-emerald-900/30 dark:to-emerald-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-emerald-500 transition-all duration-500">verified</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">SK Kemenkumham</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Pengesahan badan hukum PT</p>
+                                <div class="flex items-center gap-2 md:justify-end">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">verified_user</span>
+                                        Resmi
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="6">
+                        <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">6</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-br-[3rem]"></div>
+                            <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-cyan-500/5 to-transparent rounded-tl-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-cyan-100 to-cyan-50 dark:from-cyan-900/30 dark:to-cyan-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-cyan-500 transition-all duration-500">account_balance</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">NPWP Perusahaan</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Pendaftaran pajak badan usaha</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-cyan-600 bg-cyan-50 dark:bg-cyan-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">receipt_long</span>
+                                        DJP Online
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="timeline-step pl-20 md:pl-0 md:text-right md:pr-16 relative md:z-10" data-step="7">
+                        <div class="step-connector absolute left-8 md:left-auto md:right-0 top-1/2 -translate-y-1/2 md:translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">7</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner -->
+                            <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-bl-[3rem]"></div>
+                            <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-indigo-500/5 to-transparent rounded-tr-[2rem]"></div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 md:justify-end mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-50 dark:from-indigo-900/30 dark:to-indigo-800/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-indigo-500 transition-all duration-500">badge</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">NIB & Izin</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">Nomor Induk Berusaha via OSS</p>
+                                <div class="flex items-center gap-2 md:justify-end">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">public</span>
+                                        OSS RBA
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8 - Final -->
+                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="8">
+                        <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2 z-20">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">8</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <!-- Decorative corner - special for final -->
+                            <div class="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-primary/15 via-accent/10 to-transparent rounded-br-[4rem]"></div>
+                            <div class="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-accent/10 via-primary/5 to-transparent rounded-tl-[3rem]"></div>
+                            <div class="absolute top-2 right-2 text-xl opacity-20">🎉</div>
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 dark:from-primary/30 dark:to-accent/20 flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl text-primary transition-all duration-500">celebration</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">Legalitas Terbit</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">PT Anda resmi terdaftar! 🎊</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">star</span>
+                                        Selesai!
+                                    </span>
+                                    <span class="inline-flex items-center gap-1 text-[10px] font-bold text-accent bg-accent/10 px-2 py-1 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">download</span>
+                                        Siap Unduh
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <style>
+            /* Progress Line with traveling particle */
+            .progress-line {
+                height: 0%;
+                background: linear-gradient(180deg, #2a6ba7, #F3B444, #2a6ba7);
+                transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+            }
+
+            .progress-line::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 16px;
+                height: 16px;
+                background: radial-gradient(circle, #F3B444, #e5a030);
+                border-radius: 50%;
+                box-shadow: 0 0 20px #F3B444, 0 0 40px #F3B444, 0 0 60px rgba(243, 180, 68, 0.5);
+                animation: particlePulse 1s ease-in-out infinite;
+            }
+
+            @keyframes particlePulse {
+                0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
+                50% { transform: translateX(-50%) scale(1.3); opacity: 0.8; }
+            }
+
+            /* Glassmorphism step cards */
+            .timeline-step .step-card {
+                position: relative;
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.9) !important;
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .dark .timeline-step .step-card {
+                background: rgba(31, 41, 55, 0.9) !important;
+            }
+
+            /* 3D tilt effect on hover */
+            .timeline-step:hover .step-card {
+                transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-5px);
+            }
+
+            /* Active Step Styles - Enhanced */
+            .timeline-step.active .step-badge {
+                border-color: #2a6ba7 !important;
+                background: linear-gradient(135deg, #2a6ba7, #3b82f6) !important;
+                transform: scale(1.2) rotate(5deg);
+                box-shadow: 
+                    0 0 0 6px rgba(42, 107, 167, 0.15),
+                    0 0 0 12px rgba(42, 107, 167, 0.1),
+                    0 15px 50px rgba(42, 107, 167, 0.4);
+                animation: badgeFloat 2s ease-in-out infinite;
+            }
+
+            @keyframes badgeFloat {
+                0%, 100% { transform: scale(1.2) rotate(5deg) translateY(0); }
+                50% { transform: scale(1.2) rotate(5deg) translateY(-5px); }
+            }
+
+            .timeline-step.active .step-number {
+                color: white !important;
+                text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            }
+
+            .timeline-step.active .step-card {
+                border-color: #2a6ba7 !important;
+                background: linear-gradient(135deg, rgba(42, 107, 167, 0.1), rgba(59, 130, 246, 0.05)) !important;
+                transform: perspective(1000px) translateY(-8px) scale(1.03);
+                box-shadow: 
+                    0 25px 50px rgba(42, 107, 167, 0.25),
+                    0 0 0 1px rgba(42, 107, 167, 0.2),
+                    inset 0 1px 0 rgba(255,255,255,0.5);
+            }
+
+            .timeline-step.active .step-icon {
+                color: #2a6ba7 !important;
+                animation: iconBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+                filter: drop-shadow(0 4px 8px rgba(42, 107, 167, 0.3));
+            }
+
+            .timeline-step.active .step-title {
+                color: #2a6ba7 !important;
+                text-shadow: 0 1px 2px rgba(42, 107, 167, 0.1);
+            }
+
+            /* Completed Step Styles - Enhanced */
+            .timeline-step.completed .step-badge {
+                border-color: #22c55e !important;
+                background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+                animation: completedPop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            @keyframes completedPop {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); }
+            }
+
+            .timeline-step.completed .step-number {
+                color: white !important;
+            }
+
+            .timeline-step.completed .step-card {
+                border-color: rgba(34, 197, 94, 0.4) !important;
+                background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(22, 163, 74, 0.03)) !important;
+            }
+
+            .timeline-step.completed .step-icon {
+                color: #22c55e !important;
+            }
+
+            /* Enhanced Icon Animation */
+            @keyframes iconBounce {
+                0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+                25% { transform: translateY(-10px) rotate(-8deg) scale(1.1); }
+                50% { transform: translateY(-5px) rotate(0deg) scale(1.05); }
+                75% { transform: translateY(-8px) rotate(8deg) scale(1.1); }
+            }
+
+            /* Multiple Pulse Rings for Active Badge */
+            .timeline-step.active .step-badge::before,
+            .timeline-step.active .step-badge::after {
+                content: '';
+                position: absolute;
+                inset: -8px;
+                border: 2px solid #2a6ba7;
+                border-radius: 1rem;
+                animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+
+            .timeline-step.active .step-badge::after {
+                animation-delay: 0.5s;
+                border-color: #3b82f6;
+            }
+
+            @keyframes pulseRing {
+                0% { transform: scale(1); opacity: 0.8; }
+                100% { transform: scale(1.6); opacity: 0; }
+            }
+
+            /* Enhanced Shimmer Effect */
+            .timeline-step.active .step-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -150%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    100deg,
+                    transparent 20%,
+                    rgba(255,255,255,0.6) 50%,
+                    transparent 80%
+                );
+                animation: shimmerEnhanced 2s ease-in-out infinite;
+            }
+
+            @keyframes shimmerEnhanced {
+                0% { left: -150%; }
+                100% { left: 150%; }
+            }
+
+            /* Sparkle particles on active card */
+            .timeline-step.active .step-card::after {
+                content: '✦';
+                position: absolute;
+                font-size: 12px;
+                color: #F3B444;
+                animation: sparkle 1.5s ease-in-out infinite;
+                top: 10px;
+                right: 15px;
+            }
+
+            @keyframes sparkle {
+                0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+                50% { opacity: 1; transform: scale(1) rotate(180deg); }
+            }
+
+            /* Final step special effects */
+            .timeline-step[data-step="8"].active .step-card {
+                background: linear-gradient(135deg, #2a6ba7, #1e40af, #7c3aed) !important;
+                animation: gradientShift 3s ease infinite;
+                background-size: 200% 200%;
+            }
+
+            @keyframes gradientShift {
+                0%, 100% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+            }
+
+            .timeline-step[data-step="8"].active .step-card * {
+                color: white !important;
+            }
+
+            .timeline-step[data-step="8"].active .step-badge {
+                background: linear-gradient(135deg, #F3B444, #f59e0b, #ef4444) !important;
+                border-color: #F3B444 !important;
+                animation: badgeFloat 1s ease-in-out infinite, rainbowGlow 2s ease infinite;
+            }
+
+            @keyframes rainbowGlow {
+                0%, 100% { box-shadow: 0 0 30px #F3B444, 0 0 60px rgba(243, 180, 68, 0.5); }
+                50% { box-shadow: 0 0 40px #ef4444, 0 0 80px rgba(239, 68, 68, 0.5); }
+            }
+
+            /* Celebration icon dance */
+            .timeline-step[data-step="8"].active .step-icon {
+                animation: celebrateDance 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+            }
+
+            @keyframes celebrateDance {
+                0%, 100% { transform: rotate(-15deg) scale(1); }
+                25% { transform: rotate(15deg) scale(1.2); }
+                50% { transform: rotate(-10deg) scale(1.1); }
+                75% { transform: rotate(10deg) scale(1.15); }
+            }
+
+            /* Confetti container */
+            .confetti-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                overflow: hidden;
+            }
+
+            .confetti {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                opacity: 0;
+            }
+
+            .timeline-step[data-step="8"].active .confetti {
+                animation: confettiFall 2s ease-out infinite;
+            }
+
+            .confetti:nth-child(1) { left: 10%; animation-delay: 0s; background: #F3B444; }
+            .confetti:nth-child(2) { left: 20%; animation-delay: 0.2s; background: #ef4444; border-radius: 50%; }
+            .confetti:nth-child(3) { left: 30%; animation-delay: 0.4s; background: #22c55e; }
+            .confetti:nth-child(4) { left: 40%; animation-delay: 0.1s; background: #3b82f6; border-radius: 50%; }
+            .confetti:nth-child(5) { left: 50%; animation-delay: 0.3s; background: #a855f7; }
+            .confetti:nth-child(6) { left: 60%; animation-delay: 0.5s; background: #F3B444; border-radius: 50%; }
+            .confetti:nth-child(7) { left: 70%; animation-delay: 0.15s; background: #ef4444; }
+            .confetti:nth-child(8) { left: 80%; animation-delay: 0.35s; background: #22c55e; border-radius: 50%; }
+            .confetti:nth-child(9) { left: 90%; animation-delay: 0.25s; background: #3b82f6; }
+            .confetti:nth-child(10) { left: 95%; animation-delay: 0.45s; background: #a855f7; border-radius: 50%; }
+
+            @keyframes confettiFall {
+                0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+                100% { transform: translateY(100px) rotate(720deg); opacity: 0; }
+            }
+
+            /* Mobile Progress Dots */
+            .mobile-progress-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .progress-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #e5e7eb;
+                transition: all 0.3s ease;
+            }
+
+            .progress-dot.active {
+                background: linear-gradient(135deg, #2a6ba7, #3b82f6);
+                transform: scale(1.3);
+                box-shadow: 0 0 10px rgba(42, 107, 167, 0.5);
+            }
+
+            .progress-dot.completed {
+                background: #22c55e;
+            }
+
+            /* Mobile card slide animation */
+            @media (max-width: 768px) {
+                .timeline-step {
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+
+                .timeline-step.active {
+                    transform: scale(1.02);
+                }
+
+                .timeline-step.active .step-card {
+                    transform: translateX(5px);
+                }
+            }
+
+            /* Floating background particles */
+            .timeline-section-bg {
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                pointer-events: none;
+            }
+
+            .bg-particle {
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background: rgba(42, 107, 167, 0.1);
+                border-radius: 50%;
+                animation: floatParticle 15s linear infinite;
+            }
+
+            .bg-particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+            .bg-particle:nth-child(2) { left: 25%; animation-delay: 2s; animation-duration: 18s; }
+            .bg-particle:nth-child(3) { left: 40%; animation-delay: 4s; animation-duration: 14s; }
+            .bg-particle:nth-child(4) { left: 55%; animation-delay: 1s; animation-duration: 16s; }
+            .bg-particle:nth-child(5) { left: 70%; animation-delay: 3s; animation-duration: 20s; }
+            .bg-particle:nth-child(6) { left: 85%; animation-delay: 5s; animation-duration: 13s; }
+
+            @keyframes floatParticle {
+                0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+                10% { opacity: 1; }
+                90% { opacity: 1; }
+                100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+            }
+        </style>
+
+        <script>
+            // Enhanced Animated Timeline with Particles & Effects
+            document.addEventListener('DOMContentLoaded', () => {
+                const steps = document.querySelectorAll('.timeline-step');
+                const progressFill = document.getElementById('progress-fill');
+                const mobileStepIndicator = document.getElementById('current-step-mobile');
+                const totalSteps = steps.length;
+                let currentStep = 0;
+                const stepDuration = 1800; // Slightly longer for better visual
+
+                // Add confetti elements to step 8
+                const step8 = document.querySelector('.timeline-step[data-step="8"] .step-card');
+                if (step8) {
+                    const confettiContainer = document.createElement('div');
+                    confettiContainer.className = 'confetti-container';
+                    for (let i = 0; i < 10; i++) {
+                        const confetti = document.createElement('div');
+                        confetti.className = 'confetti';
+                        confettiContainer.appendChild(confetti);
+                    }
+                    step8.appendChild(confettiContainer);
+                }
+
+                // Add floating background particles
+                const section = document.getElementById('alur-pembuatan');
+                if (section) {
+                    const bgContainer = document.createElement('div');
+                    bgContainer.className = 'timeline-section-bg';
+                    for (let i = 0; i < 6; i++) {
+                        const particle = document.createElement('div');
+                        particle.className = 'bg-particle';
+                        bgContainer.appendChild(particle);
+                    }
+                    section.insertBefore(bgContainer, section.firstChild);
+                }
+
+                // Create mobile progress dots
+                
+
+                function updateMobileDots(stepIndex) {
+                    
+                }
+
+                function animateToStep(stepIndex) {
+                    // Update progress bar
+                    const progressPercent = ((stepIndex + 1) / totalSteps) * 100;
+                    progressFill.style.height = progressPercent + '%';
+
+                    // Update mobile indicator
+                    
+
+                    // Update mobile dots
+                    updateMobileDots(stepIndex);
+
+                    // Update all steps with staggered timing
+                    steps.forEach((step, index) => {
+                        step.classList.remove('active', 'completed');
+                        
+                        if (index < stepIndex) {
+                            step.classList.add('completed');
+                        } else if (index === stepIndex) {
+                            // Small delay for active step for better visual
+                            setTimeout(() => {
+                                step.classList.add('active');
+                            }, 100);
+                        }
+                    });
+
+                    // Scroll active step into view on mobile
+                    if (window.innerWidth < 768) {
+                        const activeStep = steps[stepIndex];
+                        if (activeStep) {
+                            
+                        }
+                    }
+                }
+
+                function runAnimation() {
+                    animateToStep(currentStep);
+                    currentStep++;
+                    
+                    if (currentStep >= totalSteps) {
+                        // Hold longer on final step for celebration effect
+                        setTimeout(() => {
+                            currentStep = 0;
+                            // Fade out effect
+                            steps.forEach(step => {
+                                step.style.opacity = '0.5';
+                            });
+                            
+                            setTimeout(() => {
+                                steps.forEach(step => {
+                                    step.classList.remove('active', 'completed');
+                                    step.style.opacity = '1';
+                                });
+                                progressFill.style.height = '0%';
+                                updateMobileDots(-1);
+                                
+                                setTimeout(runAnimation, 300);
+                            }, 400);
+                        }, 2500);
+                    } else {
+                        setTimeout(runAnimation, stepDuration);
+                    }
+                }
+
+                // Start the animation loop
+                setTimeout(runAnimation, 800);
+            });
+        </script>
 
         <!-- UMK Focus Section -->
         <section class="px-6 py-12 md:py-24">
@@ -333,7 +992,7 @@
                         harga transparan untuk kemudahan legalitas UMK Anda.</p>
                 </div>
 
-                <div class="max-w-3xl mx-auto">
+                <div class="max-w-3xl mx-auto space-y-8">
                     <!-- Single Package: PT Perorangan -->
                     <div
                         class="relative flex flex-col md:flex-row items-center gap-12 p-8 md:p-16 rounded-[3rem] border-2 border-primary bg-white dark:bg-gray-800 shadow-2xl overflow-hidden group">
@@ -383,149 +1042,131 @@
                             </a>
                         </div>
                     </div>
+
+                    <!-- Paket Lengkap -->
+                    <div
+                        class="relative flex flex-col md:flex-row items-center gap-12 p-8 md:p-10 rounded-[2rem] border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-black dark:text-white">Paket Lengkap</h3>
+                                <span class="bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded-full">VIP Service</span>
+                            </div>
+                            <div class="flex items-baseline gap-1 mb-6">
+                                <span class="text-4xl font-black text-primary">Rp 4.5jt</span>
+                                <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">All-in</span>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3 text-sm font-medium text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">stars</span>
+                                    Semua Fitur Paket Populer
+                                </li>
+                                <li class="flex items-start gap-3 text-sm font-medium text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    Sertifikat Standar Operasional
+                                </li>
+                                <li class="flex items-start gap-3 text-sm font-bold text-primary">
+                                    <span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+                                    Pendampingan Hukum 1 Tahun
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-auto">
+                            <a href="https://wa.me/6285251519925?text=Halo%20Akses%20Legal,%20saya%20tertarik%20dengan%20Paket%20Lengkap%20PT%20Perorangan."
+                                target="_blank"
+                                class="block w-full md:w-auto bg-gray-50 dark:bg-gray-700 text-primary hover:bg-primary hover:text-white font-black py-4 px-8 rounded-xl text-center transition-all">
+                                Pilih VIP
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <li class="flex items-start gap-3 text-sm font-bold text-gray-900 dark:text-white">
-            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-            NIB + NPWP Perusahaan
-        </li>
-        <li class="flex items-start gap-3 text-sm font-bold text-gray-900 dark:text-white">
-            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-            Izin Lokasi / KKPR
-        </li>
-        <li class="flex items-start gap-3 text-sm font-bold text-gray-900 dark:text-white">
-            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-            E-Stamp & Stempel Resmi
-        </li>
-        </ul>
-        <a href="https://wa.me/6285251519925?text=Halo%20Akses%20Legal,%20saya%20tertarik%20dengan%20Paket%20Populer%20PT%20Perorangan."
-            target="_blank"
-            class="w-full bg-primary text-white hover:bg-primary/90 font-black py-4 rounded-xl text-center transition-all shadow-lg shadow-primary/25">
-            Daftar Sekarang
-        </a>
-        </div>
-
-        <!-- Paket Lengkap -->
-        <div
-            class="relative flex flex-col p-8 md:p-10 rounded-[2rem] border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-xl transition-all duration-500 group">
-            <div class="mb-8">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-black dark:text-white">Paket Lengkap</h3>
-                    <span class="bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded-full">VIP
-                        Service</span>
-                </div>
-                <div class="flex items-baseline gap-1">
-                    <span class="text-4xl font-black text-primary">Rp 4.5jt</span>
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-wider">All-in</span>
-                </div>
-            </div>
-            <ul class="space-y-4 mb-10 flex-grow">
-                <li class="flex items-start gap-3 text-sm font-medium text-gray-600 dark:text-gray-300">
-                    <span class="material-symbols-outlined text-primary text-xl">stars</span>
-                    Semua Fitur Paket Populer
-                </li>
-                <li class="flex items-start gap-3 text-sm font-medium text-gray-600 dark:text-gray-300">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                    Sertifikat Standar Operasional
-                </li>
-                <li class="flex items-start gap-3 text-sm font-bold text-primary">
-                    <span class="material-symbols-outlined text-primary text-xl">verified_user</span>
-                    Pendampingan Hukum 1 Tahun
-                </li>
-            </ul>
-            <a href="https://wa.me/6285251519925?text=Halo%20Akses%20Legal,%20saya%20tertarik%20dengan%20Paket%20Lengkap%20PT%20Perorangan."
-                target="_blank"
-                class="w-full bg-gray-50 dark:bg-gray-700 text-primary hover:bg-primary hover:text-white font-black py-4 rounded-xl text-center transition-all">
-                Pilih VIP
-            </a>
-        </div>
-        </div>
 
         <!-- Detailed Feature Table -->
-        <div class="pt-12 space-y-10">
-            <div class="flex flex-col md:flex-row md:items-center gap-4">
-                <h3 class="text-2xl font-black tracking-tight dark:text-white">Detail Perbandingan Fitur</h3>
-                <div class="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-800"></div>
-            </div>
+        <div class="px-6 pb-20">
+            <div class="max-w-[1200px] mx-auto space-y-10">
+                <div class="flex flex-col md:flex-row md:items-center gap-4">
+                    <h3 class="text-2xl font-black tracking-tight dark:text-white">Detail Perbandingan Fitur</h3>
+                    <div class="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-800"></div>
+                </div>
 
-            <div
-                class="overflow-x-auto rounded-[2rem] border border-gray-200 dark:border-gray-800 shadow-sm no-scrollbar">
-                <table class="w-full text-left border-collapse bg-white dark:bg-gray-800/50">
-                    <thead>
-                        <tr class="bg-gray-50/50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-800">
-                            <th class="p-8 text-xs font-black uppercase tracking-widest text-gray-400">Fitur Layanan
-                            </th>
-                            <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">Dasar</th>
-                            <th class="p-8 text-center text-sm font-black text-primary bg-primary/10">Populer</th>
-                            <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">Lengkap</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-                        <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                            <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Akta Pendirian
-                                Notaris</td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/10"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                            <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">SK Kemenkumham Resmi
-                            </td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/10"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                            <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">NIB (RBA) & NPWP</td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/10"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                            <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Izin Lokasi / KKPR
-                            </td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-gray-300">remove</span></td>
-                            <td class="p-8 text-center bg-primary/10"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                            <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">E-Stamp & Stempel
-                                Fisik</td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-gray-300">remove</span></td>
-                            <td class="p-8 text-center bg-primary/10"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                            <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Pendampingan Hukum (1
-                                Thn)</td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-gray-300">remove</span></td>
-                            <td class="p-8 text-center bg-primary/10"><span
-                                    class="material-symbols-outlined text-gray-300">remove</span></td>
-                            <td class="p-8 text-center bg-primary/5"><span
-                                    class="material-symbols-outlined text-green-500 fill-1">stars</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div
+                    class="overflow-x-auto rounded-[2rem] border border-gray-200 dark:border-gray-800 shadow-sm no-scrollbar">
+                    <table class="w-full text-left border-collapse bg-white dark:bg-gray-800/50">
+                        <thead>
+                            <tr class="bg-gray-50/50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-800">
+                                <th class="p-8 text-xs font-black uppercase tracking-widest text-gray-400">Fitur Layanan
+                                </th>
+                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">Dasar</th>
+                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/10">Populer</th>
+                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">Lengkap</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Akta Pendirian
+                                    Notaris</td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/10"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">SK Kemenkumham Resmi
+                                </td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/10"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">NIB (RBA) & NPWP</td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/10"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Izin Lokasi / KKPR
+                                </td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-gray-300">remove</span></td>
+                                <td class="p-8 text-center bg-primary/10"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">E-Stamp & Stempel
+                                    Fisik</td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-gray-300">remove</span></td>
+                                <td class="p-8 text-center bg-primary/10"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Pendampingan Hukum (1
+                                    Thn)</td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-gray-300">remove</span></td>
+                                <td class="p-8 text-center bg-primary/10"><span
+                                        class="material-symbols-outlined text-gray-300">remove</span></td>
+                                <td class="p-8 text-center bg-primary/5"><span
+                                        class="material-symbols-outlined text-green-500 fill-1">stars</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        </section>
 
         <!-- Final CTA Section -->
         <section class="px-6 py-20 text-center">
