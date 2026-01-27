@@ -1043,7 +1043,7 @@
                         </div>
                         <h2 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">Solusi
                             Legalitas <br>Terbaik untuk <span class="text-primary">UMK</span></h2>
-                        <p class="text-lg text-gray-500 font-medium leading-relaxed">
+                        <p id="umk-desc" class="text-lg text-gray-500 font-medium leading-relaxed">
                             PT Perorangan dirancang khusus oleh pemerintah untuk memudahkan pelaku Usaha Mikro dan Kecil
                             (UMK) memiliki badan hukum dengan <b>tanggung jawab terbatas</b> tanpa perlu partner/pendiri
                             lain.
@@ -1415,6 +1415,86 @@
             return 'default';
         }
 
+        function getUMKDescription(serviceName) {
+            const name = serviceName.toLowerCase();
+            
+            // PT Perorangan
+            if (name.includes('pt perorangan')) {
+                return `${serviceName} dirancang khusus oleh pemerintah untuk memudahkan pelaku Usaha Mikro dan Kecil (UMK) memiliki badan hukum dengan <b>tanggung jawab terbatas</b> tanpa perlu partner/pendiri lain.`;
+            }
+            
+            // CV
+            if (name.includes('cv') && !name.includes('to pt') && !name.includes('cabang')) {
+                return `${serviceName} adalah bentuk badan usaha yang ideal untuk UMK yang ingin memiliki badan hukum dengan <b>modal terbatas</b> dan fleksibilitas dalam pengelolaan usaha bersama mitra.`;
+            }
+            
+            // PT Umum
+            if ((name.includes('pt umum') || name.includes('pt umu')) && !name.includes('upgrade')) {
+                return `${serviceName} memberikan solusi legalitas profesional untuk bisnis UMK yang ingin berkembang dengan struktur organisasi yang solid dan kredibilitas tinggi di mata pemerintah serta investor.`;
+            }
+            
+            // Upgrade ke PT Umum
+            if (name.includes('upgrade') && name.includes('pt')) {
+                return `Layanan ${serviceName} membantu UMK yang sudah memiliki PT Perorangan untuk meningkatkan status menjadi PT Umum dengan <b>proses yang mudah dan cepat</b>, memungkinkan ekspansi bisnis tanpa batas.`;
+            }
+            
+            // Koperasi
+            if (name.includes('koperasi')) {
+                return `${serviceName} adalah bentuk badan usaha yang sesuai untuk UMK yang ingin membangun usaha bersama dengan prinsip <b>kekeluargaan dan gotong royong</b> untuk kesejahteraan anggota.`;
+            }
+            
+            // Yayasan
+            if (name.includes('yayasan')) {
+                if (name.includes('perubahan')) {
+                    return `Layanan ${serviceName} membantu UMK untuk melakukan perubahan pada struktur, pengurus, atau anggaran dasar yayasan dengan proses yang <b>transparan dan sesuai peraturan</b>.`;
+                }
+                return `${serviceName} adalah badan hukum yang tepat untuk UMK yang ingin mengelola kegiatan sosial, keagamaan, atau kemanusiaan dengan struktur organisasi yang jelas dan akuntabel.`;
+            }
+            
+            // Perkumpulan
+            if (name.includes('perkumpulan')) {
+                return `${serviceName} adalah bentuk badan hukum yang cocok untuk UMK yang ingin membentuk organisasi dengan tujuan tertentu, baik untuk kepentingan bersama anggota maupun kegiatan sosial.`;
+            }
+            
+            // UD (Usaha Dagang)
+            if (name.includes('ud') || name.includes('usaha dagang')) {
+                return `${serviceName} adalah bentuk usaha yang sederhana dan mudah didirikan untuk UMK yang ingin memulai bisnis perdagangan dengan <b>proses pendirian yang cepat</b> dan biaya terjangkau.`;
+            }
+            
+            // PT PMA
+            if (name.includes('pma') || name.includes('asing')) {
+                return `${serviceName} memberikan solusi legalitas untuk UMK yang ingin menarik investasi asing atau melakukan ekspansi bisnis dengan struktur perusahaan yang memenuhi standar internasional.`;
+            }
+            
+            // RUPS (Perubahan)
+            if (name.includes('rups') || (name.includes('perubahan') && !name.includes('yayasan'))) {
+                return `Layanan ${serviceName} membantu UMK untuk melakukan perubahan struktur perusahaan, pengurus, atau modal dengan proses yang <b>transparan dan terpercaya</b>.`;
+            }
+            
+            // CV to PT
+            if (name.includes('cv to pt') || name.includes('cv to')) {
+                return `Layanan ${serviceName} membantu UMK yang sudah memiliki CV untuk mengubah status menjadi PT dengan <b>proses yang efisien</b>, memberikan kredibilitas lebih tinggi untuk bisnis Anda.`;
+            }
+            
+            // Cabang
+            if (name.includes('cabang')) {
+                return `Layanan ${serviceName} membantu UMK untuk membuka cabang perusahaan di lokasi baru dengan proses pendaftaran yang <b>cepat dan sesuai peraturan</b>.`;
+            }
+            
+            // Penutupan
+            if (name.includes('penutupan') || name.includes('tutup')) {
+                return `Layanan ${serviceName} membantu UMK untuk melakukan penutupan perusahaan dengan proses yang <b>legal dan terstruktur</b>, memastikan semua kewajiban perusahaan terselesaikan dengan baik.`;
+            }
+            
+            // Bundling
+            if (name.includes('bundling')) {
+                return `Paket ${serviceName} memberikan solusi lengkap untuk UMK dengan kombinasi layanan yang <b>hemat dan efisien</b>, memudahkan proses legalitas bisnis Anda dalam satu paket.`;
+            }
+            
+            // Default untuk layanan pendirian lainnya
+            return `${serviceName} memberikan solusi legalitas terbaik untuk UMK Indonesia dengan proses yang <b>cepat, transparan, dan terjangkau</b>. Dapatkan pendampingan profesional untuk memastikan legalitas bisnis Anda terdaftar dengan benar.`;
+        }
+
         function updateFlowSteps(flowType, serviceName = '') {
             let steps = serviceFlowConfigs[flowType] || serviceFlowConfigs.default;
             // Clone steps array untuk menghindari modifikasi original
@@ -1697,6 +1777,12 @@
                         priceEl.textContent = service.price;
                     }
 
+                    // Update UMK Description
+                    const umkDescEl = document.getElementById('umk-desc');
+                    if (umkDescEl) {
+                        umkDescEl.innerHTML = getUMKDescription(service.name);
+                    }
+
                     // Update WA Links
                     const waMessage = encodeURIComponent(`Halo Akses Legal, saya ingin konsultasi mengenai ${service.name} (${service.price}).`);
                     document.querySelectorAll('a[href^="https://wa.me"]').forEach(a => {
@@ -1704,6 +1790,12 @@
                         currentUrl.searchParams.set('text', `Halo Akses Legal, saya ingin konsultasi mengenai ${service.name} (${service.price}).`);
                         a.href = currentUrl.toString();
                     });
+                }
+            } else {
+                // Default case: Update UMK Description untuk PT Perorangan (default)
+                const umkDescEl = document.getElementById('umk-desc');
+                if (umkDescEl) {
+                    umkDescEl.innerHTML = getUMKDescription('PT Perorangan');
                 }
             }
         });
