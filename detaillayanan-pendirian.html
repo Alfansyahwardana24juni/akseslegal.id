@@ -1390,14 +1390,14 @@
                 { title: "Pendaftaran NIB", desc: "Pengurusan Nomor Induk Berusaha melalui portal OSS Risk Based Approach", icon: "app_registration", color: "cyan", detail: "Akses Berusaha" },
                 { title: "Izin Operasional", desc: "Pengesahan izin khusus sesuai bidang kegiatan (Dinsos/Kemenag)", icon: "verified_user", color: "blue", detail: "Siap Beroperasi", isSpecial: true }
             ],
-            // Alur khusus untuk Perkumpulan (akan diisi nanti dengan code khusus)
+            // Alur khusus untuk Perkumpulan
             perkumpulan: [
-                // TODO: Alur khusus Perkumpulan akan diisi nanti
-                { title: "Konsultasi", desc: "Diskusi kebutuhan legalitas Perkumpulan", icon: "support_agent", color: "blue", time: "15-30 menit" },
-                { title: "Validasi Dokumen", desc: "Pemeriksaan kelengkapan berkas", icon: "fact_check", color: "purple", detail: "KTP, NPWP" },
-                { title: "Akta Notaris", desc: "Pembuatan akta pendirian Perkumpulan", icon: "history_edu", color: "amber", detail: "Notaris Resmi" },
-                { title: "SK Kemenkumham", desc: "Pengesahan badan hukum Perkumpulan", icon: "verified", color: "emerald", detail: "Resmi" },
-                { title: "Legalitas Terbit", desc: "Perkumpulan Anda resmi terdaftar! 🎊", icon: "celebration", color: "primary", detail: "Selesai!" }
+                { title: "Rapat Pendirian", desc: "Penyusunan nama perkumpulan dan kesepakatan AD/ART oleh para pendiri", icon: "forum", color: "indigo", detail: "Min. 3 Orang" },
+                { title: "Akta Notaris", desc: "Formalisasi Berita Acara Rapat ke dalam Akta Notaris yang sah secara hukum", icon: "history_edu", color: "blue", detail: "Legalitas Notaril" },
+                { title: "SK Badan Hukum", desc: "Penerbitan SK Pengesahan dari Menkumham sebagai subjek hukum mandiri", icon: "workspace_premium", color: "emerald", detail: "SABH Online" },
+                { title: "NPWP Perkumpulan", desc: "Pendaftaran identitas pajak perkumpulan untuk kebutuhan pembukaan rekening bank", icon: "account_balance_wallet", color: "orange", detail: "Kewajiban Pajak" },
+                { title: "Nomor Induk Berusaha", desc: "Pendaftaran identitas organisasi pada portal OSS untuk legalitas operasional", icon: "badge", color: "cyan", detail: "Legalitas OSS" },
+                { title: "SKT / Izin Khusus", desc: "Pelaporan ke Kesbangpol atau instansi sektoral terkait sesuai tujuan organisasi", icon: "how_to_reg", color: "indigo", detail: "Legalitas Selesai", isSpecial: true }
             ]
         };
 
@@ -1489,6 +1489,14 @@
                     corner: "from-indigo-500/10",
                     corner2: "from-indigo-500/5"
                 },
+                orange: { 
+                    bg: "from-orange-100 to-orange-50", 
+                    dark: "from-orange-900/30 to-orange-800/20", 
+                    text: "text-orange-500", 
+                    badge: "text-orange-600 bg-orange-50 dark:bg-orange-900/20",
+                    corner: "from-orange-500/10",
+                    corner2: "from-orange-500/5"
+                },
                 primary: { 
                     bg: "from-primary/20 to-accent/10", 
                     dark: "from-primary/30 to-accent/20", 
@@ -1512,16 +1520,28 @@
                 const cornerPos2 = isEven ? "bottom-0 right-0 rounded-tl-[2rem]" : "bottom-0 left-0 rounded-tr-[2rem]";
                 const connectorPos = isEven ? "md:left-0 md:-translate-x-1/2" : "md:left-auto md:right-0 md:translate-x-1/2";
                 
-                // Handle special styling for Yayasan's last step
+                // Handle special styling for special steps (Yayasan/Perkumpulan last step)
                 const isSpecial = step.isSpecial || false;
-                const borderClass = isSpecial ? "border-2 border-blue-500/20" : "border-2 border-gray-100 dark:border-gray-700";
-                const iconWrapperClass = isSpecial 
-                    ? "size-12 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-200"
-                    : `size-12 rounded-xl bg-gradient-to-br ${colors.bg} dark:${colors.dark} flex items-center justify-center`;
+                const specialColor = step.color || 'blue';
+                let borderClass, iconWrapperClass, badgeClass;
+                
+                if (isSpecial) {
+                    if (specialColor === 'indigo') {
+                        borderClass = "border-2 border-indigo-500/20";
+                        iconWrapperClass = "size-12 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-200";
+                        badgeClass = "text-white bg-indigo-600";
+                    } else {
+                        borderClass = "border-2 border-blue-500/20";
+                        iconWrapperClass = "size-12 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-200";
+                        badgeClass = "text-white bg-blue-600";
+                    }
+                } else {
+                    borderClass = "border-2 border-gray-100 dark:border-gray-700";
+                    iconWrapperClass = `size-12 rounded-xl bg-gradient-to-br ${colors.bg} dark:${colors.dark} flex items-center justify-center`;
+                    badgeClass = colors.badge;
+                }
+                
                 const iconClass = isSpecial ? "text-2xl text-white" : `text-2xl ${colors.text} transition-all duration-500`;
-                const badgeClass = isSpecial 
-                    ? "text-white bg-blue-600"
-                    : colors.badge;
                 const cornerSize = isSpecial ? "w-24 h-24" : "w-20 h-20";
                 const cornerSize2 = isSpecial ? "w-20 h-20" : "w-16 h-16";
                 const cornerRadius = isSpecial ? "rounded-br-[4rem]" : (isEven ? "rounded-br-[3rem]" : "rounded-bl-[3rem]");
@@ -1534,7 +1554,13 @@
                             </div>
                         </div>
                         <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl ${borderClass} shadow-lg transition-all duration-500 relative overflow-hidden">
-                            <div class="absolute ${cornerPos} ${cornerSize} bg-gradient-to-br ${colors.corner} to-transparent ${cornerRadius}"></div>
+                            ${isSpecial ? 
+                                (specialColor === 'indigo' ? 
+                                    `<div class="absolute ${cornerPos} ${cornerSize} bg-gradient-to-br from-indigo-500/10 to-transparent ${cornerRadius}"></div>` :
+                                    `<div class="absolute ${cornerPos} ${cornerSize} bg-gradient-to-br from-blue-500/10 to-transparent ${cornerRadius}"></div>`
+                                ) :
+                                `<div class="absolute ${cornerPos} ${cornerSize} bg-gradient-to-br ${colors.corner} to-transparent ${cornerRadius}"></div>`
+                            }
                             ${!isSpecial ? `<div class="absolute ${cornerPos2} ${cornerSize2} bg-gradient-to-tr ${colors.corner2} to-transparent"></div>` : ''}
                             ${isLast && !isSpecial ? '<div class="absolute top-2 right-2 text-xl opacity-20">🎉</div>' : ''}
                             <div class="relative z-10">
@@ -1678,6 +1704,8 @@
                         const flowType = getServiceFlowType(service.name);
                         if (flowType === 'yayasan') {
                             flowDescEl.textContent = "Proses legalitas berdasarkan UU No. 28 Tahun 2004 tentang Yayasan.";
+                        } else if (flowType === 'perkumpulan') {
+                            flowDescEl.textContent = "Proses legalitas organisasi, asosiasi, atau komunitas menjadi Badan Hukum resmi.";
                         } else {
                             flowDescEl.textContent = "Proses transparan dari awal hingga legalitas Anda terbit.";
                         }
