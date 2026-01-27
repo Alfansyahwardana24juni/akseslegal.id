@@ -76,7 +76,8 @@ const kalkulatorServices = [
     { id: "pkp", name: "PKP (Pengukuhan Pengusaha Kena Pajak)", price: 1499000, category: "pajak", icon: "receipt_long", color: "blue" },
     { id: "efin", name: "EFIN Pribadi", price: 150000, category: "pajak", icon: "fingerprint", color: "indigo" },
     { id: "coretax-pribadi", name: "CORETax Pribadi", price: 350000, category: "pajak", icon: "account_balance_wallet", color: "indigo" },
-    { id: "coretax-badan", name: "CORETax Badan", price: 500000, category: "pajak", icon: "corporate_fare", color: "indigo" }
+    { id: "coretax-badan", name: "CORETax Badan", price: 500000, category: "pajak", icon: "corporate_fare", color: "indigo" },
+    { id: "perkumpulan", name: "Perkumpulan", price: 4000000, category: "usaha", icon: "groups", color: "blue" }
 ];
 
 // Render all services to kalkulator grid

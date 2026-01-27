@@ -76,7 +76,8 @@ const allServices = [
     { id: 74, name: "PKP (Pengukuhan Pengusaha Kena Pajak)", price: "Rp 1.499.000", category: "pajak", icon: "receipt_long", color: "blue" },
     { id: 75, name: "EFIN Pribadi", price: "Rp 150.000", category: "pajak", icon: "fingerprint", color: "indigo" },
     { id: 76, name: "CORETax Pribadi", price: "Rp 350.000", category: "pajak", icon: "account_balance_wallet", color: "indigo" },
-    { id: 77, name: "CORETax Badan", price: "Rp 500.000", category: "pajak", icon: "corporate_fare", color: "indigo" }
+    { id: 77, name: "CORETax Badan", price: "Rp 500.000", category: "pajak", icon: "corporate_fare", color: "indigo" },
+    { id: 78, name: "Perkumpulan", price: "Rp 4.000.000", category: "usaha", icon: "groups", color: "blue" }
 ];
 
 // Color mapping
