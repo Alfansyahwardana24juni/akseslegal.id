@@ -282,7 +282,7 @@
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="2">
+                    <div class="timeline-step pl-20 md:pl-16 relative md:z-10" data-step="2">
                         <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2">
                             <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
                                 <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">2</span>
@@ -342,7 +342,7 @@
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="4">
+                    <div class="timeline-step pl-20 md:pl-16 relative md:z-10" data-step="4">
                         <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2">
                             <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
                                 <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">4</span>
@@ -402,7 +402,7 @@
                     </div>
 
                     <!-- Step 6 -->
-                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="6">
+                    <div class="timeline-step pl-20 md:pl-16 relative md:z-10" data-step="6">
                         <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2">
                             <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
                                 <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">6</span>
@@ -462,7 +462,7 @@
                     </div>
 
                     <!-- Step 8 - Final -->
-                    <div class="timeline-step pl-20 md:pl-16 relative" data-step="8">
+                    <div class="timeline-step pl-20 md:pl-16 relative md:z-10" data-step="8">
                         <div class="step-connector absolute left-8 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-1/2">
                             <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
                                 <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">8</span>
@@ -612,8 +612,9 @@
                 }
                 
                 /* Step yang aktif HARUS selalu di atas semua step lainnya dan fully visible */
+                /* Tapi tetap di bawah navbar (z-50) */
                 .timeline-step.active .step-connector { 
-                    z-index: 100 !important;
+                    z-index: 40 !important;
                     opacity: 1 !important;
                     visibility: visible !important;
                 }
