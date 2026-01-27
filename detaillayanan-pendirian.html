@@ -540,6 +540,16 @@
                 background: rgba(31, 41, 55, 0.9) !important;
             }
 
+            /* Fix step badge alignment untuk mobile - pastikan sejajar dengan garis progress */
+            @media (max-width: 767px) {
+                /* Garis progress di mobile: left-8 (32px) dengan lebar w-1 (4px), jadi tengah di 34px */
+                /* Step badge size-14 (56px), perlu diposisikan agar tengahnya tepat di tengah garis (34px) */
+                .timeline-step .step-connector {
+                    left: 34px !important; /* Tengah garis progress: 32px (left-8) + 2px (setengah lebar w-1) */
+                    transform: translateX(-50%) translateY(-50%) !important; /* Tengahkan badge horizontal dan vertikal */
+                }
+            }
+
             /* Fix step badge z-index dan visibility untuk mencegah overlap */
             @media (min-width: 768px) {
                 /* Step badge yang belum aktif/completed: sembunyikan sepenuhnya agar tidak menutupi step aktif */
