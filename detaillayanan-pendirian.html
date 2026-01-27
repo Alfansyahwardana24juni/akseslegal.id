@@ -229,10 +229,10 @@
             </div>
         </section>
 
-        <!-- Alur Pembuatan PT Section - Enhanced Animation -->
+        <!-- Alur Pendirian Section - Enhanced Animation -->
         <section id="alur-pembuatan" class="px-6 py-20 overflow-hidden">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Alur Pembuatan PT</h2>
+                <h2 id="alur-title" class="text-3xl md:text-4xl font-black tracking-tight mb-4">Alur Pendirian PT</h2>
                 <p class="text-gray-600 dark:text-gray-400">Proses transparan dari awal hingga legalitas Anda terbit.</p>
             </div>
 
@@ -912,6 +912,14 @@
         <script>
             // Enhanced Animated Timeline with Particles & Effects
             document.addEventListener('DOMContentLoaded', () => {
+                // Check if service ID is in URL - if so, skip default animation (will be handled by service update)
+                const urlParams = new URLSearchParams(window.location.search);
+                const serviceId = urlParams.get('id');
+                if (serviceId) {
+                    // Animation will be handled by updateFlowSteps function
+                    return;
+                }
+
                 const steps = document.querySelectorAll('.timeline-step');
                 const progressFill = document.getElementById('progress-fill');
                 const mobileStepIndicator = document.getElementById('current-step-mobile');
@@ -1358,6 +1366,269 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/services.js"></script>
     <script>
+        // Step configurations for different service types
+        const serviceFlowConfigs = {
+            // Alur standar untuk semua layanan pendirian (PT, CV, UD, Koperasi, dll)
+            // Semua menggunakan alur yang sama
+            default: [
+                { title: "Konsultasi", desc: "Diskusi kebutuhan legalitas Anda", icon: "support_agent", color: "blue", time: "15-30 menit" },
+                { title: "Validasi Dokumen", desc: "Pemeriksaan kelengkapan berkas", icon: "fact_check", color: "purple", detail: "KTP, NPWP" },
+                { title: "Booking Nama", desc: "Reservasi nama di Kemenkumham", icon: "bookmark_added", color: "amber", time: "1-2 hari" },
+                { title: "Akta Notaris", desc: "Pembuatan akta pendirian resmi", icon: "history_edu", color: "rose", detail: "Notaris Resmi" },
+                { title: "SK Kemenkumham", desc: "Pengesahan badan hukum", icon: "verified", color: "emerald", detail: "Resmi" },
+                { title: "NPWP Perusahaan", desc: "Pendaftaran pajak badan usaha", icon: "account_balance", color: "cyan", detail: "DJP Online" },
+                { title: "NIB & Izin", desc: "Nomor Induk Berusaha via OSS", icon: "badge", color: "indigo", detail: "OSS RBA" },
+                { title: "Legalitas Terbit", desc: "Legalitas Anda resmi terdaftar! 🎊", icon: "celebration", color: "primary", detail: "Selesai!" }
+            ],
+            // Alur khusus untuk Yayasan (akan diisi nanti dengan code khusus)
+            yayasan: [
+                // TODO: Alur khusus Yayasan akan diisi nanti
+                { title: "Konsultasi", desc: "Diskusi kebutuhan legalitas Yayasan", icon: "support_agent", color: "blue", time: "15-30 menit" },
+                { title: "Validasi Dokumen", desc: "Pemeriksaan kelengkapan berkas", icon: "fact_check", color: "purple", detail: "KTP, NPWP" },
+                { title: "Akta Notaris", desc: "Pembuatan akta pendirian Yayasan", icon: "history_edu", color: "amber", detail: "Notaris Resmi" },
+                { title: "SK Kemenkumham", desc: "Pengesahan badan hukum Yayasan", icon: "verified", color: "emerald", detail: "Resmi" },
+                { title: "Legalitas Terbit", desc: "Yayasan Anda resmi terdaftar! 🎊", icon: "celebration", color: "primary", detail: "Selesai!" }
+            ],
+            // Alur khusus untuk Perkumpulan (akan diisi nanti dengan code khusus)
+            perkumpulan: [
+                // TODO: Alur khusus Perkumpulan akan diisi nanti
+                { title: "Konsultasi", desc: "Diskusi kebutuhan legalitas Perkumpulan", icon: "support_agent", color: "blue", time: "15-30 menit" },
+                { title: "Validasi Dokumen", desc: "Pemeriksaan kelengkapan berkas", icon: "fact_check", color: "purple", detail: "KTP, NPWP" },
+                { title: "Akta Notaris", desc: "Pembuatan akta pendirian Perkumpulan", icon: "history_edu", color: "amber", detail: "Notaris Resmi" },
+                { title: "SK Kemenkumham", desc: "Pengesahan badan hukum Perkumpulan", icon: "verified", color: "emerald", detail: "Resmi" },
+                { title: "Legalitas Terbit", desc: "Perkumpulan Anda resmi terdaftar! 🎊", icon: "celebration", color: "primary", detail: "Selesai!" }
+            ]
+        };
+
+        function getServiceFlowType(serviceName) {
+            const name = serviceName.toLowerCase();
+            // Deteksi Yayasan
+            if (name.includes('yayasan')) {
+                return 'yayasan';
+            }
+            // Deteksi Perkumpulan
+            if (name.includes('perkumpulan')) {
+                return 'perkumpulan';
+            }
+            // Semua layanan pendirian lainnya menggunakan alur default yang sama
+            return 'default';
+        }
+
+        function updateFlowSteps(flowType, serviceName = '') {
+            let steps = serviceFlowConfigs[flowType] || serviceFlowConfigs.default;
+            // Clone steps array untuk menghindari modifikasi original
+            steps = steps.map(step => ({ ...step }));
+            
+            // Update deskripsi langkah terakhir dengan nama layanan jika ada
+            if (serviceName && steps.length > 0) {
+                const lastStep = steps[steps.length - 1];
+                if (lastStep.title === "Legalitas Terbit") {
+                    lastStep.desc = `${serviceName} Anda resmi terdaftar! 🎊`;
+                }
+            }
+            
+            const timelineContainer = document.getElementById('timeline-steps');
+            if (!timelineContainer) return;
+
+            // Color mapping with full Tailwind classes
+            const colorMap = {
+                blue: { 
+                    bg: "from-blue-100 to-blue-50", 
+                    dark: "from-blue-900/30 to-blue-800/20", 
+                    text: "text-blue-500", 
+                    badge: "text-blue-500 bg-blue-50 dark:bg-blue-900/20",
+                    corner: "from-blue-500/10",
+                    corner2: "from-primary/5"
+                },
+                purple: { 
+                    bg: "from-purple-100 to-purple-50", 
+                    dark: "from-purple-900/30 to-purple-800/20", 
+                    text: "text-purple-500", 
+                    badge: "text-purple-500 bg-purple-50 dark:bg-purple-900/20",
+                    corner: "from-purple-500/10",
+                    corner2: "from-purple-500/5"
+                },
+                amber: { 
+                    bg: "from-amber-100 to-amber-50", 
+                    dark: "from-amber-900/30 to-amber-800/20", 
+                    text: "text-amber-500", 
+                    badge: "text-amber-600 bg-amber-50 dark:bg-amber-900/20",
+                    corner: "from-amber-500/10",
+                    corner2: "from-amber-500/5"
+                },
+                rose: { 
+                    bg: "from-rose-100 to-rose-50", 
+                    dark: "from-rose-900/30 to-rose-800/20", 
+                    text: "text-rose-500", 
+                    badge: "text-rose-500 bg-rose-50 dark:bg-rose-900/20",
+                    corner: "from-rose-500/10",
+                    corner2: "from-rose-500/5"
+                },
+                emerald: { 
+                    bg: "from-emerald-100 to-emerald-50", 
+                    dark: "from-emerald-900/30 to-emerald-800/20", 
+                    text: "text-emerald-500", 
+                    badge: "text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20",
+                    corner: "from-emerald-500/10",
+                    corner2: "from-emerald-500/5"
+                },
+                cyan: { 
+                    bg: "from-cyan-100 to-cyan-50", 
+                    dark: "from-cyan-900/30 to-cyan-800/20", 
+                    text: "text-cyan-500", 
+                    badge: "text-cyan-600 bg-cyan-50 dark:bg-cyan-900/20",
+                    corner: "from-cyan-500/10",
+                    corner2: "from-cyan-500/5"
+                },
+                indigo: { 
+                    bg: "from-indigo-100 to-indigo-50", 
+                    dark: "from-indigo-900/30 to-indigo-800/20", 
+                    text: "text-indigo-500", 
+                    badge: "text-indigo-600 bg-indigo-50 dark:bg-indigo-900/20",
+                    corner: "from-indigo-500/10",
+                    corner2: "from-indigo-500/5"
+                },
+                primary: { 
+                    bg: "from-primary/20 to-accent/10", 
+                    dark: "from-primary/30 to-accent/20", 
+                    text: "text-primary", 
+                    badge: "text-primary bg-primary/10",
+                    corner: "from-primary/15",
+                    corner2: "from-accent/10"
+                }
+            };
+
+            let stepsHTML = '';
+            steps.forEach((step, index) => {
+                const stepNum = index + 1;
+                const isEven = stepNum % 2 === 0;
+                const isLast = stepNum === steps.length;
+                const colors = colorMap[step.color] || colorMap.primary;
+                const alignClass = isEven ? "md:pl-16" : "md:pl-0 md:text-right md:pr-16";
+                const iconAlign = isEven ? "" : "md:justify-end";
+                const badgeAlign = isEven ? "" : "md:justify-end";
+                const cornerPos = isEven ? "top-0 left-0 rounded-br-[3rem]" : "top-0 right-0 rounded-bl-[3rem]";
+                const cornerPos2 = isEven ? "bottom-0 right-0 rounded-tl-[2rem]" : "bottom-0 left-0 rounded-tr-[2rem]";
+                const connectorPos = isEven ? "md:left-0 md:-translate-x-1/2" : "md:left-auto md:right-0 md:translate-x-1/2";
+
+                stepsHTML += `
+                    <div class="timeline-step pl-20 ${alignClass} relative ${isEven ? '' : 'md:z-10'}" data-step="${stepNum}">
+                        <div class="step-connector absolute left-8 ${connectorPos} top-1/2 -translate-y-1/2">
+                            <div class="step-badge size-14 bg-white dark:bg-gray-800 rounded-2xl border-4 border-gray-300 shadow-lg flex items-center justify-center transition-all duration-500">
+                                <span class="step-number text-gray-400 font-black text-xl transition-all duration-500">${stepNum}</span>
+                            </div>
+                        </div>
+                        <div class="step-card p-5 bg-white dark:bg-gray-800 rounded-2xl border-2 border-gray-100 dark:border-gray-700 shadow-lg transition-all duration-500 relative overflow-hidden">
+                            <div class="absolute ${cornerPos} w-20 h-20 bg-gradient-to-br ${colors.corner} to-transparent"></div>
+                            <div class="absolute ${cornerPos2} w-16 h-16 bg-gradient-to-tr ${colors.corner2} to-transparent"></div>
+                            ${isLast ? '<div class="absolute top-2 right-2 text-xl opacity-20">🎉</div>' : ''}
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 ${iconAlign} mb-3">
+                                    <div class="step-icon-wrapper size-12 rounded-xl bg-gradient-to-br ${colors.bg} dark:${colors.dark} flex items-center justify-center">
+                                        <span class="step-icon material-symbols-outlined text-2xl ${colors.text} transition-all duration-500">${step.icon}</span>
+                                    </div>
+                                </div>
+                                <h3 class="step-title text-lg font-bold mb-1 dark:text-white transition-all duration-500">${step.title}</h3>
+                                <p class="step-desc text-xs text-gray-500 dark:text-gray-400 mb-2 leading-relaxed">${step.desc}</p>
+                                <div class="flex items-center gap-2 ${badgeAlign}">
+                                    ${step.time ? `
+                                        <span class="inline-flex items-center gap-1 text-[10px] font-bold ${colors.badge} px-2 py-1 rounded-full">
+                                            <span class="material-symbols-outlined text-xs">schedule</span>
+                                            ${step.time}
+                                        </span>
+                                    ` : ''}
+                                    ${step.detail ? `
+                                        <span class="inline-flex items-center gap-1 text-[10px] font-bold ${colors.badge} px-2 py-1 rounded-full">
+                                            <span class="material-symbols-outlined text-xs">${step.detail.includes('Resmi') || step.detail.includes('Online') || step.detail.includes('RBA') ? 'verified_user' : step.detail.includes('Selesai') ? 'star' : 'description'}</span>
+                                            ${step.detail}
+                                        </span>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            timelineContainer.innerHTML = stepsHTML;
+            
+            // Add confetti to final step
+            const finalStep = document.querySelector(`.timeline-step[data-step="${steps.length}"] .step-card`);
+            if (finalStep && !finalStep.querySelector('.confetti-container')) {
+                const confettiContainer = document.createElement('div');
+                confettiContainer.className = 'confetti-container';
+                for (let i = 0; i < 10; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confettiContainer.appendChild(confetti);
+                }
+                finalStep.appendChild(confettiContainer);
+            }
+
+            // Add floating background particles if not already added
+            const section = document.getElementById('alur-pembuatan');
+            if (section && !section.querySelector('.timeline-section-bg')) {
+                const bgContainer = document.createElement('div');
+                bgContainer.className = 'timeline-section-bg';
+                for (let i = 0; i < 6; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'bg-particle';
+                    bgContainer.appendChild(particle);
+                }
+                section.insertBefore(bgContainer, section.firstChild);
+            }
+            
+            // Reinitialize animation after updating steps
+            setTimeout(() => {
+                const steps = document.querySelectorAll('.timeline-step');
+                const progressFill = document.getElementById('progress-fill');
+                const totalSteps = steps.length;
+                let currentStep = 0;
+                const stepDuration = 1800;
+
+                function animateToStep(stepIndex) {
+                    const progressPercent = ((stepIndex + 1) / totalSteps) * 100;
+                    if (progressFill) progressFill.style.height = progressPercent + '%';
+
+                    steps.forEach((step, index) => {
+                        step.classList.remove('active', 'completed');
+                        if (index < stepIndex) {
+                            step.classList.add('completed');
+                        } else if (index === stepIndex) {
+                            setTimeout(() => {
+                                step.classList.add('active');
+                            }, 100);
+                        }
+                    });
+                }
+
+                function runAnimation() {
+                    animateToStep(currentStep);
+                    currentStep++;
+                    if (currentStep >= totalSteps) {
+                        setTimeout(() => {
+                            currentStep = 0;
+                            steps.forEach(step => {
+                                step.style.opacity = '0.5';
+                            });
+                            setTimeout(() => {
+                                steps.forEach(step => {
+                                    step.classList.remove('active', 'completed');
+                                    step.style.opacity = '1';
+                                });
+                                if (progressFill) progressFill.style.height = '0%';
+                                setTimeout(runAnimation, 300);
+                            }, 400);
+                        }, 2500);
+                    } else {
+                        setTimeout(runAnimation, stepDuration);
+                    }
+                }
+
+                setTimeout(runAnimation, 800);
+            }, 100);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const serviceId = urlParams.get('id');
@@ -1378,6 +1649,17 @@
                     
                     const descEl = document.getElementById('hero-desc');
                     if (descEl) descEl.textContent = service.description || "Solusi legalitas terbaik untuk UMKM Indonesia. Proses kilat dengan harga paling terjangkau. Mulai langkah besar usaha Anda hari ini dengan pendampingan profesional.";
+                    
+                    // Update Flow Title - dinamis berdasarkan nama layanan
+                    const flowTitleEl = document.getElementById('alur-title');
+                    if (flowTitleEl) {
+                        // Format judul alur berdasarkan nama layanan
+                        flowTitleEl.textContent = `Alur ${shouldAddPendirian ? 'Pendirian ' : ''}${service.name}`;
+                    }
+
+                    // Update Flow Steps
+                    const flowType = getServiceFlowType(service.name);
+                    updateFlowSteps(flowType, service.name);
                     
                     // Update Package Info
                     const pkgNameEl = document.getElementById('package-name');
