@@ -44,6 +44,35 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Featured carousel */
+        .featured-slide {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .featured-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        .featured-carousel-wrap .featured-carousel-track {
+            position: relative;
+            aspect-ratio: 21/9;
+        }
+        @media (max-width: 768px) {
+            .featured-carousel-wrap .featured-carousel-track {
+                aspect-ratio: 16/9;
+            }
+        }
+
+        .blog-page-panel.blog-page-hidden {
+            display: none !important;
+        }
+        .blog-card.blog-cat-hidden {
+            display: none !important;
+        }
     </style>
     <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
@@ -151,41 +180,101 @@
                 bisnis, tips legalitas UMK, dan panduan hukum praktis untuk pertumbuhan usaha Anda.</p>
         </div>
 
-        <!-- Featured Article -->
-        <div class="reveal-up mb-12 md:mb-20">
-            <div
-                class="relative group aspect-video md:aspect-[21/9] rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
-                    alt="Featured Post"
-                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-12">
-                    <div class="space-y-2 md:space-y-4 max-w-2xl">
-                        <span
-                            class="px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-secondary text-primary text-[10px] md:text-xs font-black uppercase tracking-widest">Legal
-                            Update</span>
-                        <h2 class="text-xl md:text-4xl font-black text-white leading-tight">Perubahan Regulasi OSS RBA
-                            2024: Apa
-                            yang Harus Diketahui Pelaku Bisnis?</h2>
-                        <div class="flex items-center gap-4 md:gap-6 text-white/60 text-[10px] md:text-sm font-bold">
-                            <span class="flex items-center gap-1 md:gap-2"><span
-                                    class="material-symbols-outlined text-xs md:text-sm">schedule</span> 15 Jan
-                                2024</span>
-                            <span class="flex items-center gap-1 md:gap-2"><span
-                                    class="material-symbols-outlined text-xs md:text-sm">person</span> Admin ALI</span>
+        <!-- Featured Article Carousel (2 slide, auto-scroll) -->
+        <div class="reveal-up mb-12 md:mb-20 featured-carousel-wrap">
+            <div class="featured-carousel-track relative rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl aspect-video md:aspect-[21/9]">
+                <!-- Slide 1 -->
+                <a href="blog-oss-rba-2024.html" class="featured-slide active group block absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
+                        alt="Featured Post 1"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-12">
+                        <div class="space-y-2 md:space-y-4 max-w-2xl">
+                            <span
+                                class="px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-secondary text-primary text-[10px] md:text-xs font-black uppercase tracking-widest">Legal
+                                Update</span>
+                            <h2 class="text-xl md:text-4xl font-black text-white leading-tight">Perubahan Regulasi OSS RBA
+                                2024: Apa yang Harus Diketahui Pelaku Bisnis?</h2>
+                            <div class="flex items-center gap-4 md:gap-6 text-white/60 text-[10px] md:text-sm font-bold">
+                                <span class="flex items-center gap-1 md:gap-2"><span
+                                        class="material-symbols-outlined text-xs md:text-sm">schedule</span> 15 Jan
+                                    2024</span>
+                                <span class="flex items-center gap-1 md:gap-2"><span
+                                        class="material-symbols-outlined text-xs md:text-sm">person</span> Admin ALI</span>
+                            </div>
+                            <span class="inline-flex items-center gap-2 text-secondary font-black group-hover:gap-4 transition-all pt-2 md:pt-4 text-sm md:text-base">Baca
+                                Selengkapnya <span class="material-symbols-outlined">arrow_forward</span></span>
                         </div>
-                        <a href="blog-oss-rba-2024.html"
-                            class="inline-flex items-center gap-2 text-secondary font-black hover:gap-4 transition-all pt-2 md:pt-4 text-sm md:text-base">Baca
-                            Selengkapnya <span class="material-symbols-outlined">arrow_forward</span></a>
                     </div>
-                </div>
+                </a>
+                <!-- Slide 2 -->
+                <a href="blog-pt-vs-cv.html" class="featured-slide group block absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1450175804616-78ff2360eb39?auto=format&fit=crop&w=1200&q=80"
+                        alt="Featured Post 2"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-12">
+                        <div class="space-y-2 md:space-y-4 max-w-2xl">
+                            <span
+                                class="px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-secondary text-primary text-[10px] md:text-xs font-black uppercase tracking-widest">Tips
+                                Bisnis</span>
+                            <h2 class="text-xl md:text-4xl font-black text-white leading-tight">Panduan Lengkap Memilih Antara PT Perorangan atau CV</h2>
+                            <div class="flex items-center gap-4 md:gap-6 text-white/60 text-[10px] md:text-sm font-bold">
+                                <span class="flex items-center gap-1 md:gap-2"><span
+                                        class="material-symbols-outlined text-xs md:text-sm">schedule</span> 10 Jan
+                                    2024</span>
+                                <span class="flex items-center gap-1 md:gap-2"><span
+                                        class="material-symbols-outlined text-xs md:text-sm">person</span> Admin ALI</span>
+                            </div>
+                            <span class="inline-flex items-center gap-2 text-secondary font-black group-hover:gap-4 transition-all pt-2 md:pt-4 text-sm md:text-base">Baca
+                                Selengkapnya <span class="material-symbols-outlined">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Slide 3 -->
+                <a href="blog-haki-brand.html" class="featured-slide group block absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&w=1200&q=80"
+                        alt="Featured Post 3"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-12">
+                        <div class="space-y-2 md:space-y-4 max-w-2xl">
+                            <span
+                                class="px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-secondary text-primary text-[10px] md:text-xs font-black uppercase tracking-widest">HAKI</span>
+                            <h2 class="text-xl md:text-4xl font-black text-white leading-tight">Kenapa Brand Anda Harus Didaftarkan HAKI Sejak Dini?</h2>
+                            <div class="flex items-center gap-4 md:gap-6 text-white/60 text-[10px] md:text-sm font-bold">
+                                <span class="flex items-center gap-1 md:gap-2"><span
+                                        class="material-symbols-outlined text-xs md:text-sm">schedule</span> 8 Jan
+                                    2024</span>
+                                <span class="flex items-center gap-1 md:gap-2"><span
+                                        class="material-symbols-outlined text-xs md:text-sm">person</span> Admin ALI</span>
+                            </div>
+                            <span class="inline-flex items-center gap-2 text-secondary font-black group-hover:gap-4 transition-all pt-2 md:pt-4 text-sm md:text-base">Baca
+                                Selengkapnya <span class="material-symbols-outlined">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Carousel dots -->
+            <div class="flex justify-center gap-2 mt-4">
+                <button type="button" class="featured-dot size-2.5 rounded-full bg-primary transition-all" aria-label="Slide 1" data-slide="0"></button>
+                <button type="button" class="featured-dot size-2.5 rounded-full bg-primary/40 hover:bg-primary/70 transition-all" aria-label="Slide 2" data-slide="1"></button>
+                <button type="button" class="featured-dot size-2.5 rounded-full bg-primary/40 hover:bg-primary/70 transition-all" aria-label="Slide 3" data-slide="2"></button>
             </div>
         </div>
 
-        <!-- Blog Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <!-- Halaman 1: Artikel (seperti awal) -->
+        <div id="blog-page-1" class="blog-page-panel">
+        <!-- Kategori -->
+        <div class="flex flex-wrap gap-2 mb-8 reveal-up">
+            <button type="button" class="blog-cat-btn px-5 py-2.5 rounded-xl font-black text-sm transition-all bg-primary text-white" data-cat="semua">Semua</button>
+            <button type="button" class="blog-cat-btn px-5 py-2.5 rounded-xl font-black text-sm transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-primary/50 hover:text-primary" data-cat="pendirian">Pendirian</button>
+            <button type="button" class="blog-cat-btn px-5 py-2.5 rounded-xl font-black text-sm transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-primary/50 hover:text-primary" data-cat="perizinan">Perizinan</button>
+        </div>
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             <!-- Article 1 -->
-            <a href="blog-pt-vs-cv.html" class="reveal-up group" style="transition-delay: 0ms;">
+            <a href="blog-pt-vs-cv.html" class="blog-card reveal-up group" data-category="pendirian" style="transition-delay: 0ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
                     <img src="https://images.unsplash.com/photo-1450175804616-78ff2360eb39?auto=format&fit=crop&w=600&q=80"
                         alt="Post 1"
@@ -202,7 +291,7 @@
             </a>
 
             <!-- Article 2 -->
-            <a href="blog-haki-brand.html" class="reveal-up group" style="transition-delay: 100ms;">
+            <a href="blog-haki-brand.html" class="blog-card reveal-up group" data-category="lainnya" style="transition-delay: 100ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
                     <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&w=600&q=80"
                         alt="Post 2"
@@ -219,7 +308,7 @@
             </a>
 
             <!-- Article 3 -->
-            <a href="blog-halal-gratis.html" class="reveal-up group" style="transition-delay: 200ms;">
+            <a href="blog-halal-gratis.html" class="blog-card reveal-up group" data-category="perizinan" style="transition-delay: 200ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
                     <img src="https://images.unsplash.com/photo-1434626958693-3941b2623bd1?auto=format&fit=crop&w=600&q=80"
                         alt="Post 3"
@@ -234,18 +323,267 @@
                         kuliner Anda melalui skema Sertifikasi Halal Gratis.</p>
                 </div>
             </a>
+
+            <!-- Article 4 -->
+            <a href="blog-nib-wajib.html" class="blog-card reveal-up group" data-category="perizinan" style="transition-delay: 300ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 4"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Regulasi</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        NIB Wajib untuk Semua Pelaku Usaha: Ketentuan dan Cara Daftar</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Nomor Induk Berusaha kini mandatory.
+                        Simak syarat dan prosedur pendaftaran NIB secara online.</p>
+                </div>
+            </a>
+
+            <!-- Article 5 -->
+            <a href="blog-akta-notaris.html" class="blog-card reveal-up group" data-category="pendirian" style="transition-delay: 400ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 5"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Pendirian</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        Kapan Perlu Akta Notaris untuk Pendirian Badan Usaha?</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">PT dan CV punya ketentuan beda. Pelajari
+                        kapan wajib notaris dan kapan bisa pakai akta di bawah tangan.</p>
+                </div>
+            </a>
+
+            <!-- Article 6 -->
+            <a href="blog-pirt-mbr.html" class="blog-page-item reveal-up group" data-page="2" style="transition-delay: 500ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 6"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Sertifikasi</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        PIRT dan Sertifikasi MBR: Perbedaan dan Manfaat untuk UKM</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Agar produk pangan legal dijual, pahami
+                        beda PIRT, Halal, dan skema MBR serta alur pengurusannya.</p>
+                </div>
+            </a>
+
+            <!-- Article 7 -->
+            <a href="blog-izin-edar.html" class="blog-card reveal-up group" data-category="perizinan" style="transition-delay: 600ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 7"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Regulasi</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        Izin Edar BPOM vs PIRT: Pilih yang Mana untuk Produk Anda?</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Kriteria produk yang harus BPOM dan yang
+                        cukup PIRT, plus tips percepat proses pengajuan.</p>
+                </div>
+            </a>
+
+            <!-- Article 8 -->
+            <a href="blog-uu-umkm.html" class="blog-card reveal-up group" data-category="lainnya" style="transition-delay: 700ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da2bafaa?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 8"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Legal Update</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        UU UMKM Terbaru: Hak dan Kewajiban yang Perlu Anda Tahu</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Ringkasan perubahan UU UMKM dan dampaknya
+                        bagi pelaku usaha mikro, kecil, dan menengah.</p>
+                </div>
+            </a>
+
+            <!-- Article 9 -->
+            <a href="blog-merek-dagang.html" class="blog-page-item reveal-up group" data-page="3" style="transition-delay: 800ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 9"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">HAKI</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        Daftar Merek Dagang Sendiri vs Pakai Konsultan: Mana Lebih Efisien?</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Perbandingan biaya, waktu, dan risiko
+                        saat daftar merek mandiri vs melalui konsultan HKI.</p>
+                </div>
+            </a>
+
+            <!-- Article 10 -->
+            <a href="blog-oss-rba-2024.html" class="blog-card reveal-up group" data-category="perizinan" style="transition-delay: 0ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 10"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Legal Update</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        Perubahan Regulasi OSS RBA 2024: Apa yang Harus Diketahui Pelaku Bisnis?</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Ringkasan update OSS RBA dan dampaknya
+                        bagi pendirian usaha serta perizinan berusaha.</p>
+                </div>
+            </a>
+
+            <!-- Article 11 -->
+            <a href="blog-syarat-pt.html" class="blog-page-item reveal-up group" data-page="4" style="transition-delay: 100ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c888a6c2c0b0?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 11"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Pendirian</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        Syarat dan Dokumen Pendirian PT Perorangan yang Perlu Disiapkan</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Checklist lengkap dokumen serta
+                        persyaratan sebelum mengajukan pendirian PT perorangan.</p>
+                </div>
+            </a>
+
+            <!-- Article 12 -->
+            <a href="blog-cv-pt-beda.html" class="blog-card reveal-up group" data-category="pendirian" style="transition-delay: 200ms;">
+                <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1497366216544-37526070297c?auto=format&fit=crop&w=600&q=80"
+                        alt="Post 12"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-black text-primary uppercase tracking-widest">Tips Bisnis</span>
+                    <h3
+                        class="text-2xl font-black text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                        Kapan Pindah dari CV ke PT? Pertimbangan dan Prosedur Konversi</h3>
+                    <p class="text-gray-500 font-medium text-sm line-clamp-2">Kapan bisnis Anda siap naik kelas ke PT
+                        dan langkah konversi CV ke PT yang perlu Anda ketahui.</p>
+                </div>
+            </a>
+        </div>
         </div>
 
-        <!-- Pagination Placeholder -->
-        <div class="mt-20 flex justify-center gap-2 reveal-up">
-            <button
-                class="size-12 rounded-xl bg-primary text-white font-bold flex items-center justify-center">1</button>
-            <button
-                class="size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 transition-colors">2</button>
-            <button
-                class="size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 transition-colors">3</button>
-            <button
-                class="size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 transition-colors">
+        <!-- Halaman 2: Edukasi & Panduan -->
+        <div id="blog-page-2" class="blog-page-panel blog-page-hidden">
+            <div class="reveal-up max-w-3xl mx-auto text-center md:text-left space-y-8">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white">Edukasi & Panduan</h2>
+                <p class="text-gray-500 font-medium text-lg leading-relaxed">Panduan praktis dan checklist untuk memudahkan Anda menyiapkan dokumen dan langkah legalitas bisnis.</p>
+                <div class="grid sm:grid-cols-2 gap-6 pt-6">
+                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
+                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">description</span>
+                        </span>
+                        <div class="text-left">
+                            <span class="font-black text-gray-900 dark:text-white block">Checklist Pendirian PT</span>
+                            <span class="text-sm text-gray-500">Unduh PDF</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
+                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">list_alt</span>
+                        </span>
+                        <div class="text-left">
+                            <span class="font-black text-gray-900 dark:text-white block">Syarat Dokumen NIB</span>
+                            <span class="text-sm text-gray-500">Ringkasan</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
+                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">help</span>
+                        </span>
+                        <div class="text-left">
+                            <span class="font-black text-gray-900 dark:text-white block">FAQ Legalitas UMKM</span>
+                            <span class="text-sm text-gray-500">Tanya Jawab</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
+                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">temple_buddhist</span>
+                        </span>
+                        <div class="text-left">
+                            <span class="font-black text-gray-900 dark:text-white block">Alur Sertifikasi Halal</span>
+                            <span class="text-sm text-gray-500">Step by step</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 3: Video & Webinar -->
+        <div id="blog-page-3" class="blog-page-panel blog-page-hidden">
+            <div class="reveal-up max-w-3xl mx-auto space-y-8">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white text-center md:text-left">Video & Webinar</h2>
+                <p class="text-gray-500 font-medium text-lg leading-relaxed text-center md:text-left">Tonton webinar dan video edukasi legalitas untuk pelaku usaha.</p>
+                <div class="grid gap-8">
+                    <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <span class="material-symbols-outlined text-6xl text-primary/50">play_circle</span>
+                            <p class="text-gray-500 font-bold mt-2">Video: Pendirian PT Perorangan Lewat OSS</p>
+                            <p class="text-sm text-gray-400">Segera hadir</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-bold text-gray-600 dark:text-gray-400">Webinar: NIB & Perizinan Berusaha</div>
+                        <div class="px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-bold text-gray-600 dark:text-gray-400">Webinar: HAKI untuk Brand UKM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman 4: Infografis & Konsultasi -->
+        <div id="blog-page-4" class="blog-page-panel blog-page-hidden">
+            <div class="reveal-up max-w-3xl mx-auto space-y-8">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white text-center md:text-left">Infografis & Konsultasi</h2>
+                <p class="text-gray-500 font-medium text-lg leading-relaxed text-center md:text-left">Unduh infografis ringkas dan konsultasi dengan tim kami.</p>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10 dark:border-gray-700">
+                        <span class="material-symbols-outlined text-4xl text-primary">dashboard</span>
+                        <h3 class="font-black text-gray-900 dark:text-white mt-4">Infografis: PT vs CV</h3>
+                        <p class="text-gray-500 text-sm mt-1">Perbandingan singkat dalam 1 halaman.</p>
+                        <a href="#" class="inline-flex items-center gap-1 text-primary font-black text-sm mt-4">Unduh PDF <span class="material-symbols-outlined text-sm">download</span></a>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10 dark:border-gray-700">
+                        <span class="material-symbols-outlined text-4xl text-primary">description</span>
+                        <h3 class="font-black text-gray-900 dark:text-white mt-4">Infografis: Alur NIB</h3>
+                        <p class="text-gray-500 text-sm mt-1">Langkah daftar NIB secara visual.</p>
+                        <a href="#" class="inline-flex items-center gap-1 text-primary font-black text-sm mt-4">Unduh PDF <span class="material-symbols-outlined text-sm">download</span></a>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-gray-100 dark:border-gray-800 text-center">
+                    <p class="text-gray-500 font-medium mb-4">Butuh panduan khusus? Tim edukasi siap membantu.</p>
+                    <a href="https://wa.me/6285251519925" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-primary text-white px-6 py-3 font-black hover:bg-primary/90 transition-colors">
+                        <span class="material-symbols-outlined">chat</span> Konsultasi via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div id="blog-pagination" class="mt-20 flex justify-center items-center gap-2 reveal-up flex-wrap">
+            <button type="button" id="blog-prev" class="blog-pagination-prev size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 transition-colors disabled:opacity-40 disabled:pointer-events-none" aria-label="Halaman sebelumnya">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button type="button" class="blog-page-btn size-12 rounded-xl bg-primary text-white font-bold flex items-center justify-center hover:bg-primary/90 transition-colors" data-page="1">1</button>
+            <button type="button" class="blog-page-btn size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-page="2">2</button>
+            <button type="button" class="blog-page-btn size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-page="3">3</button>
+            <button type="button" class="blog-page-btn size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" data-page="4">4</button>
+            <button type="button" id="blog-next" class="blog-pagination-next size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 font-bold flex items-center justify-center hover:bg-gray-50 transition-colors" aria-label="Halaman berikutnya">
                 <span class="material-symbols-outlined">chevron_right</span>
             </button>
         </div>
@@ -308,6 +646,140 @@
                 Seluruh Hak Cipta Dilindungi.</p>
         </div>
     </footer>
+
+    <!-- Featured carousel auto-scroll -->
+    <script>
+        (function () {
+            var wrap = document.querySelector('.featured-carousel-wrap');
+            if (!wrap) return;
+            var slides = wrap.querySelectorAll('.featured-slide');
+            var dots = wrap.querySelectorAll('.featured-dot');
+            var total = slides.length;
+            var current = 0;
+            var interval = 5500;
+
+            function goToSlide(i) {
+                current = (i + total) % total;
+                slides.forEach(function (s, idx) {
+                    s.classList.toggle('active', idx === current);
+                });
+                dots.forEach(function (d, idx) {
+                    d.classList.toggle('bg-primary', idx === current);
+                    d.classList.toggle('bg-primary/40', idx !== current);
+                });
+            }
+
+            dots.forEach(function (d, i) {
+                d.addEventListener('click', function () {
+                    goToSlide(i);
+                    restartInterval();
+                });
+            });
+
+            var t;
+            function restartInterval() {
+                clearTimeout(t);
+                t = setTimeout(function next() {
+                    goToSlide(current + 1);
+                    t = setTimeout(next, interval);
+                }, interval);
+            }
+            restartInterval();
+        })();
+    </script>
+
+    <!-- Blog pagination -->
+    <script>
+        (function () {
+            var pagination = document.getElementById('blog-pagination');
+            if (!pagination) return;
+
+            var panels = document.querySelectorAll('.blog-page-panel');
+            var pageBtns = pagination.querySelectorAll('.blog-page-btn');
+            var prevBtn = document.getElementById('blog-prev');
+            var nextBtn = document.getElementById('blog-next');
+            var totalPages = 4;
+            var currentPage = 1;
+
+            function goToPage(page) {
+                currentPage = Math.max(1, Math.min(totalPages, page));
+                panels.forEach(function (el) {
+                    var id = el.id;
+                    var p = id === 'blog-page-1' ? 1 : id === 'blog-page-2' ? 2 : id === 'blog-page-3' ? 3 : 4;
+                    el.classList.toggle('blog-page-hidden', p !== currentPage);
+                });
+                pageBtns.forEach(function (btn) {
+                    var p = parseInt(btn.getAttribute('data-page'), 10);
+                    var active = p === currentPage;
+                    btn.classList.toggle('bg-primary', active);
+                    btn.classList.toggle('text-white', active);
+                    btn.classList.toggle('bg-white', !active);
+                    btn.classList.toggle('dark:bg-gray-800', !active);
+                    btn.classList.toggle('border', !active);
+                    btn.classList.toggle('border-gray-100', !active);
+                    btn.classList.toggle('dark:border-gray-700', !active);
+                });
+                if (prevBtn) prevBtn.disabled = currentPage <= 1;
+                if (nextBtn) nextBtn.disabled = currentPage >= totalPages;
+                var target = document.getElementById('blog-page-' + currentPage);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            pageBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    goToPage(parseInt(btn.getAttribute('data-page'), 10));
+                });
+            });
+            if (prevBtn) prevBtn.addEventListener('click', function () {
+                if (currentPage > 1) goToPage(currentPage - 1);
+            });
+            if (nextBtn) nextBtn.addEventListener('click', function () {
+                if (currentPage < totalPages) goToPage(currentPage + 1);
+            });
+
+            goToPage(1);
+        })();
+    </script>
+
+    <!-- Blog kategori filter (halaman 1) -->
+    <script>
+        (function () {
+            var grid = document.getElementById('blog-grid');
+            var catBtns = document.querySelectorAll('.blog-cat-btn');
+            var cards = grid ? grid.querySelectorAll('.blog-card') : [];
+            var currentCat = 'semua';
+
+            function applyCategory(cat) {
+                currentCat = cat || 'semua';
+                cards.forEach(function (el) {
+                    var c = el.getAttribute('data-category') || '';
+                    var hide = (currentCat === 'pendirian' && c !== 'pendirian') ||
+                               (currentCat === 'perizinan' && c !== 'perizinan');
+                    el.classList.toggle('blog-cat-hidden', hide);
+                });
+                catBtns.forEach(function (btn) {
+                    var b = btn.getAttribute('data-cat') || '';
+                    var active = b === currentCat;
+                    btn.classList.toggle('bg-primary', active);
+                    btn.classList.toggle('text-white', active);
+                    btn.classList.toggle('bg-white', !active);
+                    btn.classList.toggle('dark:bg-gray-800', !active);
+                    btn.classList.toggle('border', !active);
+                    btn.classList.toggle('border-gray-200', !active);
+                    btn.classList.toggle('dark:border-gray-700', !active);
+                    btn.classList.toggle('text-gray-700', !active);
+                    btn.classList.toggle('dark:text-gray-300', !active);
+                });
+            }
+
+            catBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    applyCategory(btn.getAttribute('data-cat') || 'semua');
+                });
+            });
+            applyCategory('semua');
+        })();
+    </script>
 </body>
 
 </html>
