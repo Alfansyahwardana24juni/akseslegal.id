@@ -264,7 +264,7 @@
             </div>
         </div>
 
-        <!-- Halaman 1: Artikel (seperti awal) -->
+        <!-- Artikel list (pagination: 3 artikel per halaman) -->
         <div id="blog-page-1" class="blog-page-panel">
         <!-- Kategori -->
         <div class="flex flex-wrap gap-2 mb-8 reveal-up">
@@ -273,6 +273,7 @@
             <button type="button" class="blog-cat-btn px-5 py-2.5 rounded-xl font-black text-sm transition-all bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-primary/50 hover:text-primary" data-cat="perizinan">Perizinan</button>
         </div>
         <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <!-- Catatan: Urutan artikel = urutan terbaru -> terlama (paling atas paling baru). -->
             <!-- Article 1 -->
             <a href="blog-pt-vs-cv.html" class="blog-card reveal-up group" data-category="pendirian" style="transition-delay: 0ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
@@ -359,7 +360,7 @@
             </a>
 
             <!-- Article 6 -->
-            <a href="blog-pirt-mbr.html" class="blog-page-item reveal-up group" data-page="2" style="transition-delay: 500ms;">
+            <a href="blog-pirt-mbr.html" class="blog-card reveal-up group" data-category="perizinan" style="transition-delay: 500ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
                     <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80"
                         alt="Post 6"
@@ -410,7 +411,7 @@
             </a>
 
             <!-- Article 9 -->
-            <a href="blog-merek-dagang.html" class="blog-page-item reveal-up group" data-page="3" style="transition-delay: 800ms;">
+            <a href="blog-merek-dagang.html" class="blog-card reveal-up group" data-category="lainnya" style="transition-delay: 800ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
                     <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=600&q=80"
                         alt="Post 9"
@@ -444,7 +445,7 @@
             </a>
 
             <!-- Article 11 -->
-            <a href="blog-syarat-pt.html" class="blog-page-item reveal-up group" data-page="4" style="transition-delay: 100ms;">
+            <a href="blog-syarat-pt.html" class="blog-card reveal-up group" data-category="pendirian" style="transition-delay: 100ms;">
                 <div class="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg">
                     <img src="https://images.unsplash.com/photo-1486406146926-c888a6c2c0b0?auto=format&fit=crop&w=600&q=80"
                         alt="Post 11"
@@ -477,101 +478,6 @@
                 </div>
             </a>
         </div>
-        </div>
-
-        <!-- Halaman 2: Edukasi & Panduan -->
-        <div id="blog-page-2" class="blog-page-panel blog-page-hidden">
-            <div class="reveal-up max-w-3xl mx-auto text-center md:text-left space-y-8">
-                <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white">Edukasi & Panduan</h2>
-                <p class="text-gray-500 font-medium text-lg leading-relaxed">Panduan praktis dan checklist untuk memudahkan Anda menyiapkan dokumen dan langkah legalitas bisnis.</p>
-                <div class="grid sm:grid-cols-2 gap-6 pt-6">
-                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
-                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-2xl">description</span>
-                        </span>
-                        <div class="text-left">
-                            <span class="font-black text-gray-900 dark:text-white block">Checklist Pendirian PT</span>
-                            <span class="text-sm text-gray-500">Unduh PDF</span>
-                        </div>
-                    </a>
-                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
-                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-2xl">list_alt</span>
-                        </span>
-                        <div class="text-left">
-                            <span class="font-black text-gray-900 dark:text-white block">Syarat Dokumen NIB</span>
-                            <span class="text-sm text-gray-500">Ringkasan</span>
-                        </div>
-                    </a>
-                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
-                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-2xl">help</span>
-                        </span>
-                        <div class="text-left">
-                            <span class="font-black text-gray-900 dark:text-white block">FAQ Legalitas UMKM</span>
-                            <span class="text-sm text-gray-500">Tanya Jawab</span>
-                        </div>
-                    </a>
-                    <a href="#" class="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary/30 hover:shadow-lg transition-all group">
-                        <span class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-2xl">temple_buddhist</span>
-                        </span>
-                        <div class="text-left">
-                            <span class="font-black text-gray-900 dark:text-white block">Alur Sertifikasi Halal</span>
-                            <span class="text-sm text-gray-500">Step by step</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Halaman 3: Video & Webinar -->
-        <div id="blog-page-3" class="blog-page-panel blog-page-hidden">
-            <div class="reveal-up max-w-3xl mx-auto space-y-8">
-                <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white text-center md:text-left">Video & Webinar</h2>
-                <p class="text-gray-500 font-medium text-lg leading-relaxed text-center md:text-left">Tonton webinar dan video edukasi legalitas untuk pelaku usaha.</p>
-                <div class="grid gap-8">
-                    <div class="rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 aspect-video flex items-center justify-center">
-                        <div class="text-center p-8">
-                            <span class="material-symbols-outlined text-6xl text-primary/50">play_circle</span>
-                            <p class="text-gray-500 font-bold mt-2">Video: Pendirian PT Perorangan Lewat OSS</p>
-                            <p class="text-sm text-gray-400">Segera hadir</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                        <div class="px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-bold text-gray-600 dark:text-gray-400">Webinar: NIB & Perizinan Berusaha</div>
-                        <div class="px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-bold text-gray-600 dark:text-gray-400">Webinar: HAKI untuk Brand UKM</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Halaman 4: Infografis & Konsultasi -->
-        <div id="blog-page-4" class="blog-page-panel blog-page-hidden">
-            <div class="reveal-up max-w-3xl mx-auto space-y-8">
-                <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white text-center md:text-left">Infografis & Konsultasi</h2>
-                <p class="text-gray-500 font-medium text-lg leading-relaxed text-center md:text-left">Unduh infografis ringkas dan konsultasi dengan tim kami.</p>
-                <div class="grid sm:grid-cols-2 gap-6">
-                    <div class="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10 dark:border-gray-700">
-                        <span class="material-symbols-outlined text-4xl text-primary">dashboard</span>
-                        <h3 class="font-black text-gray-900 dark:text-white mt-4">Infografis: PT vs CV</h3>
-                        <p class="text-gray-500 text-sm mt-1">Perbandingan singkat dalam 1 halaman.</p>
-                        <a href="#" class="inline-flex items-center gap-1 text-primary font-black text-sm mt-4">Unduh PDF <span class="material-symbols-outlined text-sm">download</span></a>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10 dark:border-gray-700">
-                        <span class="material-symbols-outlined text-4xl text-primary">description</span>
-                        <h3 class="font-black text-gray-900 dark:text-white mt-4">Infografis: Alur NIB</h3>
-                        <p class="text-gray-500 text-sm mt-1">Langkah daftar NIB secara visual.</p>
-                        <a href="#" class="inline-flex items-center gap-1 text-primary font-black text-sm mt-4">Unduh PDF <span class="material-symbols-outlined text-sm">download</span></a>
-                    </div>
-                </div>
-                <div class="pt-8 border-t border-gray-100 dark:border-gray-800 text-center">
-                    <p class="text-gray-500 font-medium mb-4">Butuh panduan khusus? Tim edukasi siap membantu.</p>
-                    <a href="https://wa.me/6285333338818" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-primary text-white px-6 py-3 font-black hover:bg-primary/90 transition-colors">
-                        <span class="material-symbols-outlined">chat</span> Konsultasi via WhatsApp
-                    </a>
-                </div>
-            </div>
         </div>
 
         <!-- Pagination -->
@@ -688,28 +594,48 @@
         })();
     </script>
 
-    <!-- Blog pagination -->
+    <!-- Blog: pagination + kategori filter (3 artikel per halaman, artikel baru tampil di halaman 1) -->
     <script>
         (function () {
+            var grid = document.getElementById('blog-grid');
             var pagination = document.getElementById('blog-pagination');
-            if (!pagination) return;
+            if (!grid || !pagination) return;
 
-            var panels = document.querySelectorAll('.blog-page-panel');
-            var pageBtns = pagination.querySelectorAll('.blog-page-btn');
-            var prevBtn = document.getElementById('blog-prev');
-            var nextBtn = document.getElementById('blog-next');
-            var totalPages = 4;
+            var pageSize = 3;
             var currentPage = 1;
+            var currentCat = 'semua';
 
-            function goToPage(page) {
-                currentPage = Math.max(1, Math.min(totalPages, page));
-                panels.forEach(function (el) {
-                    var id = el.id;
-                    var p = id === 'blog-page-1' ? 1 : id === 'blog-page-2' ? 2 : id === 'blog-page-3' ? 3 : 4;
-                    el.classList.toggle('blog-page-hidden', p !== currentPage);
+            function getAllCards() {
+                // Urutan artikel mengikuti urutan DOM (paling atas = paling baru).
+                return Array.prototype.slice.call(grid.querySelectorAll('.blog-card'));
+            }
+
+            function getFilteredCards(all) {
+                if (currentCat === 'semua') return all;
+                return all.filter(function (el) {
+                    return (el.getAttribute('data-category') || '') === currentCat;
                 });
+            }
+
+            function totalPagesFor(count) {
+                return Math.max(1, Math.ceil(count / pageSize));
+            }
+
+            function syncPagerUi(totalPages) {
+                var pageBtns = pagination.querySelectorAll('.blog-page-btn');
+                var prevBtn = document.getElementById('blog-prev');
+                var nextBtn = document.getElementById('blog-next');
+
+                // Batasi currentPage jika filter mengurangi jumlah halaman
+                if (currentPage > totalPages) currentPage = totalPages;
+                if (currentPage < 1) currentPage = 1;
+
                 pageBtns.forEach(function (btn) {
                     var p = parseInt(btn.getAttribute('data-page'), 10);
+                    var show = p <= totalPages;
+                    btn.style.display = show ? '' : 'none';
+                    if (!show) return;
+
                     var active = p === currentPage;
                     btn.classList.toggle('bg-primary', active);
                     btn.classList.toggle('text-white', active);
@@ -719,45 +645,36 @@
                     btn.classList.toggle('border-gray-100', !active);
                     btn.classList.toggle('dark:border-gray-700', !active);
                 });
+
                 if (prevBtn) prevBtn.disabled = currentPage <= 1;
                 if (nextBtn) nextBtn.disabled = currentPage >= totalPages;
-                var target = document.getElementById('blog-page-' + currentPage);
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
-            pageBtns.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    goToPage(parseInt(btn.getAttribute('data-page'), 10));
+            function render() {
+                var all = getAllCards();
+                var filtered = getFilteredCards(all);
+                var totalPages = totalPagesFor(filtered.length);
+
+                // Reset semua dulu
+                all.forEach(function (el) {
+                    el.classList.add('blog-cat-hidden');
                 });
-            });
-            if (prevBtn) prevBtn.addEventListener('click', function () {
-                if (currentPage > 1) goToPage(currentPage - 1);
-            });
-            if (nextBtn) nextBtn.addEventListener('click', function () {
-                if (currentPage < totalPages) goToPage(currentPage + 1);
-            });
 
-            goToPage(1);
-        })();
-    </script>
+                // Tampilkan hanya 3 artikel untuk halaman aktif (berdasarkan hasil filter)
+                var start = (currentPage - 1) * pageSize;
+                var end = start + pageSize;
+                filtered.slice(start, end).forEach(function (el) {
+                    el.classList.remove('blog-cat-hidden');
+                });
 
-    <!-- Blog kategori filter (halaman 1) -->
-    <script>
-        (function () {
-            var grid = document.getElementById('blog-grid');
-            var catBtns = document.querySelectorAll('.blog-cat-btn');
-            var cards = grid ? grid.querySelectorAll('.blog-card') : [];
-            var currentCat = 'semua';
+                syncPagerUi(totalPages);
+            }
 
-            function applyCategory(cat) {
+            function setCategory(cat) {
                 currentCat = cat || 'semua';
-                cards.forEach(function (el) {
-                    var c = el.getAttribute('data-category') || '';
-                    var hide = (currentCat === 'pendirian' && c !== 'pendirian') ||
-                               (currentCat === 'perizinan' && c !== 'perizinan');
-                    el.classList.toggle('blog-cat-hidden', hide);
-                });
-                catBtns.forEach(function (btn) {
+                currentPage = 1;
+                // Update style tombol kategori
+                document.querySelectorAll('.blog-cat-btn').forEach(function (btn) {
                     var b = btn.getAttribute('data-cat') || '';
                     var active = b === currentCat;
                     btn.classList.toggle('bg-primary', active);
@@ -770,14 +687,38 @@
                     btn.classList.toggle('text-gray-700', !active);
                     btn.classList.toggle('dark:text-gray-300', !active);
                 });
+                render();
+                var target = document.getElementById('blog-page-1');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
-            catBtns.forEach(function (btn) {
+            function goToPage(page) {
+                currentPage = page;
+                render();
+                var target = document.getElementById('blog-page-1');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Wire: kategori
+            document.querySelectorAll('.blog-cat-btn').forEach(function (btn) {
                 btn.addEventListener('click', function () {
-                    applyCategory(btn.getAttribute('data-cat') || 'semua');
+                    setCategory(btn.getAttribute('data-cat') || 'semua');
                 });
             });
-            applyCategory('semua');
+
+            // Wire: pagination
+            pagination.querySelectorAll('.blog-page-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    goToPage(parseInt(btn.getAttribute('data-page'), 10));
+                });
+            });
+            var prevBtn = document.getElementById('blog-prev');
+            var nextBtn = document.getElementById('blog-next');
+            if (prevBtn) prevBtn.addEventListener('click', function () { goToPage(currentPage - 1); });
+            if (nextBtn) nextBtn.addEventListener('click', function () { goToPage(currentPage + 1); });
+
+            // Init
+            setCategory('semua');
         })();
     </script>
 </body>
