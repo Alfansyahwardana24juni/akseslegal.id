@@ -1,0 +1,156 @@
+{
+  "pendirian_cv": {
+    "umk-badge": "Badan Usaha Terpopuler",
+    "umk-title": "Solusi Usaha <br>Hemat & <span class='text-primary'>Fleksibel</span>",
+    "umk-desc": "CV adalah pilihan ideal bagi UMK yang ingin membangun bisnis bersama mitra dengan modal terjangkau namun memiliki legalitas yang diakui perbankan.",
+    "umk-features": [
+      "Pendiri Minimal 2 Orang",
+      "Tanpa Minimal Modal Setor",
+      "Sistem Sekutu Aktif & Pasif",
+      "Manajemen Pajak Lebih Efisien"
+    ]
+  },
+  "rups_cv_perubahan": {
+    "umk-badge": "Update Legalitas CV",
+    "umk-title": "Penyesuaian Struktur <br><span class='text-primary'>Bisnis CV Anda</span>",
+    "umk-desc": "Layanan perubahan CV untuk pembaharuan data pengurus, modal, atau anggaran dasar agar tetap relevan dengan perkembangan bisnis Anda.",
+    "umk-features": [
+      "Perubahan Pengurus & Pesero",
+      "Penyesuaian Modal Usaha",
+      "Update Anggaran Dasar",
+      "Proses Cepat & Akurat"
+    ]
+  },
+  "pendirian_pt_umum": {
+    "umk-badge": "Standar Bisnis Profesional",
+    "umk-title": "Badan Hukum <br><span class='text-primary'>Pilihan Investor</span>",
+    "umk-desc": "Bangun kredibilitas tertinggi dengan PT Umum. Struktur organisasi yang solid siap membawa bisnis Anda memenangkan tender besar dan pendanaan investor.",
+    "umk-features": [
+      "Minimal 2 Pendiri/Pemegang Saham",
+      "Pemisahan Harta & Aset Pribadi",
+      "Akses Tender & Proyek Besar",
+      "Reputasi Bisnis Bonafide"
+    ]
+  },
+  "cv_to_pt_umum": {
+    "umk-badge": "Scale Up Bisnis",
+    "umk-title": "Transformasi CV <br>Menjadi <span class='text-primary'>PT Umum</span>",
+    "umk-desc": "Tingkatkan kelas bisnis Anda dari CV ke PT Umum untuk fleksibilitas operasional yang lebih besar dan perlindungan hukum yang lebih kuat.",
+    "umk-features": [
+      "Meningkatkan Status Hukum",
+      "Kapasitas Modal Lebih Besar",
+      "Keamanan Aset Pemilik",
+      "Siap Ekspansi Nasional"
+    ]
+  },
+  "bundling_pt_vo": {
+    "umk-badge": "Paket Hemat Eksklusif",
+    "umk-title": "Bundling PT <br>& <span class='text-primary'>Virtual Office</span>",
+    "umk-desc": "Solusi cerdas bagi UMK. Miliki badan hukum PT sekaligus alamat bisnis bergengsi di lokasi strategis tanpa biaya sewa kantor yang mahal.",
+    "umk-features": [
+      "Legalitas PT Lengkap",
+      "Alamat Kantor Strategis",
+      "Layanan Domisili Resmi",
+      "Lebih Hemat & Efisien"
+    ]
+  },
+  "rups_pt_pengurus": {
+    "umk-badge": "Manajemen Perusahaan",
+    "umk-title": "Perubahan Struktur <br>& <span class='text-primary'>Oper Saham</span>",
+    "umk-desc": "Layanan RUPS profesional untuk perubahan jajaran direksi, komisaris, atau pengalihan kepemilikan saham secara transparan dan legal.",
+    "umk-features": [
+      "Pengalihan Saham Legal",
+      "Ganti Direksi & Komisaris",
+      "Berita Acara RUPS Resmi",
+      "Update SK Kemenkumham"
+    ]
+  },
+  "rups_pt_kbli": {
+    "umk-badge": "Update Operasional",
+    "umk-title": "Penyesuaian <br><span class='text-primary'>Data & Bidang PT</span>",
+    "umk-desc": "Pastikan PT Anda tetap patuh pada regulasi terbaru. Sesuaikan KBLI, Nama PT, Kedudukan, atau penambahan modal dengan mudah.",
+    "umk-features": [
+      "Update KBLI Tahun Terbaru",
+      "Perubahan Nama & Kedudukan",
+      "Peningkatan Modal Disetor",
+      "Sesuai Regulasi OSS RBA"
+    ]
+  },
+  "pendirian_pt_pma": {
+    "umk-badge": "Foreign Direct Investment",
+    "umk-title": "Go Global with <br><span class='text-primary'>PT PMA</span>",
+    "umk-desc": "Solusi legalitas bagi investor asing yang ingin mendirikan bisnis di Indonesia dengan perlindungan hukum dan standar internasional.",
+    "umk-features": [
+      "Kepemilikan Modal Asing",
+      "Fasilitas KITAS Investor",
+      "Perlindungan Hukum Investasi",
+      "Akses Pasar Internasional"
+    ]
+  },
+  "pt_pma_nib_pkkpr": {
+    "umk-badge": "Izin Investasi Lengkap",
+    "umk-title": "PT PMA Lengkap <br><span class='text-primary'>NIB & PKKPR</span>",
+    "umk-desc": "Paket lengkap pendirian PT PMA hingga pengurusan izin lokasi (PKKPR) dan NIB agar operasional bisnis bisa segera berjalan.",
+    "umk-features": [
+      "Izin Lokasi (PKKPR) Resmi",
+      "Akses Akun OSS RBA Asing",
+      "Kesesuaian Tata Ruang",
+      "Pendampingan Izin Sektoral"
+    ]
+  },
+  "rups_pt_pma": {
+    "umk-badge": "Corporate Maintenance",
+    "umk-title": "RUPS & Perubahan <br><span class='text-primary'>PT PMA</span>",
+    "umk-desc": "Layanan RUPS khusus PT PMA untuk perubahan modal asing, struktur pengurus asing, atau penyesuaian regulasi investasi.",
+    "umk-features": [
+      "Pelaporan LKPM Terpadu",
+      "Update Data Pemegang Saham",
+      "Perubahan Modal Asing",
+      "Kepatuhan Regulasi BKPM"
+    ]
+  },
+  "pendirian_koperasi": {
+    "umk-badge": "Ekonomi Kerakyatan",
+    "umk-title": "Maju Bersama <br>dalam <span class='text-primary'>Koperasi</span>",
+    "umk-desc": "Bangun kekuatan ekonomi bersama melalui Koperasi dengan prinsip kekeluargaan untuk meningkatkan kesejahteraan seluruh anggota.",
+    "umk-features": [
+      "Asas Kekeluargaan & Adil",
+      "Permodalan dari Anggota",
+      "Demokrasi Rapat Anggota",
+      "Sistem SHU yang Transparan"
+    ]
+  },
+  "pendirian_ud": {
+    "umk-badge": "Langkah Awal Bisnis",
+    "umk-title": "Usaha Dagang <br><span class='text-primary'>Mandiri</span>",
+    "umk-desc": "Bentuk usaha paling praktis untuk memulai bisnis dagang secara mandiri dengan biaya operasional dan pendirian yang sangat murah.",
+    "umk-features": [
+      "Pemilik Tunggal Mandiri",
+      "Modal Bebas Sesuai Kemampuan",
+      "Kendali Penuh di Tangan Anda",
+      "Proses Cepat & Administrasi Mudah"
+    ]
+  },
+  "pendirian_yayasan": {
+    "umk-badge": "Badan Hukum Sosial",
+    "umk-title": "Legalitas Resmi <br>untuk <span class='text-primary'>Yayasan</span>",
+    "umk-desc": "Wujudkan visi sosial, pendidikan, atau keagamaan Anda melalui Yayasan dengan struktur organisasi yang akuntabel dan berstatus badan hukum.",
+    "umk-features": [
+      "Fokus Kegiatan Non-Profit",
+      "Struktur Pembina, Pengurus, Pengawas",
+      "Badan Hukum Sah Kemenkumham",
+      "Kredibilitas untuk Donasi"
+    ]
+  },
+  "perubahan_yayasan": {
+    "umk-badge": "Update Organ Yayasan",
+    "umk-title": "Perubahan Data <br><span class='text-primary'>& Organ Yayasan</span>",
+    "umk-desc": "Layanan pembaharuan struktur Pembina, Pengurus, atau Pengawas Yayasan serta penyesuaian Anggaran Dasar sesuai aturan terbaru.",
+    "umk-features": [
+      "Perubahan Susunan Pengurus",
+      "Update Anggaran Dasar",
+      "Proses Transparan & Legal",
+      "Sesuai UU Yayasan Terbaru"
+    ]
+  }
+}
