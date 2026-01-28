@@ -1037,18 +1037,18 @@
                         <span class="material-symbols-outlined text-[10rem]">storefront</span>
                     </div>
                     <div class="max-w-2xl relative z-10 space-y-6">
-                        <div
+                        <div id="umk-badge"
                             class="inline-flex items-center gap-2 bg-primary text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest">
                             Fokus Skala Usaha UMK
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">Solusi
+                        <h2 id="umk-title" class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight">Solusi
                             Legalitas <br>Terbaik untuk <span class="text-primary">UMK</span></h2>
                         <p id="umk-desc" class="text-lg text-gray-500 font-medium leading-relaxed">
                             PT Perorangan dirancang khusus oleh pemerintah untuk memudahkan pelaku Usaha Mikro dan Kecil
                             (UMK) memiliki badan hukum dengan <b>tanggung jawab terbatas</b> tanpa perlu partner/pendiri
                             lain.
                         </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div id="umk-features" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex items-center gap-3 font-bold text-gray-700 dark:text-gray-300">
                                 <span class="material-symbols-outlined text-primary">check_circle</span>
                                 Pendiri Cukup 1 Orang
@@ -1499,6 +1499,172 @@
             return `${serviceName} memberikan solusi legalitas terbaik untuk UMK Indonesia dengan proses yang <b>cepat, transparan, dan terjangkau</b>. Dapatkan pendampingan profesional untuk memastikan legalitas bisnis Anda terdaftar dengan benar.`;
         }
 
+        function getUMKFeatures(serviceName) {
+            const name = serviceName.toLowerCase();
+            
+            // PT Perorangan
+            if (name.includes('pt perorangan')) {
+                return [
+                    "Pendiri Cukup 1 Orang",
+                    "Modal Sangat Terjangkau",
+                    "Pemisahan Harta Pribadi",
+                    "Akses Modal Perbankan"
+                ];
+            }
+            
+            // CV
+            if (name.includes('cv') && !name.includes('to pt') && !name.includes('cabang')) {
+                return [
+                    "Pendiri Minimal 2 Orang",
+                    "Tidak Ada Minimal Modal",
+                    "Sekutu Aktif & Pasif",
+                    "Pajak Lebih Efisien"
+                ];
+            }
+            
+            // PT Umum
+            if ((name.includes('pt umum') || name.includes('pt umu')) && !name.includes('upgrade')) {
+                return [
+                    "Minimal 2 Pendiri",
+                    "Perlindungan Aset Pribadi",
+                    "Akses Tender Pemerintah",
+                    "Professional & Bonafide"
+                ];
+            }
+            
+            // Koperasi
+            if (name.includes('koperasi')) {
+                return [
+                    "Asas Kekeluargaan",
+                    "Modal dari Anggota",
+                    "Keputusan Rapat Anggota",
+                    "Sistem Bagi Hasil"
+                ];
+            }
+            
+            // Yayasan
+            if (name.includes('yayasan') && !name.includes('perubahan')) {
+                return [
+                    "Fokus Sosial/Kemanusiaan",
+                    "Non-Profit Oriented",
+                    "Struktur Organ Jelas",
+                    "Badan Hukum Resmi"
+                ];
+            }
+            
+            // Perkumpulan
+            if (name.includes('perkumpulan')) {
+                return [
+                    "Berbasis Keanggotaan",
+                    "Wadah Hobi/Profesi",
+                    "Badan Hukum Sah",
+                    "Kegiatan Terstruktur"
+                ];
+            }
+            
+            // UD
+            if (name.includes('ud') || name.includes('usaha dagang')) {
+                return [
+                    "Pendiri 1 Orang",
+                    "Modal Suka-Suka",
+                    "Kendali Penuh Pemilik",
+                    "Biaya Paling Murah"
+                ];
+            }
+            
+            // PT PMA
+            if (name.includes('pma') || name.includes('asing')) {
+                return [
+                    "Investasi Asing (FDI)",
+                    "Fasilitas KITAS/S",
+                    "Perlindungan Hukum",
+                    "Standar Internasional"
+                ];
+            }
+
+            // Default fallback
+            return [
+                "Proses Cepat",
+                "Harga Transparan",
+                "Konsultasi Gratis",
+                "Dokumen Lengkap"
+            ];
+        }
+
+        function getUMKHeader(serviceName) {
+            const name = serviceName.toLowerCase();
+            
+            // PT Perorangan
+            if (name.includes('pt perorangan')) {
+                return {
+                    badge: "Fokus Skala Usaha UMK",
+                    title: `Solusi Legalitas <br>Terbaik untuk <span class="text-primary">UMK</span>`
+                };
+            }
+            
+            // CV (Commanditaire Vennootschap)
+            if (name.includes('cv') && !name.includes('to pt') && !name.includes('cabang')) {
+                return {
+                    badge: "Badan Usaha Terpopuler",
+                    title: `Solusi Usaha <br>Hemat & <span class="text-primary">Fleksibel</span>`
+                };
+            }
+            
+            // PT Umum
+            if ((name.includes('pt umum') || name.includes('pt umu')) && !name.includes('upgrade')) {
+                return {
+                    badge: "Standar Bisnis Profesional",
+                    title: `Badan Hukum <br>Pilihan <span class="text-primary">Investor</span>`
+                };
+            }
+            
+            // Koperasi
+            if (name.includes('koperasi')) {
+                return {
+                    badge: "Ekonomi Kerakyatan",
+                    title: `Maju Bersama <br>dalam <span class="text-primary">Koperasi</span>`
+                };
+            }
+            
+            // Yayasan
+            if (name.includes('yayasan') && !name.includes('perubahan')) {
+                return {
+                    badge: "Badan Hukum Sosial",
+                    title: `Legalitas Resmi <br>untuk <span class="text-primary">Yayasan</span>`
+                };
+            }
+            
+            // Perkumpulan
+            if (name.includes('perkumpulan')) {
+                return {
+                    badge: "Legalitas Organisasi",
+                    title: `Wadah Resmi <br>Komunitas <span class="text-primary">Anda</span>`
+                };
+            }
+            
+            // UD
+            if (name.includes('ud') || name.includes('usaha dagang')) {
+                return {
+                    badge: "Usaha Paling Sederhana",
+                    title: `Langkah Awal <br>Bisnis <span class="text-primary">Mandiri</span>`
+                };
+            }
+            
+            // PT PMA
+            if (name.includes('pma') || name.includes('asing')) {
+                return {
+                    badge: "Foreign Direct Investment",
+                    title: `Go Global with <br><span class="text-primary">PT PMA</span>`
+                };
+            }
+            
+            // Default fallback
+            return {
+                badge: "Solusi Legalitas",
+                title: `Solusi Legalitas <br>Terbaik untuk <span class="text-primary">Bisnis</span>`
+            };
+        }
+
         function updateFlowSteps(flowType, serviceName = '') {
             let steps = serviceFlowConfigs[flowType] || serviceFlowConfigs.default;
             // Clone steps array untuk menghindari modifikasi original
@@ -1809,10 +1975,30 @@
                         priceEl.textContent = service.price;
                     }
 
-                    // Update UMK Description
+                    // Update UMK Description & Features & Header
                     const umkDescEl = document.getElementById('umk-desc');
+                    const umkFeaturesEl = document.getElementById('umk-features');
+                    const umkBadgeEl = document.getElementById('umk-badge');
+                    const umkTitleEl = document.getElementById('umk-title');
+
                     if (umkDescEl) {
                         umkDescEl.innerHTML = getUMKDescription(service.name);
+                    }
+                    
+                    if (umkBadgeEl && umkTitleEl) {
+                        const headerContent = getUMKHeader(service.name);
+                        umkBadgeEl.textContent = headerContent.badge;
+                        umkTitleEl.innerHTML = headerContent.title;
+                    }
+
+                    if (umkFeaturesEl) {
+                        const features = getUMKFeatures(service.name);
+                        umkFeaturesEl.innerHTML = features.map(feature => `
+                            <div class="flex items-center gap-3 font-bold text-gray-700 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                ${feature}
+                            </div>
+                        `).join('');
                     }
 
                     // Update WA Links
@@ -1828,6 +2014,24 @@
                 const umkDescEl = document.getElementById('umk-desc');
                 if (umkDescEl) {
                     umkDescEl.innerHTML = getUMKDescription('PT Perorangan');
+                }
+                const umkFeaturesEl = document.getElementById('umk-features');
+                if (umkFeaturesEl) {
+                    const features = getUMKFeatures('PT Perorangan');
+                    umkFeaturesEl.innerHTML = features.map(feature => `
+                        <div class="flex items-center gap-3 font-bold text-gray-700 dark:text-gray-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            ${feature}
+                        </div>
+                    `).join('');
+                }
+                // Ensure header is set for default view
+                const umkBadgeEl = document.getElementById('umk-badge');
+                const umkTitleEl = document.getElementById('umk-title');
+                if (umkBadgeEl && umkTitleEl) {
+                    const headerContent = getUMKHeader('PT Perorangan');
+                    umkBadgeEl.textContent = headerContent.badge;
+                    umkTitleEl.innerHTML = headerContent.title;
                 }
             }
         });
