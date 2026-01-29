@@ -1419,22 +1419,363 @@
             return 'default';
         }
 
+        // UMK Data from JSON
+        const umkData = {
+  "pendirian_cv": {
+    "umk-badge": "Badan Usaha Terpopuler",
+    "umk-title": "Solusi Usaha <br>Hemat & <span class='text-primary'>Fleksibel</span>",
+    "umk-desc": "CV adalah pilihan ideal bagi UMK yang ingin membangun bisnis bersama mitra dengan modal terjangkau namun memiliki legalitas yang diakui perbankan.",
+    "umk-features": [
+      "Pendiri Minimal 2 Orang",
+      "Tanpa Minimal Modal Setor",
+      "Sistem Sekutu Aktif & Pasif",
+      "Manajemen Pajak Lebih Efisien"
+    ]
+  },
+  "rups_cv_perubahan": {
+    "umk-badge": "Update Legalitas CV",
+    "umk-title": "Penyesuaian Struktur <br><span class='text-primary'>Bisnis CV Anda</span>",
+    "umk-desc": "Layanan perubahan CV untuk pembaharuan data pengurus, modal, atau anggaran dasar agar tetap relevan dengan perkembangan bisnis Anda.",
+    "umk-features": [
+      "Perubahan Pengurus & Pesero",
+      "Penyesuaian Modal Usaha",
+      "Update Anggaran Dasar",
+      "Proses Cepat & Akurat"
+    ]
+  },
+  "pendirian_pt_umum": {
+    "umk-badge": "Standar Bisnis Profesional",
+    "umk-title": "Badan Hukum <br><span class='text-primary'>Pilihan Investor</span>",
+    "umk-desc": "Bangun kredibilitas tertinggi dengan PT Umum. Struktur organisasi yang solid siap membawa bisnis Anda memenangkan tender besar dan pendanaan investor.",
+    "umk-features": [
+      "Minimal 2 Pendiri/Pemegang Saham",
+      "Pemisahan Harta & Aset Pribadi",
+      "Akses Tender & Proyek Besar",
+      "Reputasi Bisnis Bonafide"
+    ]
+  },
+  "cv_to_pt_umum": {
+    "umk-badge": "Scale Up Bisnis",
+    "umk-title": "Transformasi CV <br>Menjadi <span class='text-primary'>PT Umum</span>",
+    "umk-desc": "Tingkatkan kelas bisnis Anda dari CV ke PT Umum untuk fleksibilitas operasional yang lebih besar dan perlindungan hukum yang lebih kuat.",
+    "umk-features": [
+      "Meningkatkan Status Hukum",
+      "Kapasitas Modal Lebih Besar",
+      "Keamanan Aset Pemilik",
+      "Siap Ekspansi Nasional"
+    ]
+  },
+  "bundling_pt_vo": {
+    "umk-badge": "Paket Hemat Eksklusif",
+    "umk-title": "Bundling PT <br>& <span class='text-primary'>Virtual Office</span>",
+    "umk-desc": "Solusi cerdas bagi UMK. Miliki badan hukum PT sekaligus alamat bisnis bergengsi di lokasi strategis tanpa biaya sewa kantor yang mahal.",
+    "umk-features": [
+      "Legalitas PT Lengkap",
+      "Alamat Kantor Strategis",
+      "Layanan Domisili Resmi",
+      "Lebih Hemat & Efisien"
+    ]
+  },
+  "rups_pt_pengurus": {
+    "umk-badge": "Manajemen Perusahaan",
+    "umk-title": "Perubahan Struktur <br>& <span class='text-primary'>Oper Saham</span>",
+    "umk-desc": "Layanan RUPS profesional untuk perubahan jajaran direksi, komisaris, atau pengalihan kepemilikan saham secara transparan dan legal.",
+    "umk-features": [
+      "Pengalihan Saham Legal",
+      "Ganti Direksi & Komisaris",
+      "Berita Acara RUPS Resmi",
+      "Update SK Kemenkumham"
+    ]
+  },
+  "rups_pt_kbli": {
+    "umk-badge": "Update Operasional",
+    "umk-title": "Penyesuaian <br><span class='text-primary'>Data & Bidang PT</span>",
+    "umk-desc": "Pastikan PT Anda tetap patuh pada regulasi terbaru. Sesuaikan KBLI, Nama PT, Kedudukan, atau penambahan modal dengan mudah.",
+    "umk-features": [
+      "Update KBLI Tahun Terbaru",
+      "Perubahan Nama & Kedudukan",
+      "Peningkatan Modal Disetor",
+      "Sesuai Regulasi OSS RBA"
+    ]
+  },
+  "pendirian_pt_pma": {
+    "umk-badge": "Foreign Direct Investment",
+    "umk-title": "Go Global with <br><span class='text-primary'>PT PMA</span>",
+    "umk-desc": "Solusi legalitas bagi investor asing yang ingin mendirikan bisnis di Indonesia dengan perlindungan hukum dan standar internasional.",
+    "umk-features": [
+      "Kepemilikan Modal Asing",
+      "Fasilitas KITAS Investor",
+      "Perlindungan Hukum Investasi",
+      "Akses Pasar Internasional"
+    ]
+  },
+  "pt_pma_nib_pkkpr": {
+    "umk-badge": "Izin Investasi Lengkap",
+    "umk-title": "PT PMA Lengkap <br><span class='text-primary'>NIB & PKKPR</span>",
+    "umk-desc": "Paket lengkap pendirian PT PMA hingga pengurusan izin lokasi (PKKPR) dan NIB agar operasional bisnis bisa segera berjalan.",
+    "umk-features": [
+      "Izin Lokasi (PKKPR) Resmi",
+      "Akses Akun OSS RBA Asing",
+      "Kesesuaian Tata Ruang",
+      "Pendampingan Izin Sektoral"
+    ]
+  },
+  "rups_pt_pma": {
+    "umk-badge": "Corporate Maintenance",
+    "umk-title": "RUPS & Perubahan <br><span class='text-primary'>PT PMA</span>",
+    "umk-desc": "Layanan RUPS khusus PT PMA untuk perubahan modal asing, struktur pengurus asing, atau penyesuaian regulasi investasi.",
+    "umk-features": [
+      "Pelaporan LKPM Terpadu",
+      "Update Data Pemegang Saham",
+      "Perubahan Modal Asing",
+      "Kepatuhan Regulasi BKPM"
+    ]
+  },
+  "pendirian_koperasi": {
+    "umk-badge": "Ekonomi Kerakyatan",
+    "umk-title": "Maju Bersama <br>dalam <span class='text-primary'>Koperasi</span>",
+    "umk-desc": "Bangun kekuatan ekonomi bersama melalui Koperasi dengan prinsip kekeluargaan untuk meningkatkan kesejahteraan seluruh anggota.",
+    "umk-features": [
+      "Asas Kekeluargaan & Adil",
+      "Permodalan dari Anggota",
+      "Demokrasi Rapat Anggota",
+      "Sistem SHU yang Transparan"
+    ]
+  },
+  "pendirian_ud": {
+    "umk-badge": "Langkah Awal Bisnis",
+    "umk-title": "Usaha Dagang <br><span class='text-primary'>Mandiri</span>",
+    "umk-desc": "Bentuk usaha paling praktis untuk memulai bisnis dagang secara mandiri dengan biaya operasional dan pendirian yang sangat murah.",
+    "umk-features": [
+      "Pemilik Tunggal Mandiri",
+      "Modal Bebas Sesuai Kemampuan",
+      "Kendali Penuh di Tangan Anda",
+      "Proses Cepat & Administrasi Mudah"
+    ]
+  },
+  "pendirian_yayasan": {
+    "umk-badge": "Badan Hukum Sosial",
+    "umk-title": "Legalitas Resmi <br>untuk <span class='text-primary'>Yayasan</span>",
+    "umk-desc": "Wujudkan visi sosial, pendidikan, atau keagamaan Anda melalui Yayasan dengan struktur organisasi yang akuntabel dan berstatus badan hukum.",
+    "umk-features": [
+      "Fokus Kegiatan Non-Profit",
+      "Struktur Pembina, Pengurus, Pengawas",
+      "Badan Hukum Sah Kemenkumham",
+      "Kredibilitas untuk Donasi"
+    ]
+  },
+  "perubahan_yayasan": {
+    "umk-badge": "Update Organ Yayasan",
+    "umk-title": "Perubahan Data <br><span class='text-primary'>& Organ Yayasan</span>",
+    "umk-desc": "Layanan pembaharuan struktur Pembina, Pengurus, atau Pengawas Yayasan serta penyesuaian Anggaran Dasar sesuai aturan terbaru.",
+    "umk-features": [
+      "Perubahan Susunan Pengurus",
+      "Update Anggaran Dasar",
+      "Proses Transparan & Legal",
+      "Sesuai UU Yayasan Terbaru"
+    ]
+  },
+  "penutupan_pt_perorangan": {
+    "umk-badge": "Likuidasi Bisnis",
+    "umk-title": "Pembubaran Resmi <br><span class='text-primary'>PT Perorangan</span>",
+    "umk-desc": "Proses penutupan badan hukum PT Perorangan secara legal untuk menghindari kewajiban pajak atau administratif di masa depan.",
+    "umk-features": [
+      "Penghapusan Status Hukum",
+      "Pencabutan Izin Usaha",
+      "Pelaporan Pajak Akhir",
+      "Bebas Tanggungan Admin"
+    ]
+  },
+  "akta_cabang_pt": {
+    "umk-badge": "Ekspansi Wilayah",
+    "umk-title": "Pembukaan <br><span class='text-primary'>Kantor Cabang PT</span>",
+    "umk-desc": "Perluas jangkauan bisnis Anda dengan pembukaan cabang resmi yang terdaftar di Kemenkumham dan memiliki legalitas operasional.",
+    "umk-features": [
+      "Akta Notaris Kantor Cabang",
+      "SK Sah Kemenkumham",
+      "NIB Khusus Cabang",
+      "Legalitas Operasional Lokal"
+    ]
+  },
+  "akta_cabang_cv": {
+    "umk-badge": "Ekspansi Wilayah",
+    "umk-title": "Pembukaan <br><span class='text-primary'>Kantor Cabang CV</span>",
+    "umk-desc": "Mudahkan operasional CV di berbagai lokasi dengan pendaftaran cabang resmi untuk memperkuat jaringan bisnis bersama mitra.",
+    "umk-features": [
+      "Pendaftaran Cabang Resmi",
+      "Legalitas Terpercaya",
+      "Proses Cepat & Transparan",
+      "Dukungan Ekspansi Bisnis"
+    ]
+  },
+  "nib_pt_pma": {
+    "umk-badge": "Izin Investasi Asing",
+    "umk-title": "Registrasi <br><span class='text-primary'>NIB PT PMA</span>",
+    "umk-desc": "Pengurusan Nomor Induk Berusaha khusus perusahaan modal asing untuk memastikan operasional bisnis sesuai regulasi investasi Indonesia.",
+    "umk-features": [
+      "Akses OSS RBA Internasional",
+      "Izin Usaha Sektoral",
+      "Legalitas Penanaman Modal",
+      "Standar Operasional Global"
+    ]
+  },
+  "pengumuman_koran": {
+    "umk-badge": "Kewajiban Publikasi",
+    "umk-title": "Layanan <br><span class='text-primary'>Pengumuman Koran</span>",
+    "umk-desc": "Penuhi persyaratan legal untuk pembubaran, merger, atau perubahan modal melalui publikasi resmi di media cetak nasional.",
+    "umk-features": [
+      "Media Cetak Terakreditasi",
+      "Bukti Fisik Iklan Resmi",
+      "Proses Cepat & Murah",
+      "Sesuai UU Perseroan Terbatas"
+    ]
+  },
+  "nib_badan": {
+    "umk-badge": "Identitas Bisnis",
+    "umk-title": "Nomor Induk Berusaha <br><span class='text-primary'>(NIB) Badan</span>",
+    "umk-desc": "Dapatkan identitas tunggal untuk operasional bisnis badan usaha Anda sebagai syarat mutlak perizinan berusaha berbasis risiko.",
+    "umk-features": [
+      "Berlaku Seumur Hidup",
+      "Syarat Utama Izin Usaha",
+      "Akses Fasilitas Investasi",
+      "Legalitas di Sistem OSS"
+    ]
+  },
+  "nib_pribadi": {
+    "umk-badge": "Legalitas Perorangan",
+    "umk-title": "NIB Untuk <br><span class='text-primary'>Usaha Mandiri</span>",
+    "umk-desc": "Solusi praktis bagi pemilik usaha mikro perorangan untuk memiliki izin resmi guna meningkatkan kepercayaan pembeli dan perbankan.",
+    "umk-features": [
+      "Proses Kilat 1 Hari",
+      "Syarat Pinjaman Bank",
+      "Izin Operasional Resmi",
+      "Bebas Biaya Administrasi"
+    ]
+  },
+  "pendirian_iumk": {
+    "umk-badge": "Izin Usaha Mikro",
+    "umk-title": "Sertifikasi <br><span class='text-primary'>Legalitas IUMK</span>",
+    "umk-desc": "Tanda legalitas bagi pelaku usaha mikro dan kecil untuk memberikan kepastian hukum dan sarana pemberdayaan dalam mengembangkan usaha.",
+    "umk-features": [
+      "Sertifikat Izin Resmi",
+      "Akses Program Pemerintah",
+      "Pendampingan Usaha",
+      "Legalitas Lokasi Usaha"
+    ]
+  },
+  "pendirian_tdp": {
+    "umk-badge": "Registrasi Perusahaan",
+    "umk-title": "Tanda Daftar <br><span class='text-primary'>Perusahaan (TDP)</span>",
+    "umk-desc": "Pengurusan pendaftaran perusahaan sebagai bukti sah bahwa unit usaha Anda telah terdaftar dan memenuhi kewajiban wajib daftar perusahaan.",
+    "umk-features": [
+      "Bukti Sah Perusahaan",
+      "Kelengkapan Dokumen Lelang",
+      "Validasi Data Bisnis",
+      "Registrasi Instansi Terkait"
+    ]
+  },
+  "pendirian_siup": {
+    "umk-badge": "Izin Dagang",
+    "umk-title": "Surat Izin Usaha <br><span class='text-primary'>Perdagangan (SIUP)</span>",
+    "umk-desc": "Izin resmi untuk menjalankan kegiatan usaha perdagangan bagi perusahaan, koperasi, atau perorangan agar operasional legal.",
+    "umk-features": [
+      "Izin Niaga Terpercaya",
+      "Klasifikasi Bidang Usaha",
+      "Syarat Transaksi B2B",
+      "Legalitas Operasional Sah"
+    ]
+  },
+  "pendirian_situ": {
+    "umk-badge": "Izin Lokasi",
+    "umk-title": "Surat Izin <br><span class='text-primary'>Tempat Usaha (SITU)</span>",
+    "umk-desc": "Izin tempat usaha yang diberikan kepada perorangan atau badan usaha di lokasi tertentu yang tidak menimbulkan gangguan lingkungan.",
+    "umk-features": [
+      "Legalitas Lokasi Fisik",
+      "Izin Tata Ruang Daerah",
+      "Persetujuan Lingkungan",
+      "Keamanan Domisili Bisnis"
+    ]
+  },
+  "pendirian_ho": {
+    "umk-badge": "Izin Gangguan",
+    "umk-title": "Izin Gangguan <br><span class='text-primary'>(HO/Hinderordonnantie)</span>",
+    "umk-desc": "Pernyataan tidak keberatan dari lingkungan sekitar terhadap operasional bisnis yang memiliki potensi risiko gangguan atau kebisingan.",
+    "umk-features": [
+      "Izin Lingkungan Sosial",
+      "Sertifikat Bebas Gangguan",
+      "Kepatuhan Perda Setempat",
+      "Perlindungan Operasional"
+    ]
+  },
+  "izin_toko_retail": {
+    "umk-badge": "Izin Retail",
+    "umk-title": "Izin Usaha <br><span class='text-primary'>Toko Modern/Retail</span>",
+    "umk-desc": "Layanan legalitas khusus untuk operasional toko retail atau swalayan agar sesuai dengan zonasi perdagangan dan regulasi ritel.",
+    "umk-features": [
+      "Zonasi Perdagangan Sah",
+      "Syarat Kerjasama Supplier",
+      "Kepatuhan Standar Ritel",
+      "Izin Operasional Lengkap"
+    ]
+  },
+  "pendirian_perkumpulan": {
+    "umk-badge": "Legalitas Organisasi",
+    "umk-title": "Wadah Resmi <br><span class='text-primary'>Komunitas Anda</span>",
+    "umk-desc": "Bentuk badan hukum non-profit yang ideal untuk komunitas, hobi, atau asosiasi profesi agar memiliki identitas hukum yang sah.",
+    "umk-features": [
+      "Berbasis Keanggotaan",
+      "Wadah Hobi & Profesi",
+      "Badan Hukum Sah Kemenkumham",
+      "Manajemen Organisasi Teratur"
+    ]
+  }
+};
+
+        function getUMKDataKey(serviceName) {
+            const name = serviceName.toLowerCase();
+            
+            // Map exact names first based on services.js
+            if (name === "cv") return "pendirian_cv";
+            if (name === "rups cv (perubahan)") return "rups_cv_perubahan";
+            if (name === "pt umum") return "pendirian_pt_umum";
+            if (name === "cv to pt umum") return "cv_to_pt_umum";
+            if (name === "bundling pt dan vo") return "bundling_pt_vo";
+            if (name.includes("rups pt (pengurus")) return "rups_pt_pengurus";
+            if (name.includes("rups pt (kbli")) return "rups_pt_kbli";
+            if (name === "pt pma (pt asing)") return "pendirian_pt_pma";
+            if (name.includes("pt pma + nib")) return "pt_pma_nib_pkkpr";
+            if (name.includes("rups pt pma")) return "rups_pt_pma";
+            if (name === "koperasi") return "pendirian_koperasi";
+            if (name.includes("ud (usaha dagang)")) return "pendirian_ud";
+            if (name === "yayasan") return "pendirian_yayasan";
+            if (name === "perubahan yayasan") return "perubahan_yayasan";
+            if (name === "penutupan pt perorangan") return "penutupan_pt_perorangan";
+            if (name === "akta cabang pt") return "akta_cabang_pt";
+            if (name === "akta cabang cv") return "akta_cabang_cv";
+            if (name === "nib pt pma") return "nib_pt_pma";
+            if (name === "pengumuman koran") return "pengumuman_koran";
+            if (name.includes("nib badan")) return "nib_badan";
+            if (name.includes("nib pribadi")) return "nib_pribadi";
+            if (name.includes("iumk")) return "pendirian_iumk";
+            if (name.includes("tdp")) return "pendirian_tdp";
+            if (name.includes("siup")) return "pendirian_siup";
+            if (name.includes("situ")) return "pendirian_situ";
+            if (name.includes("ho (izin")) return "pendirian_ho";
+            if (name.includes("toko retail")) return "izin_toko_retail";
+            if (name === "perkumpulan") return "pendirian_perkumpulan";
+            
+            // Fuzzy match fallbacks
+            if (name.includes("cv") && !name.includes("pt") && !name.includes("cabang") && !name.includes("perubahan") && !name.includes("rups")) return "pendirian_cv";
+            
+            return null;
+        }
+
         function getUMKDescription(serviceName) {
             const name = serviceName.toLowerCase();
             
             // PT Perorangan
-            if (name.includes('pt perorangan')) {
+            if (name.includes('pt perorangan') && !name.includes('penutupan')) {
                 return `${serviceName} PT Perorangan adalah entitas hukum resmi yang memungkinkan Anda menjadi <b>Direktur sekaligus Pemilik Tunggal</b> dengan perlindungan aset penuh.`;
-            }
-            
-            // CV
-            if (name.includes('cv') && !name.includes('to pt') && !name.includes('cabang')) {
-                return `${serviceName} adalah bentuk badan usaha yang ideal untuk UMK yang ingin memiliki badan hukum dengan <b>modal terbatas</b> dan fleksibilitas dalam pengelolaan usaha bersama mitra.`;
-            }
-            
-            // PT Umum
-            if ((name.includes('pt umum') || name.includes('pt umu')) && !name.includes('upgrade')) {
-                return `${serviceName} memberikan solusi legalitas profesional untuk bisnis UMK yang ingin berkembang dengan struktur organisasi yang solid dan kredibilitas tinggi di mata pemerintah serta investor.`;
             }
             
             // Upgrade ke PT Umum
@@ -1442,60 +1783,13 @@
                 return `Solusi transformatif untuk mengubah PT Perorangan menjadi <b>PT Persekutuan Modal</b> guna membuka peluang investasi, tender besar, dan kerjasama strategis.`;
             }
             
-            // Koperasi
-            if (name.includes('koperasi')) {
-                return `${serviceName} adalah bentuk badan usaha yang sesuai untuk UMK yang ingin membangun usaha bersama dengan prinsip <b>kekeluargaan dan gotong royong</b> untuk kesejahteraan anggota.`;
+            // Try JSON lookup
+            const key = getUMKDataKey(serviceName);
+            if (key && umkData[key]) {
+                 return umkData[key]['umk-desc'];
             }
             
-            // Yayasan
-            if (name.includes('yayasan')) {
-                if (name.includes('perubahan')) {
-                    return `Layanan ${serviceName} membantu UMK untuk melakukan perubahan pada struktur, pengurus, atau anggaran dasar yayasan dengan proses yang <b>transparan dan sesuai peraturan</b>.`;
-                }
-                return `${serviceName} adalah badan hukum yang tepat untuk UMK yang ingin mengelola kegiatan sosial, keagamaan, atau kemanusiaan dengan struktur organisasi yang jelas dan akuntabel.`;
-            }
-            
-            // Perkumpulan
-            if (name.includes('perkumpulan')) {
-                return `${serviceName} adalah bentuk badan hukum yang cocok untuk UMK yang ingin membentuk organisasi dengan tujuan tertentu, baik untuk kepentingan bersama anggota maupun kegiatan sosial.`;
-            }
-            
-            // UD (Usaha Dagang)
-            if (name.includes('ud') || name.includes('usaha dagang')) {
-                return `${serviceName} adalah bentuk usaha yang sederhana dan mudah didirikan untuk UMK yang ingin memulai bisnis perdagangan dengan <b>proses pendirian yang cepat</b> dan biaya terjangkau.`;
-            }
-            
-            // PT PMA
-            if (name.includes('pma') || name.includes('asing')) {
-                return `${serviceName} memberikan solusi legalitas untuk UMK yang ingin menarik investasi asing atau melakukan ekspansi bisnis dengan struktur perusahaan yang memenuhi standar internasional.`;
-            }
-            
-            // RUPS (Perubahan)
-            if (name.includes('rups') || (name.includes('perubahan') && !name.includes('yayasan'))) {
-                return `Layanan ${serviceName} membantu UMK untuk melakukan perubahan struktur perusahaan, pengurus, atau modal dengan proses yang <b>transparan dan terpercaya</b>.`;
-            }
-            
-            // CV to PT
-            if (name.includes('cv to pt') || name.includes('cv to')) {
-                return `Layanan ${serviceName} membantu UMK yang sudah memiliki CV untuk mengubah status menjadi PT dengan <b>proses yang efisien</b>, memberikan kredibilitas lebih tinggi untuk bisnis Anda.`;
-            }
-            
-            // Cabang
-            if (name.includes('cabang')) {
-                return `Layanan ${serviceName} membantu UMK untuk membuka cabang perusahaan di lokasi baru dengan proses pendaftaran yang <b>cepat dan sesuai peraturan</b>.`;
-            }
-            
-            // Penutupan
-            if (name.includes('penutupan') || name.includes('tutup')) {
-                return `Layanan ${serviceName} membantu UMK untuk melakukan penutupan perusahaan dengan proses yang <b>legal dan terstruktur</b>, memastikan semua kewajiban perusahaan terselesaikan dengan baik.`;
-            }
-            
-            // Bundling
-            if (name.includes('bundling')) {
-                return `Paket ${serviceName} memberikan solusi lengkap untuk UMK dengan kombinasi layanan yang <b>hemat dan efisien</b>, memudahkan proses legalitas bisnis Anda dalam satu paket.`;
-            }
-            
-            // Default untuk layanan pendirian lainnya
+            // Default fallback
             return `${serviceName} memberikan solusi legalitas terbaik untuk UMK Indonesia dengan proses yang <b>cepat, transparan, dan terjangkau</b>. Dapatkan pendampingan profesional untuk memastikan legalitas bisnis Anda terdaftar dengan benar.`;
         }
 
@@ -1503,7 +1797,7 @@
             const name = serviceName.toLowerCase();
             
             // PT Perorangan
-            if (name.includes('pt perorangan')) {
+            if (name.includes('pt perorangan') && !name.includes('penutupan')) {
                 return [
                     "100% Kendali di Tangan Anda",
                     "Modal Sangat Terjangkau",
@@ -1512,74 +1806,20 @@
                 ];
             }
             
-            // CV
-            if (name.includes('cv') && !name.includes('to pt') && !name.includes('cabang')) {
-                return [
-                    "Pendiri Minimal 2 Orang",
-                    "Tidak Ada Minimal Modal",
-                    "Sekutu Aktif & Pasif",
-                    "Pajak Lebih Efisien"
+            // Upgrade ke PT Umum
+            if (name.includes('upgrade') && name.includes('pt')) {
+                 return [
+                    "Meningkatkan Status Hukum",
+                    "Kapasitas Modal Lebih Besar",
+                    "Keamanan Aset Pemilik",
+                    "Siap Ekspansi Nasional"
                 ];
             }
             
-            // PT Umum
-            if ((name.includes('pt umum') || name.includes('pt umu')) && !name.includes('upgrade')) {
-                return [
-                    "Minimal 2 Pendiri",
-                    "Perlindungan Aset Pribadi",
-                    "Akses Tender Pemerintah",
-                    "Professional & Bonafide"
-                ];
-            }
-            
-            // Koperasi
-            if (name.includes('koperasi')) {
-                return [
-                    "Asas Kekeluargaan",
-                    "Modal dari Anggota",
-                    "Keputusan Rapat Anggota",
-                    "Sistem Bagi Hasil"
-                ];
-            }
-            
-            // Yayasan
-            if (name.includes('yayasan') && !name.includes('perubahan')) {
-                return [
-                    "Fokus Sosial/Kemanusiaan",
-                    "Non-Profit Oriented",
-                    "Struktur Organ Jelas",
-                    "Badan Hukum Resmi"
-                ];
-            }
-            
-            // Perkumpulan
-            if (name.includes('perkumpulan')) {
-                return [
-                    "Berbasis Keanggotaan",
-                    "Wadah Hobi/Profesi",
-                    "Badan Hukum Sah",
-                    "Kegiatan Terstruktur"
-                ];
-            }
-            
-            // UD
-            if (name.includes('ud') || name.includes('usaha dagang')) {
-                return [
-                    "Pendiri 1 Orang",
-                    "Modal Suka-Suka",
-                    "Kendali Penuh Pemilik",
-                    "Biaya Paling Murah"
-                ];
-            }
-            
-            // PT PMA
-            if (name.includes('pma') || name.includes('asing')) {
-                return [
-                    "Investasi Asing (FDI)",
-                    "Fasilitas KITAS/S",
-                    "Perlindungan Hukum",
-                    "Standar Internasional"
-                ];
+            // Try JSON lookup
+            const key = getUMKDataKey(serviceName);
+            if (key && umkData[key]) {
+                 return umkData[key]['umk-features'];
             }
 
             // Default fallback
@@ -1595,69 +1835,30 @@
             const name = serviceName.toLowerCase();
             
             // PT Perorangan
-            if (name.includes('pt perorangan')) {
+            if (name.includes('pt perorangan') && !name.includes('penutupan')) {
                 return {
-                    badge: "KHUSUS USAHA MIKRO & KECIL",
+                    badge: "Fokus Skala Usaha UMK",
                     title: `Solusi Legalitas <br>Terbaik untuk <span class="text-primary">UMK</span>`
                 };
             }
             
-            // CV (Commanditaire Vennootschap)
-            if (name.includes('cv') && !name.includes('to pt') && !name.includes('cabang')) {
-                return {
-                    badge: "Badan Usaha Terpopuler",
-                    title: `Solusi Usaha <br>Hemat & <span class="text-primary">Fleksibel</span>`
+            // Upgrade ke PT Umum
+            if (name.includes('upgrade') && name.includes('pt')) {
+                 return {
+                    badge: "SIAP UNTUK EKSPANSI",
+                    title: `Tingkatkan Status <br>Bisnis ke <span class="text-primary">PT Umum</span>`
                 };
             }
-            
-            // PT Umum
-            if ((name.includes('pt umum') || name.includes('pt umu')) && !name.includes('upgrade')) {
-                return {
-                    badge: "Standar Bisnis Profesional",
-                    title: `Badan Hukum <br>Pilihan <span class="text-primary">Investor</span>`
-                };
+
+            // Try JSON lookup
+            const key = getUMKDataKey(serviceName);
+            if (key && umkData[key]) {
+                 return {
+                     badge: umkData[key]['umk-badge'],
+                     title: umkData[key]['umk-title']
+                 };
             }
-            
-            // Koperasi
-            if (name.includes('koperasi')) {
-                return {
-                    badge: "Ekonomi Kerakyatan",
-                    title: `Maju Bersama <br>dalam <span class="text-primary">Koperasi</span>`
-                };
-            }
-            
-            // Yayasan
-            if (name.includes('yayasan') && !name.includes('perubahan')) {
-                return {
-                    badge: "Badan Hukum Sosial",
-                    title: `Legalitas Resmi <br>untuk <span class="text-primary">Yayasan</span>`
-                };
-            }
-            
-            // Perkumpulan
-            if (name.includes('perkumpulan')) {
-                return {
-                    badge: "Legalitas Organisasi",
-                    title: `Wadah Resmi <br>Komunitas <span class="text-primary">Anda</span>`
-                };
-            }
-            
-            // UD
-            if (name.includes('ud') || name.includes('usaha dagang')) {
-                return {
-                    badge: "Usaha Paling Sederhana",
-                    title: `Langkah Awal <br>Bisnis <span class="text-primary">Mandiri</span>`
-                };
-            }
-            
-            // PT PMA
-            if (name.includes('pma') || name.includes('asing')) {
-                return {
-                    badge: "Foreign Direct Investment",
-                    title: `Go Global with <br><span class="text-primary">PT PMA</span>`
-                };
-            }
-            
+
             // Default fallback
             return {
                 badge: "SIAP UNTUK EKSPANSI",

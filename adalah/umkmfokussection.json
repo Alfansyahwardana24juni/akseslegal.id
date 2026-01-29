@@ -152,5 +152,159 @@
       "Proses Transparan & Legal",
       "Sesuai UU Yayasan Terbaru"
     ]
+  },
+  "penutupan_pt_perorangan": {
+    "umk-badge": "Likuidasi Bisnis",
+    "umk-title": "Pembubaran Resmi <br><span class='text-primary'>PT Perorangan</span>",
+    "umk-desc": "Proses penutupan badan hukum PT Perorangan secara legal untuk menghindari kewajiban pajak atau administratif di masa depan.",
+    "umk-features": [
+      "Penghapusan Status Hukum",
+      "Pencabutan Izin Usaha",
+      "Pelaporan Pajak Akhir",
+      "Bebas Tanggungan Admin"
+    ]
+  },
+  "akta_cabang_pt": {
+    "umk-badge": "Ekspansi Wilayah",
+    "umk-title": "Pembukaan <br><span class='text-primary'>Kantor Cabang PT</span>",
+    "umk-desc": "Perluas jangkauan bisnis Anda dengan pembukaan cabang resmi yang terdaftar di Kemenkumham dan memiliki legalitas operasional.",
+    "umk-features": [
+      "Akta Notaris Kantor Cabang",
+      "SK Sah Kemenkumham",
+      "NIB Khusus Cabang",
+      "Legalitas Operasional Lokal"
+    ]
+  },
+  "akta_cabang_cv": {
+    "umk-badge": "Ekspansi Wilayah",
+    "umk-title": "Pembukaan <br><span class='text-primary'>Kantor Cabang CV</span>",
+    "umk-desc": "Mudahkan operasional CV di berbagai lokasi dengan pendaftaran cabang resmi untuk memperkuat jaringan bisnis bersama mitra.",
+    "umk-features": [
+      "Pendaftaran Cabang Resmi",
+      "Legalitas Terpercaya",
+      "Proses Cepat & Transparan",
+      "Dukungan Ekspansi Bisnis"
+    ]
+  },
+  "nib_pt_pma": {
+    "umk-badge": "Izin Investasi Asing",
+    "umk-title": "Registrasi <br><span class='text-primary'>NIB PT PMA</span>",
+    "umk-desc": "Pengurusan Nomor Induk Berusaha khusus perusahaan modal asing untuk memastikan operasional bisnis sesuai regulasi investasi Indonesia.",
+    "umk-features": [
+      "Akses OSS RBA Internasional",
+      "Izin Usaha Sektoral",
+      "Legalitas Penanaman Modal",
+      "Standar Operasional Global"
+    ]
+  },
+  "pengumuman_koran": {
+    "umk-badge": "Kewajiban Publikasi",
+    "umk-title": "Layanan <br><span class='text-primary'>Pengumuman Koran</span>",
+    "umk-desc": "Penuhi persyaratan legal untuk pembubaran, merger, atau perubahan modal melalui publikasi resmi di media cetak nasional.",
+    "umk-features": [
+      "Media Cetak Terakreditasi",
+      "Bukti Fisik Iklan Resmi",
+      "Proses Cepat & Murah",
+      "Sesuai UU Perseroan Terbatas"
+    ]
+  },
+  "nib_badan": {
+    "umk-badge": "Identitas Bisnis",
+    "umk-title": "Nomor Induk Berusaha <br><span class='text-primary'>(NIB) Badan</span>",
+    "umk-desc": "Dapatkan identitas tunggal untuk operasional bisnis badan usaha Anda sebagai syarat mutlak perizinan berusaha berbasis risiko.",
+    "umk-features": [
+      "Berlaku Seumur Hidup",
+      "Syarat Utama Izin Usaha",
+      "Akses Fasilitas Investasi",
+      "Legalitas di Sistem OSS"
+    ]
+  },
+  "nib_pribadi": {
+    "umk-badge": "Legalitas Perorangan",
+    "umk-title": "NIB Untuk <br><span class='text-primary'>Usaha Mandiri</span>",
+    "umk-desc": "Solusi praktis bagi pemilik usaha mikro perorangan untuk memiliki izin resmi guna meningkatkan kepercayaan pembeli dan perbankan.",
+    "umk-features": [
+      "Proses Kilat 1 Hari",
+      "Syarat Pinjaman Bank",
+      "Izin Operasional Resmi",
+      "Bebas Biaya Administrasi"
+    ]
+  },
+  "pendirian_iumk": {
+    "umk-badge": "Izin Usaha Mikro",
+    "umk-title": "Sertifikasi <br><span class='text-primary'>Legalitas IUMK</span>",
+    "umk-desc": "Tanda legalitas bagi pelaku usaha mikro dan kecil untuk memberikan kepastian hukum dan sarana pemberdayaan dalam mengembangkan usaha.",
+    "umk-features": [
+      "Sertifikat Izin Resmi",
+      "Akses Program Pemerintah",
+      "Pendampingan Usaha",
+      "Legalitas Lokasi Usaha"
+    ]
+  },
+  "pendirian_tdp": {
+    "umk-badge": "Registrasi Perusahaan",
+    "umk-title": "Tanda Daftar <br><span class='text-primary'>Perusahaan (TDP)</span>",
+    "umk-desc": "Pengurusan pendaftaran perusahaan sebagai bukti sah bahwa unit usaha Anda telah terdaftar dan memenuhi kewajiban wajib daftar perusahaan.",
+    "umk-features": [
+      "Bukti Sah Perusahaan",
+      "Kelengkapan Dokumen Lelang",
+      "Validasi Data Bisnis",
+      "Registrasi Instansi Terkait"
+    ]
+  },
+  "pendirian_siup": {
+    "umk-badge": "Izin Dagang",
+    "umk-title": "Surat Izin Usaha <br><span class='text-primary'>Perdagangan (SIUP)</span>",
+    "umk-desc": "Izin resmi untuk menjalankan kegiatan usaha perdagangan bagi perusahaan, koperasi, atau perorangan agar operasional legal.",
+    "umk-features": [
+      "Izin Niaga Terpercaya",
+      "Klasifikasi Bidang Usaha",
+      "Syarat Transaksi B2B",
+      "Legalitas Operasional Sah"
+    ]
+  },
+  "pendirian_situ": {
+    "umk-badge": "Izin Lokasi",
+    "umk-title": "Surat Izin <br><span class='text-primary'>Tempat Usaha (SITU)</span>",
+    "umk-desc": "Izin tempat usaha yang diberikan kepada perorangan atau badan usaha di lokasi tertentu yang tidak menimbulkan gangguan lingkungan.",
+    "umk-features": [
+      "Legalitas Lokasi Fisik",
+      "Izin Tata Ruang Daerah",
+      "Persetujuan Lingkungan",
+      "Keamanan Domisili Bisnis"
+    ]
+  },
+  "pendirian_ho": {
+    "umk-badge": "Izin Gangguan",
+    "umk-title": "Izin Gangguan <br><span class='text-primary'>(HO/Hinderordonnantie)</span>",
+    "umk-desc": "Pernyataan tidak keberatan dari lingkungan sekitar terhadap operasional bisnis yang memiliki potensi risiko gangguan atau kebisingan.",
+    "umk-features": [
+      "Izin Lingkungan Sosial",
+      "Sertifikat Bebas Gangguan",
+      "Kepatuhan Perda Setempat",
+      "Perlindungan Operasional"
+    ]
+  },
+  "izin_toko_retail": {
+    "umk-badge": "Izin Retail",
+    "umk-title": "Izin Usaha <br><span class='text-primary'>Toko Modern/Retail</span>",
+    "umk-desc": "Layanan legalitas khusus untuk operasional toko retail atau swalayan agar sesuai dengan zonasi perdagangan dan regulasi ritel.",
+    "umk-features": [
+      "Zonasi Perdagangan Sah",
+      "Syarat Kerjasama Supplier",
+      "Kepatuhan Standar Ritel",
+      "Izin Operasional Lengkap"
+    ]
+  },
+  "pendirian_perkumpulan": {
+    "umk-badge": "Legalitas Organisasi",
+    "umk-title": "Wadah Resmi <br><span class='text-primary'>Komunitas Anda</span>",
+    "umk-desc": "Bentuk badan hukum non-profit yang ideal untuk komunitas, hobi, atau asosiasi profesi agar memiliki identitas hukum yang sah.",
+    "umk-features": [
+      "Berbasis Keanggotaan",
+      "Wadah Hobi & Profesi",
+      "Badan Hukum Sah Kemenkumham",
+      "Manajemen Organisasi Teratur"
+    ]
   }
 }
