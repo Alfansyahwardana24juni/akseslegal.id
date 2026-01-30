@@ -1,0 +1,536 @@
+{
+  "pricingPackages": [
+    {
+      "id": "pendirian-cv",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur Pendirian CV",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp1.999.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp2.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "legal": false, "business": true }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-perkumpulan",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur Pendirian Perkumpulan",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp4.000.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp4.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "legal": false, "business": true }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-pt-perorangan",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur Pendirian PT Perorangan",
+        "headers": [
+          {
+            "key": "standard",
+            "label": "Paket Standard",
+            "price": "Rp999.000",
+            "subLabel": "Hanya Legalitas",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "bundle",
+            "label": "Paket Lengkap + VO",
+            "price": "Rp1.999.000",
+            "subLabel": "Legalitas + Kantor 1 Thn",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Surat Pernyataan",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Surat Pernyataan*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "standard": false, "bundle": false }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "standard": false, "bundle": false }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Penggunaan Alamat Kantor (Makassar/Kendari/Palu)",
+            "status": { "standard": false, "bundle": true }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-pt-pma",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur Pendirian PT PMA",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp8.999.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp9.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "legal": false, "business": true }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-pt-umum",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur Pendirian PT Umum",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp3.999.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp4.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "legal": false, "business": true }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-yayasan",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur Pendirian Yayasan",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp3.499.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp3.999.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "legal": false, "business": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "legal": true, "business": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "legal": false, "business": true }
+          }
+        ]
+      }
+    }
+  ]
+}

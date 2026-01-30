@@ -1074,81 +1074,171 @@
         <div class="px-6 pb-20">
             <div class="max-w-[1200px] mx-auto space-y-10">
                 <div class="flex flex-col md:flex-row md:items-center gap-4">
-                    <h3 class="text-2xl font-black tracking-tight dark:text-white">Detail Perbandingan Fitur</h3>
+                    <h3 id="feature-table-title" class="text-2xl font-black tracking-tight dark:text-white">Detail Perbandingan Fitur</h3>
                     <div class="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-800"></div>
                 </div>
 
                 <div
                     class="overflow-x-auto rounded-[2rem] border border-gray-200 dark:border-gray-800 shadow-sm no-scrollbar">
                     <table class="w-full text-left border-collapse bg-white dark:bg-gray-800/50">
-                        <thead>
+                        <thead id="feature-table-head">
                             <tr class="bg-gray-50/50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-800">
                                 <th class="p-8 text-xs font-black uppercase tracking-widest text-gray-400">Fitur Layanan
                                 </th>
-                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">Paket Legal</th>
-                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/10">Paket Business</th>
-                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">Lengkap</th>
+                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/5">
+                                    Paket Legal
+                                    <span class="block text-[11px] font-bold text-gray-500 mt-1">Rp1.999.000</span>
+                                </th>
+                                <th class="p-8 text-center text-sm font-black text-primary bg-primary/10">
+                                    Paket Business
+                                    <span class="block text-[11px] font-bold text-gray-500 mt-1">Rp2.499.000</span>
+                                </th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+                        <tbody id="feature-table-body" class="divide-y divide-gray-100 dark:divide-gray-800">
                             <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Akta Pendirian
-                                    Notaris</td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/10"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            </tr>
-                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">SK Kemenkumham Resmi
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Akta Notaris</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
                                 </td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/10"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            </tr>
-                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">NIB (RBA) & NPWP</td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/10"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                            </tr>
-                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Izin Lokasi / KKPR
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
                                 </td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-gray-300">remove</span></td>
-                                <td class="p-8 text-center bg-primary/10"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
                             </tr>
                             <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">E-Stamp & Stempel
-                                    Fisik</td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-gray-300">remove</span></td>
-                                <td class="p-8 text-center bg-primary/10"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">check_circle</span></td>
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Free 10 KBLI Pada Akta Notaris*</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
                             </tr>
                             <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
-                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Pendampingan Hukum (1
-                                    Thn)</td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-gray-300">remove</span></td>
-                                <td class="p-8 text-center bg-primary/10"><span
-                                        class="material-symbols-outlined text-gray-300">remove</span></td>
-                                <td class="p-8 text-center bg-primary/5"><span
-                                        class="material-symbols-outlined text-green-500 fill-1">stars</span></td>
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">SK Menteri</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Akun Coretax</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">NPWP Perusahaan</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Akun OSS*</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-gray-300">remove</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">NIB Perusahaan*</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-gray-300">remove</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Free 5 KBLI pada NIB*</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-gray-300">remove</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Konsultasi Legalitas</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Free 50 Draft Perjanjian</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Desain Logo</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Desain Stempel</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Desain Kartu Nama</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Desain Kop Surat</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Email Perusahaan</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                                <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">Pembukaan Rekening*</td>
+                                <td class="p-8 text-center bg-primary/5">
+                                    <span class="material-symbols-outlined text-gray-300">remove</span>
+                                </td>
+                                <td class="p-8 text-center bg-primary/10">
+                                    <span class="material-symbols-outlined text-green-500 fill-1">check_circle</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -1417,6 +1507,850 @@
             }
             // Semua layanan pendirian lainnya menggunakan alur default yang sama
             return 'default';
+        }
+
+        // Feature comparison table (Hardcoded from JSON)
+        const pricingPackagesData = [
+    {
+      "id": "pendirian-cv",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp1.999.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp2.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "SK Menteri",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Logo",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-perkumpulan",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp4.000.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp4.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "SK Menteri",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Logo",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-pt-perorangan",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur",
+        "headers": [
+          {
+            "key": "standard",
+            "label": "Paket Standard",
+            "price": "Rp999.000",
+            "subLabel": "Hanya Legalitas",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "bundle",
+            "label": "Paket Lengkap + VO",
+            "price": "Rp1.999.000",
+            "subLabel": "Legalitas + Kantor 1 Thn",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Surat Pernyataan",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Free 10 KBLI Pada Surat Pernyataan*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "SK Menteri",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Desain Logo",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": { "standard": false, "bundle": false }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": { "standard": false, "bundle": false }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": { "standard": true, "bundle": true }
+          },
+          {
+            "name": "Penggunaan Alamat Kantor (Makassar/Kendari/Palu)",
+            "status": { "standard": false, "bundle": true }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-pt-pma",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp8.999.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp9.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "SK Menteri",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Logo",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-pt-umum",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp3.999.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp4.499.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "SK Menteri",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Logo",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pendirian-yayasan",
+      "comparisonTable": {
+        "title": "Detail Perbandingan Fitur",
+        "headers": [
+          {
+            "key": "legal",
+            "label": "Paket Legal",
+            "price": "Rp3.499.000",
+            "subLabel": "Best Value",
+            "cssClass": "bg-primary/5"
+          },
+          {
+            "key": "business",
+            "label": "Paket Business",
+            "price": "Rp3.999.000",
+            "subLabel": "Recommended",
+            "cssClass": "bg-primary/10"
+          }
+        ],
+        "features": [
+          {
+            "name": "Akta Notaris",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 10 KBLI Pada Akta Notaris*",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "SK Menteri",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun Coretax",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "NPWP Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Akun OSS*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "NIB Perusahaan*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 5 KBLI pada NIB*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          },
+          {
+            "name": "Konsultasi Legalitas",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Free 50 Draft Perjanjian",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Logo",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Stempel",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kartu Nama",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Desain Kop Surat",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Email Perusahaan",
+            "status": {
+              "legal": true,
+              "business": true
+            }
+          },
+          {
+            "name": "Pembukaan Rekening*",
+            "status": {
+              "legal": false,
+              "business": true
+            }
+          }
+        ]
+      }
+    }
+  ];
+
+        function getComparisonTableKey(serviceName) {
+            const name = (serviceName || '').toLowerCase().trim();
+            if (name === 'cv') return 'pendirian-cv';
+            if (name === 'perkumpulan') return 'pendirian-perkumpulan';
+            if (name.includes('pt perorangan')) return 'pendirian-pt-perorangan';
+            if (name.includes('pt pma')) return 'pendirian-pt-pma';
+            if (name === 'pt umum') return 'pendirian-pt-umum';
+            if (name === 'yayasan') return 'pendirian-yayasan';
+            return null;
+        }
+
+        function renderFeatureComparisonTable(tableData) {
+            const titleEl = document.getElementById('feature-table-title');
+            const theadEl = document.getElementById('feature-table-head');
+            const tbodyEl = document.getElementById('feature-table-body');
+            if (!theadEl || !tbodyEl) return;
+
+            if (titleEl && tableData?.title) titleEl.textContent = tableData.title;
+
+            const headers = tableData?.headers || [];
+            const features = tableData?.features || [];
+
+            // Build header row
+            theadEl.innerHTML = `
+                <tr class="bg-gray-50/50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-800">
+                    <th class="p-8 text-xs font-black uppercase tracking-widest text-gray-400">Fitur Layanan</th>
+                    ${headers.map(h => `
+                        <th class="p-8 text-center text-sm font-black text-primary ${h.cssClass || ''}">
+                            ${h.label || ''}
+                            ${h.price ? `<span class="block text-[11px] font-bold text-gray-500 mt-1">${h.price}</span>` : ''}
+                        </th>
+                    `).join('')}
+                </tr>
+            `;
+
+            // Build body rows
+            tbodyEl.innerHTML = features.map(f => {
+                const status = f.status || {};
+                const tds = headers.map(h => {
+                    const enabled = !!status[h.key];
+                    const icon = enabled ? 'check_circle' : 'remove';
+                    const iconClass = enabled ? 'text-green-500 fill-1' : 'text-gray-300';
+                    return `
+                        <td class="p-8 text-center ${h.cssClass || ''}">
+                            <span class="material-symbols-outlined ${iconClass}">${icon}</span>
+                        </td>
+                    `;
+                }).join('');
+
+                return `
+                    <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-900/50 transition-colors">
+                        <td class="p-8 text-sm font-bold text-gray-700 dark:text-gray-200">${f.name || ''}</td>
+                        ${tds}
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function updateFeatureComparisonTableForService(serviceName) {
+            const key = getComparisonTableKey(serviceName);
+            if (!key) return; // fallback: keep default static table
+            
+            const pkg = pricingPackagesData.find(p => p.id === key);
+            if (pkg?.comparisonTable) {
+                renderFeatureComparisonTable(pkg.comparisonTable);
+            }
         }
 
         // UMK Data from JSON
@@ -2175,6 +3109,9 @@
                         // Format price to match design if possible, or just display raw
                         priceEl.textContent = service.price;
                     }
+
+                    // Update feature comparison table (CV / Perkumpulan)
+                    updateFeatureComparisonTableForService(service.name);
 
                     // Update UMK Description & Features & Header
                     const umkDescEl = document.getElementById('umk-desc');
