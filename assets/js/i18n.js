@@ -42,7 +42,7 @@ const I18n = {
             trust_kemenkumham: "Kemenkumham RI",
             trust_legalitas: "Legalitas Terjamin",
             trust_process_time: "± 3 Hari",
-            trust_process_text: "Proses Izin Terbit",
+            trust_process_text: "Proses Legalitas",
             floating_client_title: "Klien Puas!",
             floating_client_desc: "\"Sangat cepat & dibantu sampai tuntas.\"",
             floating_izin: "IZIN TERBIT",
