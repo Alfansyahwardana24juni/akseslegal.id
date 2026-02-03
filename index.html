@@ -675,52 +675,27 @@
 </section>
 
         <!-- Trust Bar & Stats -->
-        <section
-            class="py-12 md:py-16 border-y border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark px-6">
-            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12">
-                <div class="grid grid-cols-2 gap-8 md:gap-10 w-full md:w-auto">
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
-                        <span
-                            class="text-4xl md:text-5xl font-black text-primary transition-transform group-hover:scale-110"
-                            data-counter="5" data-plus="true">0</span>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-primary transition-colors text-center md:text-left"
-                            data-i18n="stat_exp">Tahun
-                            Pengalaman</span>
+        <section class="py-10 border-y border-gray-100 dark:border-gray-800 bg-white dark:bg-background-dark/50 relative z-20">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-center divide-x-0 md:divide-x divide-gray-100 dark:divide-gray-800">
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
+                        <span class="text-4xl lg:text-5xl font-black text-primary transition-transform group-hover:scale-110 duration-300" data-counter="5" data-plus="true">0</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Tahun Pengalaman</span>
                     </div>
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
-                        <span
-                            class="text-4xl md:text-5xl font-black text-[#f3b444] transition-transform group-hover:scale-110"
-                            data-counter="5" data-plus="true">0</span>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-[#f3b444] transition-colors text-center md:text-left"
-                            data-i18n="stat_office">Virtual
-                            Office</span>
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
+                        <span class="text-4xl lg:text-5xl font-black text-[#f3b444] transition-transform group-hover:scale-110 duration-300" data-counter="2000" data-plus="true">0</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Klien Terbantu</span>
                     </div>
-                </div>
-                <div class="h-px w-full md:h-20 md:w-px bg-gray-200 dark:bg-gray-800"></div>
-                <div class="grid grid-cols-2 gap-8 md:gap-10 w-full md:w-auto">
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
-                        <span
-                            class="text-4xl md:text-5xl font-black text-primary transition-transform group-hover:scale-110"
-                            data-counter="2000" data-plus="true">0</span>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-primary transition-colors text-center md:text-left"
-                            data-i18n="stat_client">Klien
-                            Aktif</span>
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
+                        <span class="text-4xl lg:text-5xl font-black text-primary transition-transform group-hover:scale-110 duration-300" data-counter="1" data-plus="false">0</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Hari Kerja (Kilat)</span>
                     </div>
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
                         <div class="flex items-center gap-1">
-                            <span
-                                class="text-4xl md:text-5xl font-black text-[#f3b444] transition-transform group-hover:scale-110"
-                                data-counter="4.9" data-plus="false">0</span>
-                            <span
-                                class="material-symbols-outlined text-2xl md:text-3xl text-[#f3b444] fill-1">star</span>
+                            <span class="text-4xl lg:text-5xl font-black text-[#f3b444]" data-counter="4.9" data-plus="false">0</span>
+                            <span class="material-symbols-outlined text-3xl text-[#f3b444] fill-1 animate-pulse">star</span>
                         </div>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-[#f3b444] transition-colors text-center md:text-left"
-                            data-i18n="stat_rating">Rating
-                            Google</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Rating Sempurna</span>
                     </div>
                 </div>
             </div>
