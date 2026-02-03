@@ -450,182 +450,168 @@
     <main class="relative">
         <!-- Hero Section -->
         <!-- Hero Section Revamped -->
-<section class="relative pt-16 pb-16 md:pt-8 md:pb-24 overflow-hidden bg-gray-50 dark:bg-gray-900 selection:bg-primary selection:text-white">
-    
-    <!-- 1. Background Elements (Enhanced) -->
-    <div class="absolute inset-0 pointer-events-none">
-        <!-- Grid Pattern -->
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        
-        <!-- Gradient Blobs -->
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-blob mix-blend-multiply dark:mix-blend-screen"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-multiply dark:mix-blend-screen"></div>
-    </div>
-
-    <div class="max-w-[1400px] mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
-        
-        <!-- 2. Text Content (Left Side) -->
-        <div class="flex flex-col gap-8 reveal-up order-2 lg:order-1"> <!-- Order 1 agar di HP teks duluan -->
-            
-            <!-- Badge -->
-            <div class="flex items-start">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-800/80 border border-primary/20 backdrop-blur-md shadow-sm hover:shadow-md transition-all cursor-default">
-                    <span class="relative flex h-2.5 w-2.5">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-                    </span>
-                    <span class="text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-300">
-                        Solusi Legal #1 Terpercaya
-                    </span>
+<section class="relative pb-16 md:pb-24 mesh-gradient overflow-hidden">
+            <!-- Subliminal Background -->
+            <div class="absolute inset-0 pointer-events-none -z-10">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-blob">
                 </div>
+                <div
+                    class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] animate-blob animation-delay-2000">
+                </div>
+                <div class="absolute inset-0 hero-pattern opacity-40"></div>
             </div>
 
-            <!-- Headline -->
-            <div class="space-y-6">
-                <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-white" data-i18n="hero_title">
-                    Bangun PT Perorangan
-                    <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-600 to-secondary">
-                        Tanpa Ribet!
-                    </span>
-                </h1>
+            <div class="max-w-[1400px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                <!-- Text Content -->
+                <div class="flex flex-col gap-10 reveal-up order-2 lg:order-1">
+                    <div class="space-y-8">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-premium border border-primary/20 shadow-sm">
+                            <span class="flex h-2 w-2 rounded-full bg-primary animate-ping"></span>
+                            <span
+                                class="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-primary" data-i18n="hero_badge">Solusi
+                                Legal #1 Terpercaya</span>
+                        </div>
 
-                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed font-medium" data-i18n="hero_subtitle">
-                    Urus legalitas bisnis Anda bersama <strong>Akseslegal</strong>. Proses cepat, resmi terdaftar OSS & Kemenkumham, harga transparan.
-                </p>
-            </div>
+                        <h2
+                            class="font-heading text-5xl md:text-6xl font-black leading-[1.05] tracking-tight text-gray-900 dark:text-white" data-i18n="hero_title">
+                            Mulai Bisnis Anda!
+                        </h2>
 
-            <!-- CTA Buttons & Social Proof -->
-            <div class="flex flex-col gap-8">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <!-- Main Button -->
-                    <a href="harga.html" class="group relative px-8 h-14 rounded-2xl bg-primary text-white font-bold flex items-center justify-center gap-3 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                        <span class="text-lg">Mulai Sekarang</span>
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
-                    
-                    <!-- Secondary Button -->
-                    <a href="https://wa.me/6285333338818" class="px-8 h-14 rounded-2xl bg-white dark:bg-gray-800 text-gray-700 dark:text-white font-bold border border-gray-200 dark:border-gray-700 flex items-center justify-center gap-3 hover:border-primary hover:text-primary transition-all duration-300 group">
-                        <img src="assets/images/whatsapp-icon.svg" alt="WA" class="w-6 h-6 grayscale group-hover:grayscale-0 transition-all">
-                        <span>Konsultasi Gratis</span>
-                    </a>
-                </div>
+                        <p class="text-xl md:text-2xl max-w-xl leading-relaxed font-medium" data-i18n="hero_subtitle">
+                            Mulai Bisnis anda sekarang juga melalui jasa Akseslegal dengan pendirian PT Perorangan. Cepat tanpa ribet.
+                        </p>
+                    </div>
 
-                <!-- Avatar Social Proof (New Addition) -->
-                <div class="flex items-center gap-4">
-                    <div class="flex -space-x-3">
-                        <img class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900" src="https://storage.googleapis.com/download/storage/v1/b/akses-legal-indonesia.appspot.com/o/documents%2F1678333933728-cv-tumming.jpg?generation=1678333934696761&amp;alt=media" alt="Client">
-                        <img class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900" src="https://storage.googleapis.com/download/storage/v1/b/akses-legal-indonesia.appspot.com/o/documents%2F1728531489478-Gambar-WhatsApp-2024-10-02-pukul-15.43.31_1eed6df3.jpg?generation=1728531490191745&amp;alt=media" alt="Client">
-                        <img class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900" src="https://storage.googleapis.com/download/storage/v1/b/akses-legal-indonesia.appspot.com/o/documents%2F1678338514875-74ff22d3-0537-4452-8627-e4f7173159fc.jpg?generation=1678338515641734&amp;alt=media" alt="Client">
-                        <div class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-900 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs font-bold text-gray-600 dark:text-gray-300">
-                            +2k
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="harga.html"
+                            class="relative group overflow-hidden h-16 px-10 rounded-2xl bg-primary flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 shadow-2xl shadow-primary/25">
+                            <span class="absolute inset-0 animate-shimmer opacity-30"></span>
+                            <span class="relative text-white font-black text-lg" data-i18n="hero_cta">Mulai Sekarang</span>
+                            <span
+                                class="material-symbols-outlined text-white relative group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <a href="https://wa.me/6285333338818"
+                            class="h-16 px-10 rounded-2xl glass-premium flex items-center justify-center gap-3 font-black text-gray-700 dark:text-gray-200 border-2 border-gray-100 dark:border-gray-800 transition-all hover:border-primary/50 group">
+                            <span
+                                class="size-8 rounded-full  flex items-center justify-center transition-all">
+                            <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp">
+                               </span>
+                            <span data-i18n="hero_chat">Tanya Legal Kami</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap items-center gap-10 pt-4 border-t border-gray-100 dark:border-gray-800">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <div class="size-10 rounded-full bg-primary flex items-center justify-center border-2 border-white dark:border-gray-900 shadow-sm">
+                                    <span class="material-symbols-outlined text-white text-xl">verified</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-[13px] font-black dark:text-white leading-tight" data-i18n="trust_oss">Resmi OSS</span>
+                                    <span class="text-[9px] text-gray-400 font-bold uppercase tracking-tighter" data-i18n="trust_kemenkumham">Kemenkumham RI</span>
+                                </div>
+                            </div>
+                            <p class="text-[11px] font-bold text-gray-500 uppercase tracking-widest"
+                                data-i18n="trust_legalitas">Legalitas Terjamin
+                            </p>
+                        </div>
+
+                        <div class="h-10 w-px bg-gray-200 dark:bg-gray-800 hidden sm:block"></div>
+
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-2xl text-secondary fill-1">bolt</span>
+                                <span class="text-xl font-black dark:text-white">5-7 Hari Kerja</span>
+                            </div>
+                            <p class="text-[11px] font-bold text-gray-500 uppercase tracking-widest"
+                                data-i18n="trust_process_text">Estimasi Proses Izin</p>
                         </div>
                     </div>
-                    <div class="flex flex-col">
-                        <div class="flex gap-1 text-yellow-500 text-sm">
-                            <span class="material-symbols-outlined text-[16px] fill-1">star</span>
-                            <span class="material-symbols-outlined text-[16px] fill-1">star</span>
-                            <span class="material-symbols-outlined text-[16px] fill-1">star</span>
-                            <span class="material-symbols-outlined text-[16px] fill-1">star</span>
-                            <span class="material-symbols-outlined text-[16px] fill-1">star</span>
-                        </div>
-                        <span class="text-xs font-semibold text-gray-500"><span class="text-gray-900 dark:text-white font-bold">4.9/5</span> dari klien puas</span>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Simple Trust Features -->
-            <div class="flex flex-wrap gap-x-8 gap-y-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-                <div class="flex items-center gap-2 text-sm font-bold text-gray-600 dark:text-gray-400">
-                    <span class="material-symbols-outlined text-primary text-xl">verified_user</span>
-                    Resmi Kemenkumham
-                </div>
-                <div class="flex items-center gap-2 text-sm font-bold text-gray-600 dark:text-gray-400">
-                    <span class="material-symbols-outlined text-primary text-xl">bolt</span>
-                    Proses 5-7 Hari
-                </div>
-                <div class="flex items-center gap-2 text-sm font-bold text-gray-600 dark:text-gray-400">
-                    <span class="material-symbols-outlined text-primary text-xl">lock</span>
-                    Data Aman 100%
-                </div>
-            </div>
+                <!-- Visual Content -->
+                <div class="relative lg:block order-1 lg:order-2 -mt-5">
+                    <div class="relative w-full max-w-[400px] lg:max-w-[500px] mx-auto lg:ml-auto reveal-up"
+                        style="transition-delay: 300ms;">
+                        <!-- Main Image Container -->
+                        <div class="relative z-10 animate-tilt">
+                            <div
+                                class="absolute inset-0 bg-primary/20 rounded-full blur-[100px] opacity-30 animate-pulse -z-10">
+                            </div>
+                            <img src="assets/images/hero.png" alt="Akses Legal Lead"
+                                class="w-full h-auto drop-shadow-[0_50px_50px_rgba(0,0,0,0.15)] relative z-10">
+                        </div>
+
+                        <!-- Floating Premium Cards -->
+                        <div class="absolute -left-12 top-1/2 -translate-y-1/2 glass-premium p-5 rounded-[2.5rem] shadow-2xl animate-float z-20 max-w-[200px]">
+    <div class="flex items-start gap-4">
+        <div class="size-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-3xl">sentiment_very_satisfied</span>
         </div>
-
-        <!-- 3. Visual Content (Right Side) -->
-        <div class="relative order-1 lg:order-2">
-            <!-- Main Image Wrapper with Tilt Effect -->
-            <div class="relative mx-auto w-full max-w-[500px] perspective-1000 group">
-                
-                <!-- Background Glow -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-primary/30 to-secondary/30 blur-[60px] rounded-full -z-10"></div>
-                
-                <!-- Main Image -->
-                <div class="relative z-10 animate-float-sway">
-                    <div class="relative rounded-[2.5rem] overflow-hidden border-4 border-white/50 dark:border-gray-700/50 shadow-2xl transition-transform duration-500 hover:scale-[1.02] hover:rotate-1">
-                        <img src="assets/images/hero.png" alt="Akses Legal Services" class="w-full h-auto object-cover">
-                        
-                        <!-- Overlay Gradient at bottom for text readability if needed -->
-                        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-
-                <!-- Floating Card 1: Success Notification -->
-                <div class="absolute top-12 -right-4 glass-card p-4 rounded-2xl z-30 animate-float-medium flex items-center gap-4 max-w-[220px]">
-                        <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-green-500/30 flex-shrink-0">
-                            <span class="material-symbols-outlined">check</span>
-                        </div>
-                        <div>
-                            <p class="text-[10px] text-gray-500 font-bold mb-0.5 uppercase tracking-wide">OSS System</p>
-                            <p class="text-sm font-black text-gray-800 dark:text-white leading-none">NIB Terbit!</p>
-                        </div>
-                    </div>
-
-                <!-- Floating Card 2: Stats -->
-                <div class="absolute bottom-16 -left-4 glass-card p-4 rounded-2xl z-30 animate-float-fast flex flex-col gap-2 w-48">
-                        <div class="flex gap-1 text-accent">
-                            <span class="material-symbols-outlined text-sm fill-1">star</span>
-                            <span class="material-symbols-outlined text-sm fill-1">star</span>
-                            <span class="material-symbols-outlined text-sm fill-1">star</span>
-                            <span class="material-symbols-outlined text-sm fill-1">star</span>
-                            <span class="material-symbols-outlined text-sm fill-1">star</span>
-                        </div>
-                        <p class="text-xs font-bold text-gray-600 dark:text-gray-300 italic">"Prosesnya cepet banget, admin ramah!"</p>
-                        <div class="flex items-center gap-2 mt-1 border-t border-gray-100 dark:border-gray-700 pt-2">
-                            <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-primary to-blue-400"></div>
-                            <span class="text-[10px] font-bold text-gray-400">Owner, Kopi Senja</span>
-                        </div>
-                    </div>
-
-                <!-- Marquee Badge (Bottom Center of Image) -->
-                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-[90%]">
-                    <div class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-xl p-3 shadow-lg border border-white/20 overflow-hidden">
-                        <div class="flex gap-6 animate-marquee whitespace-nowrap">
-                            <!-- Content Repeated for Smooth Loop -->
-                            <span class="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-300">
-                                <span class="material-symbols-outlined text-primary text-sm">verified</span> OSS RBA
-                            </span>
-                            <span class="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-300">
-                                <span class="material-symbols-outlined text-primary text-sm">verified</span> AHU Online
-                            </span>
-                             <span class="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-300">
-                                <span class="material-symbols-outlined text-primary text-sm">verified</span> NPWP Perusahaan
-                            </span>
-                            <!-- Duplicate -->
-                            <span class="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-300">
-                                <span class="material-symbols-outlined text-primary text-sm">verified</span> OSS RBA
-                            </span>
-                            <span class="flex items-center gap-2 text-xs font-bold text-gray-600 dark:text-gray-300">
-                                <span class="material-symbols-outlined text-primary text-sm">verified</span> AHU Online
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div>
+            <h4 class="text-sm font-black text-gray-900 dark:text-white leading-tight mb-1" data-i18n="floating_client_title">
+                Klien Puas!
+            </h4>
+            <p class="text-[10px] font-bold text-gray-500" data-i18n="floating_client_desc">"Sangat cepat & dibantu sampai tuntas."</p>
         </div>
     </div>
-</section>
+</div>
+
+<div class="absolute -right-8 bottom-12 glass-premium p-6 rounded-[2.5rem] shadow-2xl animate-float-delayed z-20">
+    <div class="flex items-center gap-4">
+        <div class="flex flex-col">
+            <span class="text-2xl font-black text-primary">2.5k+</span>
+            <span class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                IZIN TERBIT
+            </span>
+        </div>
+        <div class="size-10 rounded-full bg-secondary text-white flex items-center justify-center">
+            <span class="material-symbols-outlined">description</span>
+        </div>
+    </div>
+</div>
+
+                        <!-- Trusted Marquee in Visual -->
+                        <div class="absolute -bottom-10 left-0 right-0 py-4 glass-premium rounded-3xl z-30 overflow-hidden border border-white/30">
+    <div class="marquee-container px-6">
+        <div class="animate-marquee px-6">
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_oss">Terdaftar OSS RBA</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_kemenkumham">Berizin Kemenkumham</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_aman">Aman & Sah Secara Hukum</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_ahu">Terintegrasi AHU Online</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_regulasi">Sesuai Regulasi Terkini</span>
+        </span>
+        <!-- Duplicate for seamless marquee -->
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_oss">Terdaftar OSS RBA</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_kemenkumham">Berizin Kemenkumham</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_aman">Aman & Sah Secara Hukum</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_ahu">Terintegrasi AHU Online</span>
+        </span>
+        <span class="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> <span data-i18n="marquee_regulasi">Sesuai Regulasi Terkini</span>
+        </span>
+        </div>
+    </div>
+</div>
+        </section>
         <!-- Trust Bar & Stats -->
         <section
             class="py-12 md:py-16 border-y border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark px-6">
