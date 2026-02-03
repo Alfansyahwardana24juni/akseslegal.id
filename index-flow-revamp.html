@@ -34,19 +34,19 @@
                         "DEFAULT": "0.5rem",
                         "lg": "1rem",
                         "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
                         "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(42, 107, 167, 0.3)',
+                        'glow-gold': '0 0 20px rgba(243, 180, 68, 0.3)',
                     },
                 },
             },
         }
     </script>
     <style>
-
-/* Ensure flag emoji renders on desktop (Windows/macOS/Linux). */
-.lang-flag {
-  font-family: "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji","Twemoji Mozilla","Segoe UI Symbol",sans-serif;
-  line-height: 1;
-}
 
 /* Custom Animations di file CSS Anda */
 @keyframes float {
@@ -77,6 +77,9 @@
 .perspective-1000 {
   perspective: 1000px;
 }
+.animate-blob { animation: blob 7s infinite; }
+        .animate-tilt { animation: tilt 4s ease-in-out infinite; }
+        
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -348,115 +351,55 @@
 <body
     class="bg-background-light dark:bg-background-dark text-[#101519] dark:text-gray-100 min-h-screen overflow-x-hidden">
     <!-- Top Navigation Bar -->
-    <header
-        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e9edf1] dark:border-gray-800 transition-all duration-300">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-[#e9edf1] dark:border-gray-800 transition-all duration-300">
         <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
             <a class="flex items-center gap-2 group shrink-0" href="index.html">
                 <span class="text-2xl font-black tracking-tighter transition-all group-hover:scale-105">
-                    <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-24 w-auto">
+                    <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-24 w-auto object-contain">
                 </span>
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html" data-i18n="nav_layanan">
-                    Layanan
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html" data-i18n="nav_harga">
-                    Harga
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="about.html" data-i18n="nav_tentang">
-                    Tentang Kami
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html" data-i18n="nav_blog">
-                    Blog
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="career.html" data-i18n="nav_career">
-                    Career
-                    <span
-                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-                </a>
-                <a class="text-sm font-black text-accent bg-accent/10 px-4 py-2 rounded-xl border border-accent/20 hover:bg-accent/20 transition-all"
-                    href="dashboard.html" data-i18n="nav_dashboard">
-                    Dashboard
-                </a>
+            <nav class="hidden md:flex items-center gap-8 lg:gap-10">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html" data-i18n="nav_layanan">Layanan<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html" data-i18n="nav_harga">Harga<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="about.html" data-i18n="nav_tentang">Tentang<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html" data-i18n="nav_blog">Blog<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="career.html" data-i18n="nav_career">Karir<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span></a>
             </nav>
 
             <!-- Actions -->
-            <div class="flex items-center gap-6">
-                <a href="https://wa.me/6285333338818?text=Halo%20Akses%20Legal,%20saya%20ingin%20konsultasi%20gratis%20mengenai%20legalitas%20bisnis."
-                    target="_blank"
-                    class="hidden md:block text-sm font-black text-secondary hover:text-primary transition-colors"
-                    data-i18n="btn_konsultasi">
-                    Konsultasi Gratis
-                </a>
-                <a href="harga.html"
-                    class="hidden sm:flex items-center justify-center rounded-xl h-11 px-6 bg-primary text-white text-sm font-black transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 active:scale-95"
-                    data-i18n="hero_cta">
-                    Mulai Sekarang
-                </a>
-
+            <div class="flex items-center gap-4">
+                <a href="dashboard.html" class="hidden lg:flex text-sm font-black text-primary bg-primary/10 px-4 py-2.5 rounded-xl hover:bg-primary hover:text-white transition-all" data-i18n="nav_dashboard">Dashboard</a>
+                <a href="https://wa.me/6285333338818" target="_blank" class="hidden sm:flex items-center justify-center rounded-xl h-11 px-6 bg-gradient-to-r from-primary to-blue-600 text-white text-sm font-black transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:scale-95" data-i18n="hero_cta">Konsultasi Gratis</a>
+                
                 <!-- Language Toggle -->
-                <button id="desktop-lang-toggle"
-                    class="hidden md:flex items-center justify-center h-10 px-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 transition-all cursor-pointer min-w-[80px]">
-                    <!-- Injected by i18n.js -->
-                </button>
-
+                <button id="desktop-lang-toggle" class="hidden md:flex items-center justify-center h-10 px-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 transition-all cursor-pointer min-w-[70px]"></button>
+                
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-toggle"
-                    class="md:hidden size-11 flex items-center justify-center rounded-xl bg-gray-50 dark:bg-gray-800 text-primary transition-all hover:bg-gray-100 dark:hover:bg-gray-700">
+                <button id="mobile-menu-toggle" class="md:hidden size-11 flex items-center justify-center rounded-xl bg-gray-50 dark:bg-gray-800 text-primary transition-all hover:bg-gray-100 dark:hover:bg-gray-700">
                     <span class="material-symbols-outlined text-2xl">menu</span>
                 </button>
-
             </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu"
-            class="md:hidden fixed inset-0 z-[999] bg-white dark:bg-gray-900 p-6 flex flex-col h-screen overflow-y-auto transition-transform duration-300 translate-x-full">
+        <div id="mobile-menu" class="md:hidden fixed inset-0 z-[999] bg-white dark:bg-gray-900 p-6 flex flex-col h-screen overflow-y-auto transition-transform duration-300 translate-x-full">
             <div class="flex items-center justify-between mb-12">
-                <a class="flex items-center gap-2 group shrink-0" href="index.html">
-                    <span class="text-2xl font-black tracking-tighter transition-all group-hover:scale-105">
-                        <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-24 w-auto">
-                    </span>
-                </a>
-                <!-- Language Toggle Mobile -->
-                <button id="mobile-lang-toggle"
-                    class="hidden items-center justify-center h-10 px-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 mr-4">
-                    <!-- Injected by i18n.js -->
-                </button>
-
-                <button id="mobile-menu-close"
-                    class="size-11 flex items-center justify-center rounded-xl bg-gray-50 dark:bg-gray-800">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
+                <img src="assets/images/logo-color.png" alt="ALI Logo" class="h-20 w-auto">
+                <button id="mobile-menu-close" class="size-11 flex items-center justify-center rounded-xl bg-gray-50 dark:bg-gray-800"><span class="material-symbols-outlined">close</span></button>
             </div>
-            <nav class="flex flex-col gap-8 text-2xl font-black text-gray-900 dark:text-white mb-auto">
-                <a href="layanan.html" class="flex items-center justify-between group" data-i18n="nav_layanan">Layanan <span
-                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="harga.html" class="flex items-center justify-between group" data-i18n="nav_harga">Harga <span
-                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="about.html" class="flex items-center justify-between group" data-i18n="nav_tentang">Tentang Kami <span
-                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="blog.html" class="flex items-center justify-between group" data-i18n="nav_blog">Blog <span
-                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="career.html" class="flex items-center justify-between group" data-i18n="nav_career">Career <span
-                        class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="dashboard.html" class="flex items-center justify-between group text-accent" data-i18n="nav_dashboard">Dashboard <span
-                        class="material-symbols-outlined text-accent group-hover:translate-x-2 transition-transform">dashboard</span></a>
+            <nav class="flex flex-col gap-6 text-xl font-black text-gray-900 dark:text-white mb-auto">
+                <a href="layanan.html" class="flex items-center justify-between group py-2 border-b border-gray-100 dark:border-gray-800">Layanan <span class="material-symbols-outlined text-primary">chevron_right</span></a>
+                <a href="harga.html" class="flex items-center justify-between group py-2 border-b border-gray-100 dark:border-gray-800">Harga <span class="material-symbols-outlined text-primary">chevron_right</span></a>
+                <a href="dashboard.html" class="flex items-center justify-between group py-2 border-b border-gray-100 dark:border-gray-800 text-primary">Dashboard <span class="material-symbols-outlined">dashboard</span></a>
             </nav>
-            <a href="https://wa.me/6285333338818" target="_blank"
-                class="w-full h-16 bg-primary text-white flex items-center justify-center rounded-2xl font-black gap-2 shadow-xl shadow-primary/20 mt-12">
-                <span class="material-symbols-outlined">chat</span> <span data-i18n="mobile_chat">Chat Konsultan</span>
-            </a>
+            <div class="flex flex-col gap-4 mt-8">
+                <button id="mobile-lang-toggle" class="w-full h-12 flex items-center justify-center bg-gray-50 rounded-xl font-bold"></button>
+                <a href="https://wa.me/6285333338818" class="w-full h-14 bg-primary text-white flex items-center justify-center rounded-2xl font-black gap-2 shadow-xl shadow-primary/20">
+                    <span class="material-symbols-outlined">chat</span> Chat Konsultan
+                </a>
+            </div>
         </div>
     </header>
     <main class="relative">
@@ -640,52 +583,27 @@
 </section>
 
         <!-- Trust Bar & Stats -->
-        <section
-            class="py-12 md:py-16 border-y border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark px-6">
-            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12">
-                <div class="grid grid-cols-2 gap-8 md:gap-10 w-full md:w-auto">
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
-                        <span
-                            class="text-4xl md:text-5xl font-black text-primary transition-transform group-hover:scale-110"
-                            data-counter="5" data-plus="true">0</span>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-primary transition-colors text-center md:text-left"
-                            data-i18n="stat_exp">Tahun
-                            Pengalaman</span>
+        <section class="py-10 border-y border-gray-100 dark:border-gray-800 bg-white dark:bg-background-dark/50 relative z-20">
+            <div class="max-w-[1200px] mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-center divide-x-0 md:divide-x divide-gray-100 dark:divide-gray-800">
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
+                        <span class="text-4xl lg:text-5xl font-black text-primary transition-transform group-hover:scale-110 duration-300" data-counter="5" data-plus="true">0</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Tahun Pengalaman</span>
                     </div>
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
-                        <span
-                            class="text-4xl md:text-5xl font-black text-[#f3b444] transition-transform group-hover:scale-110"
-                            data-counter="5" data-plus="true">0</span>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-[#f3b444] transition-colors text-center md:text-left"
-                            data-i18n="stat_office">Virtual
-                            Office</span>
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
+                        <span class="text-4xl lg:text-5xl font-black text-[#f3b444] transition-transform group-hover:scale-110 duration-300" data-counter="2000" data-plus="true">0</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Klien Terbantu</span>
                     </div>
-                </div>
-                <div class="h-px w-full md:h-20 md:w-px bg-gray-200 dark:bg-gray-800"></div>
-                <div class="grid grid-cols-2 gap-8 md:gap-10 w-full md:w-auto">
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
-                        <span
-                            class="text-4xl md:text-5xl font-black text-primary transition-transform group-hover:scale-110"
-                            data-counter="2000" data-plus="true">0</span>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-primary transition-colors text-center md:text-left"
-                            data-i18n="stat_client">Klien
-                            Aktif</span>
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
+                        <span class="text-4xl lg:text-5xl font-black text-primary transition-transform group-hover:scale-110 duration-300" data-counter="1" data-plus="false">0</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Hari Kerja (Kilat)</span>
                     </div>
-                    <div class="flex flex-col items-center md:items-start group cursor-default">
+                    <div class="flex flex-col items-center justify-center text-center group cursor-default p-2">
                         <div class="flex items-center gap-1">
-                            <span
-                                class="text-4xl md:text-5xl font-black text-[#f3b444] transition-transform group-hover:scale-110"
-                                data-counter="4.9" data-plus="false">0</span>
-                            <span
-                                class="material-symbols-outlined text-2xl md:text-3xl text-[#f3b444] fill-1">star</span>
+                            <span class="text-4xl lg:text-5xl font-black text-[#f3b444]" data-counter="4.9" data-plus="false">0</span>
+                            <span class="material-symbols-outlined text-3xl text-[#f3b444] fill-1 animate-pulse">star</span>
                         </div>
-                        <span
-                            class="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest mt-2 group-hover:text-[#f3b444] transition-colors text-center md:text-left"
-                            data-i18n="stat_rating">Rating
-                            Google</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mt-2">Rating Sempurna</span>
                     </div>
                 </div>
             </div>
@@ -753,183 +671,117 @@
             </div>
         </section>
 
-        <!-- Traditional vs Akses Legal Comparison -->
-        <section class="py-24 px-6 relative overflow-hidden">
-            <div class="max-w-[1200px] mx-auto">
-                <div class="text-center mb-16 reveal-up">
-                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4"
-                        data-i18n="comp_title">Cara Lama vs Cara Kami</h2>
-                    <p class="text-lg text-gray-500 font-medium" data-i18n="comp_subtitle">Buktikan sendiri efisiensi
-                        yang akan Anda dapatkan.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8 items-center reveal-up">
-                    <!-- Traditional Way -->
-                    <div
-                        class="p-8 md:p-12 rounded-[3.5rem] bg-gray-100 dark:bg-gray-800/30 border-2 border-transparent opacity-60 hover:opacity-100 transition-all group">
-                        <div class="space-y-8">
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="size-14 rounded-2xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
-                                    <span class="material-symbols-outlined text-3xl">history</span>
-                                </div>
-                                <h3 class="text-2xl font-black text-gray-600 dark:text-gray-400"
-                                    data-i18n="comp_old_title">Jasa Konvensional</h3>
-                            </div>
-                            <ul class="space-y-6">
-                                <li class="flex items-start gap-4 text-gray-500 font-medium">
-                                    <span class="material-symbols-outlined text-red-400 shrink-0">cancel</span>
-                                    <span data-i18n="comp_old_1">Proses 2-4 minggu, penuh dengan tumpukan dokumen
-                                        fisik.</span>
-                                </li>
-                                <li class="flex items-start gap-4 text-gray-500 font-medium">
-                                    <span class="material-symbols-outlined text-red-400 shrink-0">cancel</span>
-                                    <span data-i18n="comp_old_2">Biaya seringkali fluktuatif (ada biaya tambahan di
-                                        tengah jalan).</span>
-                                </li>
-                                <li class="flex items-start gap-4 text-gray-500 font-medium">
-                                    <span class="material-symbols-outlined text-red-400 shrink-0">cancel</span>
-                                    <span data-i18n="comp_old_3">Update status manual melalui telepon atau meeting
-                                        fisik.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Akses Legal Way -->
-                    <div
-                        class="p-8 md:p-12 rounded-[3.5rem] bg-white dark:bg-gray-800 border-2 border-primary shadow-[0_30px_60px_rgba(42,107,167,0.15)] relative overflow-hidden group">
-                        <!-- ... (skipped recommended badge) ... -->
-                        <div class="space-y-8 relative z-10">
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="size-14 rounded-2xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
-                                    <span class="material-symbols-outlined text-3xl">bolt</span>
-                                </div>
-                                <h3 class="text-2xl font-black text-gray-900 dark:text-white"
-                                    data-i18n="comp_new_title">Akses Legal Indonesia</h3>
-                            </div>
-                            <ul class="space-y-6">
-                                <li class="flex items-start gap-4 text-gray-900 dark:text-white font-bold">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 shrink-0 font-variation-settings-'FILL'-1">check_circle</span>
-                                    <span data-i18n="comp_new_1">Proses Hanya 1 Hari Kerja untuk NIB & Akta.</span>
-                                </li>
-                                <li class="flex items-start gap-4 text-gray-900 dark:text-white font-bold">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 shrink-0 font-variation-settings-'FILL'-1">check_circle</span>
-                                    <span data-i18n="comp_new_2">Harga Fixed & Transparan sejak awal pendaftaran.</span>
-                                </li>
-                                <li class="flex items-start gap-4 text-gray-900 dark:text-white font-bold">
-                                    <span
-                                        class="material-symbols-outlined text-green-500 shrink-0 font-variation-settings-'FILL'-1">check_circle</span>
-                                    <span data-i18n="comp_new_3">Dashboard digital & monitoring progress via WhatsApp
-                                        24/7.</span>
-                                </li>
-                            </ul>
-                            <a href="harga.html"
-                                class="inline-flex items-center gap-2 text-primary font-black group/link">
-                                <span data-i18n="comp_cta">Hitung Biaya Sekarang</span>
-                                <span
-                                    class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
-                            </a>
-                        </div>
-                        <!-- ... -->
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Services Section Header -->
-        <section id="layanan" class="pt-20 pb-10 px-6 reveal-up">
-            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div class="space-y-3">
-                    <h2 class="text-4xl font-black text-gray-900 dark:text-white tracking-tight" data-i18n="serv_title">
-                        Solusi Legalitas
-                        Profesional</h2>
-                    <p class="text-lg text-gray-500 max-w-xl font-medium" data-i18n="serv_desc">Layanan hulu ke hilir
-                        untuk membantu bisnis
-                        Anda tumbuh secara legal dan aman.</p>
-                </div>
-                <a class="text-primary font-black text-lg flex items-center gap-2 group border-b-2 border-transparent hover:border-primary transition-all pb-1"
-                    href="layanan.html">
-                    <span data-i18n="serv_link">Lihat Paket Harga</span>
-                    <span
-                        class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward_ios</span>
-                </a>
-            </div>
-        </section>
-        <!-- Services Grid -->
-        <section class="pb-20 px-6">
-            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- PT Perorangan -->
-                <div
-                    class="reveal-up group p-10 rounded-[2.5rem] bg-white dark:bg-gray-800/50 border-2 border-gray-100 dark:border-gray-700 hover:border-primary hover:shadow-[0_20px_50px_rgba(42,107,167,0.1)] transition-all duration-500">
-                    <div
-                        class="size-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 transition-transform group-hover:rotate-12">
-                        <span class="material-symbols-outlined text-4xl">corporate_fare</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4 dark:text-white" data-i18n="card_pt_title">PT Perorangan</h3>
-                    <p class="text-gray-500 text-base leading-relaxed mb-8 font-medium" data-i18n="card_pt_desc">Satu
-                        orang pendiri, tanggung
-                        jawab terbatas. Solusi paling populer untuk pengusaha mandiri.</p>
-                    <div class="pt-8 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
-                        <div>
-                            <p class="text-xs font-black text-gray-400 uppercase tracking-widest" data-i18n="investasi">
-                                Investasi</p>
-                            <p class="text-xl font-black text-gray-900 dark:text-white">Rp 500rb-an</p>
+        <section id="layanan" class="py-24 px-6 relative bg-gray-50 dark:bg-[#0f172a]">
+            <!-- Background Decoration -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+            
+            <div class="max-w-[1200px] mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal-up">
+                    <div class="space-y-4 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-black uppercase tracking-widest border border-primary/20">
+                            <span class="material-symbols-outlined text-sm">verified</span> Produk Unggulan
                         </div>
-                        <a href="layanan-pt.html"
-                            class="size-12 rounded-2xl bg-gray-50 dark:bg-gray-700 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                        </a>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight">
+                            Solusi Legalitas Bisnis <br><span class="text-gradient">Terlengkap & Termurah</span>
+                        </h2>
+                        <p class="text-lg text-gray-500 font-medium">Pilih paket yang sesuai dengan kebutuhan bisnis Anda. Semua harga transparan, tanpa biaya tersembunyi.</p>
                     </div>
+                    <a href="harga.html" class="hidden md:flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-bold text-primary hover:border-primary transition-all group shadow-sm">
+                        Lihat Semua Paket <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
                 </div>
-                <!-- CV -->
-                <div class="reveal-up group p-10 rounded-[2.5rem] bg-white dark:bg-gray-800/50 border-2 border-gray-100 dark:border-gray-700 hover:border-primary hover:shadow-[0_20px_50px_rgba(42,107,167,0.1)] transition-all duration-500"
-                    style="transition-delay: 100ms;">
-                    <div
-                        class="size-16 rounded-2xl bg-[#f3b444]/10 text-[#f3b444] flex items-center justify-center mb-8 transition-transform group-hover:rotate-12">
-                        <span class="material-symbols-outlined text-4xl">groups</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4 dark:text-white" data-i18n="card_cv_title">Pendirian CV</h3>
-                    <p class="text-gray-500 text-base leading-relaxed mb-8 font-medium" data-i18n="card_cv_desc">
-                        Bermitra dengan kolega Anda
-                        secara resmi dengan prosedur yang ringkas dan aman.</p>
-                    <div class="pt-8 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
-                        <div>
-                            <p class="text-xs font-black text-gray-400 uppercase tracking-widest" data-i18n="investasi">
-                                Investasi</p>
-                            <p class="text-xl font-black text-gray-900 dark:text-white">Rp 1.5jt-an</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- PT Perorangan (Highlighted) -->
+                    <div class="reveal-up relative glass-card-hover rounded-[2.5rem] p-8 lg:p-10 flex flex-col h-full border-t-4 border-t-primary shadow-xl">
+                        <div class="absolute -top-4 left-8 bg-[#f3b444] text-primary text-xs font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-wide z-10">
+                            Paling Populer
                         </div>
-                        <a href="layanan-cv.html"
-                            class="size-12 rounded-2xl bg-gray-50 dark:bg-gray-700 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- HAKI -->
-                <div class="reveal-up group p-10 rounded-[2.5rem] bg-white dark:bg-gray-800/50 border-2 border-gray-100 dark:border-gray-700 hover:border-primary hover:shadow-[0_20px_50px_rgba(42,107,167,0.1)] transition-all duration-500"
-                    style="transition-delay: 200ms;">
-                    <div
-                        class="size-16 rounded-2xl bg-green-100 text-green-600 flex items-center justify-center mb-8 transition-transform group-hover:rotate-12">
-                        <span class="material-symbols-outlined text-4xl">verified_user</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-4 dark:text-white" data-i18n="card_haki_title">Hak Kekayaan
-                        Intelektual</h3>
-                    <p class="text-gray-500 text-base leading-relaxed mb-8 font-medium" data-i18n="card_haki_desc">
-                        Proteksi Merek, Logo, dan Karya
-                        Cipta Anda. Aset masa depan bisnis yang wajib dilindungi.</p>
-                    <div class="pt-8 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
-                        <div>
-                            <p class="text-xs font-black text-gray-400 uppercase tracking-widest" data-i18n="investasi">
-                                Investasi</p>
-                            <p class="text-xl font-black text-gray-900 dark:text-white">Rp 2jt-an</p>
+                        <div class="size-16 rounded-2xl bg-gradient-to-br from-primary to-blue-400 text-white flex items-center justify-center mb-8 shadow-lg shadow-primary/30 group-hover:-translate-y-2 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-3xl">corporate_fare</span>
                         </div>
-                        <a href="layanan-haki.html"
-                            class="size-12 rounded-2xl bg-gray-50 dark:bg-gray-700 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                        </a>
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-3">PT Perorangan</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">Solusi terbaik untuk UMKM. Tanggung jawab terbatas, pajak lebih ringan, dan prestise perusahaan.</p>
+                        <div class="space-y-4 border-t border-gray-100 dark:border-gray-700 pt-6">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Akta Pendirian
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> SK Kemenkumham
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> NIB & NPWP
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 flex items-center justify-between border-t border-dashed border-gray-200 dark:border-gray-700">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">Mulai Dari</p>
+                                <p class="text-2xl font-black text-primary">Rp 1.5jt<span class="text-sm text-gray-400 font-medium">,-</span></p>
+                            </div>
+                            <a href="layanan-pt.html" class="size-12 rounded-xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CV -->
+                    <div class="reveal-up glass-card-hover rounded-[2.5rem] p-8 lg:p-10 flex flex-col h-full border-t-4 border-t-gray-200 dark:border-t-gray-700" style="transition-delay: 100ms;">
+                        <div class="size-16 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-gray-600 dark:text-gray-300 flex items-center justify-center mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-3">Pendirian CV</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">Badan usaha untuk kemitraan (sekutu aktif & pasif). Cocok untuk tender pemerintah.</p>
+                        <div class="space-y-4 border-t border-gray-100 dark:border-gray-700 pt-6">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Akta Notaris
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Daftar Pengadilan
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Perizinan OSS
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 flex items-center justify-between border-t border-dashed border-gray-200 dark:border-gray-700">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">Mulai Dari</p>
+                                <p class="text-2xl font-black text-gray-800 dark:text-white">Rp 2jt<span class="text-sm text-gray-400 font-medium">,-</span></p>
+                            </div>
+                            <a href="layanan-cv.html" class="size-12 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-white flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- HAKI -->
+                    <div class="reveal-up glass-card-hover rounded-[2.5rem] p-8 lg:p-10 flex flex-col h-full border-t-4 border-t-gray-200 dark:border-t-gray-700" style="transition-delay: 200ms;">
+                        <div class="size-16 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-gray-600 dark:text-gray-300 flex items-center justify-center mb-8 shadow-sm group-hover:-translate-y-2 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-3xl">verified_user</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-3">Daftar Merek (HAKI)</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">Lindungi nama brand dan logo Anda dari plagiarisme kompetitor. Aset terpenting bisnis.</p>
+                        <div class="space-y-4 border-t border-gray-100 dark:border-gray-700 pt-6">
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Analisa Merek
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Pendaftaran DJKI
+                            </div>
+                            <div class="flex items-center gap-3 text-sm font-bold text-gray-600 dark:text-gray-300">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span> Sertifikat Resmi
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 flex items-center justify-between border-t border-dashed border-gray-200 dark:border-gray-700">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">Mulai Dari</p>
+                                <p class="text-2xl font-black text-gray-800 dark:text-white">Rp 2.5jt<span class="text-sm text-gray-400 font-medium">,-</span></p>
+                            </div>
+                            <a href="layanan-haki.html" class="size-12 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-white flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

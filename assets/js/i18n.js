@@ -519,15 +519,15 @@ const I18n = {
         const desktopBtn = document.getElementById('desktop-lang-toggle');
         const mobileBtn = document.getElementById('mobile-lang-toggle');
 
-        // Content: Capsule Design with Emoji
+        // Content: Capsule Design with SVG flags (emoji flags are unreliable on some desktops)
         const content = this.currentLang === 'id'
             ? `<div class="flex items-center gap-2 px-1">
-                 <span class="text-xl">🇮🇩</span>
+                 <img src="assets/images/flag-id.svg" alt="" class="w-5 h-5 rounded-sm shrink-0" loading="lazy" decoding="async" />
                  <span class="text-xs font-bold font-heading">ID</span>
                  <span class="material-symbols-outlined text-[10px] opacity-50">expand_more</span>
                </div>`
             : `<div class="flex items-center gap-2 px-1">
-                 <span class="text-xl">🇺🇸</span>
+                 <img src="assets/images/flag-us.svg" alt="" class="w-5 h-5 rounded-sm shrink-0" loading="lazy" decoding="async" />
                  <span class="text-xs font-bold font-heading">EN</span>
                  <span class="material-symbols-outlined text-[10px] opacity-50">expand_more</span>
                </div>`;
