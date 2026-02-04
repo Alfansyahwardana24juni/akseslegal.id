@@ -44,6 +44,21 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Updated Gradient to Match Brand (Blue to Gold) instead of Insta Pink */
+        .text-gradient-brand {
+            background: linear-gradient(to right, #2a6ba7, #f3b444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bg-gradient-brand {
+            background: linear-gradient(135deg, #2a6ba7 0%, #1a2c3d 100%);
+        }
+
+        .bg-gradient-border {
+            background: linear-gradient(45deg, #f3b444, #2a6ba7);
+        }
     </style>
     <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
@@ -63,27 +78,27 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html" data-i18n="nav_layanan">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="layanan.html" >
                     Layanan
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html" data-i18n="nav_harga">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="harga.html" >
                     Harga
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
-                <a class="text-sm font-bold text-primary transition-all relative group py-2" href="about.html" data-i18n="nav_tentang">
+                <a class="text-sm font-bold text-primary transition-all relative group py-2" href="about.html" >
                     Tentang Kami
                     <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-all"></span>
                 </a>
-                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html" data-i18n="nav_blog">
+                <a class="text-sm font-bold hover:text-primary transition-all relative group py-2" href="blog.html" >
                     Blog
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                 </a>
                 <a class="text-sm font-black text-accent bg-accent/10 px-4 py-2 rounded-xl border border-accent/20 hover:bg-accent/20 transition-all"
-                    href="dashboard.html" data-i18n="nav_dashboard">
+                    href="dashboard.html" >
                     Dashboard
                 </a>
             </nav>
@@ -93,7 +108,7 @@
                 <a href="https://wa.me/6285333338818?text=Halo%20Akses%20Legal,%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20perusahaan..."
                     target="_blank"
                     class="hidden sm:flex items-center justify-center rounded-xl h-11 px-6 bg-primary text-white text-sm font-black transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 active:scale-95"
-                    data-i18n="btn_konsultasi">
+                    >
                     Konsultasi Gratis
                 </a>
 
@@ -120,20 +135,20 @@
                 </button>
             </div>
             <nav class="flex flex-col gap-8 text-2xl font-black text-gray-900 dark:text-white mb-auto">
-                <a href="layanan.html" class="flex items-center justify-between group" data-i18n="nav_layanan">Layanan <span
+                <a href="layanan.html" class="flex items-center justify-between group" >Layanan <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="harga.html" class="flex items-center justify-between group" data-i18n="nav_harga">Harga <span
+                <a href="harga.html" class="flex items-center justify-between group" >Harga <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="about.html" class="flex items-center justify-between group" data-i18n="nav_tentang">Tentang Kami <span
+                <a href="about.html" class="flex items-center justify-between group" >Tentang Kami <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="blog.html" class="flex items-center justify-between group" data-i18n="nav_blog">Blog <span
+                <a href="blog.html" class="flex items-center justify-between group" >Blog <span
                         class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-                <a href="dashboard.html" class="flex items-center justify-between group text-accent" data-i18n="nav_dashboard">Dashboard <span
+                <a href="dashboard.html" class="flex items-center justify-between group text-accent" >Dashboard <span
                         class="material-symbols-outlined text-accent group-hover:translate-x-2 transition-transform">dashboard</span></a>
             </nav>
             <a href="https://wa.me/6285333338818" target="_blank"
                 class="w-full h-16 bg-primary text-white flex items-center justify-center rounded-2xl font-black gap-2 shadow-xl shadow-primary/20 mt-12">
-                <span class="material-symbols-outlined">chat</span> <span data-i18n="mobile_chat">Chat Konsultan</span>
+                <span class="material-symbols-outlined">chat</span> <span >Chat Konsultan</span>
             </a>
         </div>
     </header>
@@ -143,10 +158,10 @@
         <section class="py-24 bg-gradient-to-br from-primary to-[#1a2c3d] text-white overflow-hidden relative px-6">
             <div class="max-w-[1200px] mx-auto relative z-10">
                 <div class="max-w-3xl space-y-4 md:space-y-6 reveal-up">
-                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight leading-tight"><span data-i18n="about_title_pre">Membangun</span>
-                        <br /><span class="text-secondary" data-i18n="about_title_accent">Masa Depan Legalitas</span> <span data-i18n="about_title_post">Indonesia</span>
+                    <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight leading-tight"><span >Membangun</span>
+                        <br /><span class="text-secondary" >Masa Depan Legalitas</span> <span >Indonesia</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-white/80 font-medium leading-relaxed" data-i18n="about_subtitle">PT Akses Legal Indonesia
+                    <p class="text-lg md:text-xl text-white/80 font-medium leading-relaxed" >PT Akses Legal Indonesia
                         adalah partner
                         strategis bagi ribuan pengusaha dalam mengamankan pondasi legal bisnis mereka melalui teknologi.
                     </p>
@@ -162,7 +177,7 @@
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="reveal-up space-y-6 md:space-y-8">
                     <div class="space-y-3 md:space-y-4">
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight" data-i18n="about_vision_title">Visi &
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight" >Visi &
                             Misi Kami
                         </h2>
                         <div class="w-16 md:w-20 h-1 md:h-1.5 bg-secondary rounded-full"></div>
@@ -175,8 +190,8 @@
                                 <span class="material-symbols-outlined text-3xl">rocket_launch</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-xl font-black text-gray-900 dark:text-white" data-i18n="about_vision_company">Visi Perusahaan</h3>
-                                <p class="text-gray-500 font-medium leading-relaxed" data-i18n="about_vision_desc">Menjadi garda terdepan dalam
+                                <h3 class="text-xl font-black text-gray-900 dark:text-white" >Visi Perusahaan</h3>
+                                <p class="text-gray-500 font-medium leading-relaxed" >Menjadi garda terdepan dalam
                                     digitalisasi layanan hukum di Indonesia, memberdayakan UMKM untuk tumbuh tanpa
                                     hambatan birokrasi.</p>
                             </div>
@@ -188,22 +203,22 @@
                                 <span class="material-symbols-outlined text-3xl">target</span>
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-xl font-black text-gray-900 dark:text-white" data-i18n="about_mission_company">Misi Perusahaan</h3>
+                                <h3 class="text-xl font-black text-gray-900 dark:text-white" >Misi Perusahaan</h3>
                                 <ul class="space-y-3 text-gray-500 font-medium">
                                     <li class="flex items-start gap-2">
                                         <span
                                             class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        <span data-i18n="about_mission_1">Menyediakan akses legalitas yang transparan dan terjangkau.</span>
+                                        <span >Menyediakan akses legalitas yang transparan dan terjangkau.</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span
                                             class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        <span data-i18n="about_mission_2">Mengintegrasikan teknologi ke dalam proses administratif hukum.</span>
+                                        <span >Mengintegrasikan teknologi ke dalam proses administratif hukum.</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span
                                             class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        <span data-i18n="about_mission_3">Memberikan konsultasi ahli yang solutif bagi pertumbuhan bisnis.</span>
+                                        <span >Memberikan konsultasi ahli yang solutif bagi pertumbuhan bisnis.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -217,13 +232,13 @@
                             class="rounded-[2.5rem] shadow-xl w-full aspect-[4/5] object-cover" alt="Office Life">
                         <div class="bg-primary p-8 rounded-[2.5rem] text-white">
                             <p class="text-4xl font-black mb-1">5+</p>
-                            <p class="text-xs font-black uppercase tracking-widest opacity-80" data-i18n="about_stats_years">Tahun Dedikasi</p>
+                            <p class="text-xs font-black uppercase tracking-widest opacity-80" >Tahun Dedikasi</p>
                         </div>
                     </div>
                     <div class="space-y-6">
                         <div class="bg-secondary p-8 rounded-[2.5rem] text-primary">
                             <p class="text-4xl font-black mb-1">2K+</p>
-                            <p class="text-xs font-black uppercase tracking-widest opacity-80" data-i18n="about_stats_clients">Klien Aktif</p>
+                            <p class="text-xs font-black uppercase tracking-widest opacity-80" >Klien Aktif</p>
                         </div>
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
                             class="rounded-[2.5rem] shadow-xl w-full aspect-[4/5] object-cover" alt="Teamwork">
@@ -236,8 +251,8 @@
         <section class="py-24 bg-white dark:bg-gray-900/50">
             <div class="max-w-[1200px] mx-auto px-6">
                 <div class="text-center mb-16 reveal-up">
-                    <h2 class="text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-4" data-i18n="about_team_title">Tim Ahli Kami</h2>
-                    <p class="text-lg text-gray-500 max-w-2xl mx-auto font-medium" data-i18n="about_team_subtitle">Bekerja dengan dedikasi tinggi untuk
+                    <h2 class="text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-4" >Tim Ahli Kami</h2>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto font-medium" >Bekerja dengan dedikasi tinggi untuk
                         memastikan setiap dokumen bisnis Anda aman secara hukum.</p>
                 </div>
 
@@ -249,12 +264,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_consultant">Legal
+                                <span class="text-white text-xs font-black uppercase tracking-widest" >Legal
                                     Consultant</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Bapak [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_founder">Founder / CEO</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" >Founder / CEO</p>
                     </div>
 
                     <!-- Team Member 2 -->
@@ -264,12 +279,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_compliance">Compliance
+                                <span class="text-white text-xs font-black uppercase tracking-widest" >Compliance
                                     Officer</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Ibu [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_cofounder">Co-Founder</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" >Co-Founder</p>
                     </div>
 
                     <!-- Team Member 3 -->
@@ -279,12 +294,12 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_analyst">Business
+                                <span class="text-white text-xs font-black uppercase tracking-widest" >Business
                                     Analyst</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Nama [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_expert">Legal Tech Expert</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" >Legal Tech Expert</p>
                     </div>
 
                     <!-- Team Member 4 -->
@@ -294,36 +309,127 @@
                                 class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <span class="text-white text-xs font-black uppercase tracking-widest" data-i18n="about_team_role_tax">Tax
+                                <span class="text-white text-xs font-black uppercase tracking-widest" >Tax
                                     Consultant</span>
                             </div>
                         </div>
                         <h3 class="text-xl font-black text-gray-900 dark:text-white mb-1">Nama [Placeholder]</h3>
-                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" data-i18n="about_team_partner">Managing Partner</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-wider" >Managing Partner</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Instagram / Social Embed Section (Updated to Corporate Colors) -->
+        <section class="py-24 bg-background-light dark:bg-gray-800 relative overflow-hidden">
+            <div class="absolute inset-0 bg-white/50 dark:bg-black/20 pattern-dots opacity-50"></div>
+            <div class="max-w-[1200px] mx-auto px-6 relative z-10">
+                <div class="reveal-up grid lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="space-y-8 text-center lg:text-left">
+                        <div class="space-y-4">
+                            <!-- Badge matched to Primary color -->
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/10 dark:border-primary/30 shadow-sm">
+                                <span class="material-symbols-outlined text-primary text-lg">photo_camera</span>
+                                <span class="text-xs font-black uppercase tracking-widest text-primary">Instagram Official</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+                                Update Hukum & <br>
+                                <span class="text-secondary">Wawasan Bisnis</span>
+                            </h2>
+                            <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                                Ikuti <span class="font-bold text-primary">@akseslegal.id</span> untuk mendapatkan informasi terbaru mengenai regulasi, tips bisnis, dan promo layanan legalitas eksklusif.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <!-- Button matched to Primary color -->
+                            <a href="https://www.instagram.com/akseslegal.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                               target="_blank"
+                               class="inline-flex items-center justify-center gap-3 h-14 px-8 bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:scale-105 active:scale-95 transition-all duration-300 group">
+                                <svg class="w-6 h-6 fill-current group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                Follow Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Card Mockup -->
+                    <div class="relative max-w-sm mx-auto w-full group">
+                        <!-- Decorative Blob (Matched to Secondary) -->
+                        <div class="absolute -inset-1 bg-gradient-border rounded-[2.5rem] blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <!-- Card Container -->
+                        <div class="relative bg-white dark:bg-gray-900 rounded-[2rem] p-6 shadow-2xl border border-gray-100 dark:border-gray-700">
+                            <!-- Profile Header -->
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="relative shrink-0">
+                                    <!-- Ring Gradient Blue to Gold -->
+                                    <div class="size-16 rounded-full bg-gradient-border p-[3px]">
+                                        <div class="bg-white dark:bg-gray-900 rounded-full w-full h-full p-1">
+                                            <img src="assets/images/logo-color.png" alt="Profile" class="w-full h-full object-contain rounded-full">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-1">
+                                        <h3 class="font-bold text-gray-900 dark:text-white">akseslegal.id</h3>
+                                        <span class="material-symbols-outlined text-primary text-sm" style="font-size: 16px;">verified</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 font-medium">Layanan Legal & Hukum</p>
+                                    <p class="text-[10px] text-gray-400 mt-1">Solusi legalitas bisnis terpercaya.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feed Preview Mockup -->
+                            <div class="grid grid-cols-3 gap-2 mb-6">
+                                <div class="aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden relative group/item">
+                                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
+                                </div>
+                                <div class="aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden relative group/item">
+                                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
+                                </div>
+                                <div class="aspect-square bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden relative group/item">
+                                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
+                                    <!-- Overlay count -->
+                                    <div class="absolute inset-0 bg-primary/80 flex items-center justify-center text-white font-bold text-xs">
+                                        +100 Posts
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action -->
+                            <a href="https://www.instagram.com/akseslegal.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                               target="_blank" 
+                               class="w-full flex items-center justify-center h-10 rounded-xl bg-secondary text-primary text-sm font-black hover:bg-primary hover:text-white transition-all">
+                                Lihat Profil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- CTA Section -->
         <section class="py-12 md:py-24 max-w-[1200px] mx-auto px-6 mb-10 md:mb-20">
             <div
                 class="bg-primary rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-20 text-center space-y-6 md:space-y-8 reveal-up">
-                <h2 class="text-2xl md:text-5xl font-black text-white leading-tight"><span data-i18n="about_cta_title_pre">Jadilah Bagian dari</span> <br
-                        class="hidden md:block" /><span data-i18n="about_cta_title_number">5,000+</span>
-                    <span data-i18n="about_cta_title_post">Bisnis yang Sukses Secara Legal</span></h2>
-                <p class="text-base md:text-xl text-white/80 max-w-2xl mx-auto" data-i18n="about_cta_desc">Konsultasikan struktur bisnis terbaik
+                <h2 class="text-2xl md:text-5xl font-black text-white leading-tight"><span >Jadilah Bagian dari</span> <br
+                        class="hidden md:block" /><span >5,000+</span>
+                    <span >Bisnis yang Sukses Secara Legal</span></h2>
+                <p class="text-base md:text-xl text-white/80 max-w-2xl mx-auto" >Konsultasikan struktur bisnis terbaik
                     Anda hari ini
                     dengan tim ahli kami secara gratis.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
                     <button
                         class="h-14 md:h-16 px-8 md:px-10 bg-secondary text-primary font-black text-base md:text-lg rounded-xl md:rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all"
-                        data-i18n="about_cta_contact">
+                        >
                         Hubungi Kami Sekarang
                     </button>
                     <button
                         class="h-14 md:h-16 px-8 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-base md:text-lg rounded-xl md:rounded-2xl hover:bg-white/20 transition-all"
-                        data-i18n="about_cta_services">
+                        >
                         Lihat Layanan
                     </button>
                 </div>
@@ -331,6 +437,8 @@
         </section>
     </main>
 
+
+    
     <!-- Footer (Consistent) -->
     <footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 py-20 px-6">
         <div class="max-w-[1200px] mx-auto grid md:grid-cols-4 gap-16">
@@ -338,40 +446,40 @@
                 <div class="flex flex-col gap-4">
                     <img src="assets/images/logo-color.png" alt="ALI Logo Footer"
                         class="h-14 w-auto object-contain self-start">
-                    <p class="text-base text-gray-500 font-medium leading-relaxed" data-i18n="footer_desc">
+                    <p class="text-base text-gray-500 font-medium leading-relaxed" >
                         Solusi terdepan untuk legalitas bisnis UMK di Indonesia. Profesional, Transparan, dan
                         Terpercaya.
                     </p>
                 </div>
             </div>
             <div>
-                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" data-i18n="footer_links_main">Layanan
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" >Layanan
                     Utama</h4>
                 <ul class="space-y-5 text-sm font-bold text-gray-500">
-                    <li><a class="hover:text-primary transition-colors" href="layanan-pt.html" data-i18n="footer_link_pt">Pendirian PT
+                    <li><a class="hover:text-primary transition-colors" href="layanan-pt.html" >Pendirian PT
                             Perorangan</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="layanan-cv.html" data-i18n="footer_link_cv">Pendaftaran CV</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="layanan-haki.html" data-i18n="footer_link_haki">Hak Kekayaan
+                    <li><a class="hover:text-primary transition-colors" href="layanan-cv.html" >Pendaftaran CV</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="layanan-haki.html" >Hak Kekayaan
                             Intelektual</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="layanan-halal.html" data-i18n="footer_link_halal">Sertifikasi Halal &
+                    <li><a class="hover:text-primary transition-colors" href="layanan-halal.html" >Sertifikasi Halal &
                             PIRT</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" data-i18n="footer_links_company">Perusahaan
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" >Perusahaan
                 </h4>
                 <ul class="space-y-5 text-sm font-bold text-gray-500">
-                    <li><a class="hover:text-primary transition-colors" href="about.html" data-i18n="footer_link_about">Tentang Kami</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="blog.html" data-i18n="footer_link_blog">Blog & Edukasi</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="kontak.html" data-i18n="footer_link_contact">Hubungi Kami</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="syarat-ketentuan.html" data-i18n="footer_link_terms">Syarat &
+                    <li><a class="hover:text-primary transition-colors" href="about.html" >Tentang Kami</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="blog.html" >Blog & Edukasi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="kontak.html" >Hubungi Kami</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="syarat-ketentuan.html" >Syarat &
                             Ketentuan</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="kebijakan-privasi.html" data-i18n="footer_link_privacy">Kebijakan
+                    <li><a class="hover:text-primary transition-colors" href="kebijakan-privasi.html" >Kebijakan
                             Privasi</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" data-i18n="footer_links_contact">Hubungi
+                <h4 class="font-black mb-8 text-gray-900 dark:text-white uppercase text-xs tracking-[0.2em]" >Hubungi
                     Kami</h4>
                 <div class="space-y-6">
                     <div class="flex items-center gap-4 text-sm text-gray-600 font-bold">
@@ -384,7 +492,7 @@
             </div>
         </div>
         <div class="max-w-[1200px] mx-auto mt-20 pt-10 border-t border-gray-100 dark:border-gray-800 text-center">
-            <p class="text-xs font-black text-gray-400 uppercase tracking-[0.2em]" data-i18n="footer_copyright">© 2025 PT Akses Legal Indonesia.
+            <p class="text-xs font-black text-gray-400 uppercase tracking-[0.2em]" >© 2025 PT Akses Legal Indonesia.
                 Seluruh Hak Cipta Dilindungi.</p>
         </div>
     </footer>
